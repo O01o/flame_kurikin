@@ -1,86 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
-import 'package:flame/sprite.dart';
+import 'package:flutter/services.dart';
 import 'package:flame/components.dart';
 
+import 'package:flame/effects.dart';
+import 'package:flame/experimental.dart';
+import 'package:flame/game.dart';
+import 'package:flame/rendering.dart';
+import 'package:flutter/rendering.dart';
+
+import 'package:flame/src/components/route.dart';
+import 'package:flame/src/widgets/navigator.dart';
+
+import 'widgets/screens/all_screens.dart';
+
 void main() {
-  final game = MyGame();
+  WidgetsFlutterBinding.ensureInitialized();
+  Flame.device.fullScreen();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight
+  ]);
+
+  final game = RouterGame();
   runApp(GameWidget(game: game));
 }
 
-class MyGame extends FlameGame {
+class RouterGame extends FlameGame with HasTappableComponents {
+  late final RouterComponent router;
+  
   @override
   Future<void> onLoad() async {
-    final sprite = await Sprite.load('kurikin_package.jpg');
-    final size = Vector2.all(128.0);
-    final kin = SpriteComponent(size: size, sprite: sprite);
-
-    kin.position = Vector2(100, 200);
-    kin.angle = 90;
-    add(kin);
-  }
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+    add(
+      router = RouterComponent(
+        initialRoute: "title", 
+        routes: {
+          "title": Route(TitleScreen.new()),
+          "battle": Route(BattleScreen().new())
+        }
+      )
     );
   }
 }
