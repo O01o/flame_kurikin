@@ -5,8 +5,9 @@ import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 
-import 'package:flame_kurikin/widgets/elements/title_components.dart';
+import 'package:flame_kurikin/widgets/elements/title_elements.dart';
 import 'package:flame_kurikin/styles.dart';
+import 'package:flame_kurikin/router.dart';
 
 class MapScreen extends Component with TapCallbacks, HasGameRef<RouterGame> {
   
