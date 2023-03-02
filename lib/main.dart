@@ -20,6 +20,7 @@ void main() {
   runApp(GameWidget(game: game));
 }
 
+/*
 class SingleGame extends FlameGame {
 
   @override
@@ -29,3 +30,4 @@ class SingleGame extends FlameGame {
     );
   }
 }
+*/

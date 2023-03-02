@@ -1,20 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'kin.dart';
+part of 'kin_stock.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Kin _$$_KinFromJson(Map<String, dynamic> json) => _$_Kin(
-      id: json['id'] as int,
+_$_KinStock _$$_KinStockFromJson(Map<String, dynamic> json) => _$_KinStock(
       name: json['name'] as String,
       owner: json['owner'] as String,
       getType: $enumDecode(_$GetTypeEnumMap, json['getType']),
-      race: $enumDecode(_$RaceEnumMap, json['race']),
-      explanation: json['explanation'] as String,
-      langOfKin: json['langOfKin'] as String,
-      isCollected: json['isCollected'] as bool,
       level: json['level'] as int,
       hp: json['hp'] as int,
       atk: json['atk'] as int,
@@ -27,6 +22,7 @@ _$_Kin _$$_KinFromJson(Map<String, dynamic> json) => _$_Kin(
       size: $enumDecode(_$SizeEnumMap, json['size']),
       ph: $enumDecode(_$PHEnumMap, json['ph']),
       temperature: $enumDecode(_$TemperatureEnumMap, json['temperature']),
+      attribute: $enumDecode(_$AttributeEnumMap, json['attribute']),
       specialAtk: $enumDecode(_$SpecialAttackEnumMap, json['specialAtk']),
       activity: $enumDecode(_$ActivityEnumMap, json['activity']),
       x: json['x'] as int,
@@ -35,7 +31,6 @@ _$_Kin _$$_KinFromJson(Map<String, dynamic> json) => _$_Kin(
       dstY: json['dstY'] as int,
       isRounded: json['isRounded'] as bool,
       isMoving: json['isMoving'] as bool,
-      isAtkMode: json['isAtkMode'] as bool,
       isAtkMotion: json['isAtkMotion'] as bool,
       isProlMotion: json['isProlMotion'] as bool,
       isAppealMotion: json['isAppealMotion'] as bool,
@@ -48,15 +43,11 @@ _$_Kin _$$_KinFromJson(Map<String, dynamic> json) => _$_Kin(
       expBase: json['expBase'] as int,
     );
 
-Map<String, dynamic> _$$_KinToJson(_$_Kin instance) => <String, dynamic>{
-      'id': instance.id,
+Map<String, dynamic> _$$_KinStockToJson(_$_KinStock instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'owner': instance.owner,
       'getType': _$GetTypeEnumMap[instance.getType]!,
-      'race': _$RaceEnumMap[instance.race]!,
-      'explanation': instance.explanation,
-      'langOfKin': instance.langOfKin,
-      'isCollected': instance.isCollected,
       'level': instance.level,
       'hp': instance.hp,
       'atk': instance.atk,
@@ -69,6 +60,7 @@ Map<String, dynamic> _$$_KinToJson(_$_Kin instance) => <String, dynamic>{
       'size': _$SizeEnumMap[instance.size]!,
       'ph': _$PHEnumMap[instance.ph]!,
       'temperature': _$TemperatureEnumMap[instance.temperature]!,
+      'attribute': _$AttributeEnumMap[instance.attribute]!,
       'specialAtk': _$SpecialAttackEnumMap[instance.specialAtk]!,
       'activity': _$ActivityEnumMap[instance.activity]!,
       'x': instance.x,
@@ -77,7 +69,6 @@ Map<String, dynamic> _$$_KinToJson(_$_Kin instance) => <String, dynamic>{
       'dstY': instance.dstY,
       'isRounded': instance.isRounded,
       'isMoving': instance.isMoving,
-      'isAtkMode': instance.isAtkMode,
       'isAtkMotion': instance.isAtkMotion,
       'isProlMotion': instance.isProlMotion,
       'isAppealMotion': instance.isAppealMotion,
@@ -97,13 +88,6 @@ const _$GetTypeEnumMap = {
   GetType.onlineBattle: 'onlineBattle',
   GetType.fusion: 'fusion',
   GetType.trade: 'trade',
-};
-
-const _$RaceEnumMap = {
-  Race.primeval: 'primeval',
-  Race.newSpecies: 'newSpecies',
-  Race.unique: 'unique',
-  Race.phantom: 'phantom',
 };
 
 const _$SpeedEnumMap = {
@@ -129,6 +113,12 @@ const _$TemperatureEnumMap = {
   Temperature.high: 'high',
   Temperature.medium: 'medium',
   Temperature.low: 'low',
+};
+
+const _$AttributeEnumMap = {
+  Attribute.edge: 'edge',
+  Attribute.solid: 'solid',
+  Attribute.veil: 'veil',
 };
 
 const _$SpecialAttackEnumMap = {

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'kin.dart';
+part of 'kin_stock.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,20 +14,15 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Kin _$KinFromJson(Map<String, dynamic> json) {
-  return _Kin.fromJson(json);
+KinStock _$KinStockFromJson(Map<String, dynamic> json) {
+  return _KinStock.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Kin {
-  int get id => throw _privateConstructorUsedError;
+mixin _$KinStock {
   String get name => throw _privateConstructorUsedError;
   String get owner => throw _privateConstructorUsedError;
   GetType get getType => throw _privateConstructorUsedError;
-  Race get race => throw _privateConstructorUsedError;
-  String get explanation => throw _privateConstructorUsedError;
-  String get langOfKin => throw _privateConstructorUsedError;
-  bool get isCollected => throw _privateConstructorUsedError;
   int get level => throw _privateConstructorUsedError;
   int get hp => throw _privateConstructorUsedError;
   int get atk => throw _privateConstructorUsedError;
@@ -40,6 +35,7 @@ mixin _$Kin {
   Size get size => throw _privateConstructorUsedError;
   PH get ph => throw _privateConstructorUsedError;
   Temperature get temperature => throw _privateConstructorUsedError;
+  Attribute get attribute => throw _privateConstructorUsedError;
   SpecialAttack get specialAtk => throw _privateConstructorUsedError;
   Activity get activity => throw _privateConstructorUsedError;
   int get x => throw _privateConstructorUsedError;
@@ -48,7 +44,6 @@ mixin _$Kin {
   int get dstY => throw _privateConstructorUsedError;
   bool get isRounded => throw _privateConstructorUsedError;
   bool get isMoving => throw _privateConstructorUsedError;
-  bool get isAtkMode => throw _privateConstructorUsedError;
   bool get isAtkMotion => throw _privateConstructorUsedError;
   bool get isProlMotion => throw _privateConstructorUsedError;
   bool get isAppealMotion => throw _privateConstructorUsedError;
@@ -62,23 +57,19 @@ mixin _$Kin {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $KinCopyWith<Kin> get copyWith => throw _privateConstructorUsedError;
+  $KinStockCopyWith<KinStock> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $KinCopyWith<$Res> {
-  factory $KinCopyWith(Kin value, $Res Function(Kin) then) =
-      _$KinCopyWithImpl<$Res, Kin>;
+abstract class $KinStockCopyWith<$Res> {
+  factory $KinStockCopyWith(KinStock value, $Res Function(KinStock) then) =
+      _$KinStockCopyWithImpl<$Res, KinStock>;
   @useResult
   $Res call(
-      {int id,
-      String name,
+      {String name,
       String owner,
       GetType getType,
-      Race race,
-      String explanation,
-      String langOfKin,
-      bool isCollected,
       int level,
       int hp,
       int atk,
@@ -91,6 +82,7 @@ abstract class $KinCopyWith<$Res> {
       Size size,
       PH ph,
       Temperature temperature,
+      Attribute attribute,
       SpecialAttack specialAtk,
       Activity activity,
       int x,
@@ -99,7 +91,6 @@ abstract class $KinCopyWith<$Res> {
       int dstY,
       bool isRounded,
       bool isMoving,
-      bool isAtkMode,
       bool isAtkMotion,
       bool isProlMotion,
       bool isAppealMotion,
@@ -113,8 +104,9 @@ abstract class $KinCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
-  _$KinCopyWithImpl(this._value, this._then);
+class _$KinStockCopyWithImpl<$Res, $Val extends KinStock>
+    implements $KinStockCopyWith<$Res> {
+  _$KinStockCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -124,14 +116,9 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? name = null,
     Object? owner = null,
     Object? getType = null,
-    Object? race = null,
-    Object? explanation = null,
-    Object? langOfKin = null,
-    Object? isCollected = null,
     Object? level = null,
     Object? hp = null,
     Object? atk = null,
@@ -144,6 +131,7 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
     Object? size = null,
     Object? ph = null,
     Object? temperature = null,
+    Object? attribute = null,
     Object? specialAtk = null,
     Object? activity = null,
     Object? x = null,
@@ -152,7 +140,6 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
     Object? dstY = null,
     Object? isRounded = null,
     Object? isMoving = null,
-    Object? isAtkMode = null,
     Object? isAtkMotion = null,
     Object? isProlMotion = null,
     Object? isAppealMotion = null,
@@ -165,10 +152,6 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
     Object? expBase = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -181,22 +164,6 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
           ? _value.getType
           : getType // ignore: cast_nullable_to_non_nullable
               as GetType,
-      race: null == race
-          ? _value.race
-          : race // ignore: cast_nullable_to_non_nullable
-              as Race,
-      explanation: null == explanation
-          ? _value.explanation
-          : explanation // ignore: cast_nullable_to_non_nullable
-              as String,
-      langOfKin: null == langOfKin
-          ? _value.langOfKin
-          : langOfKin // ignore: cast_nullable_to_non_nullable
-              as String,
-      isCollected: null == isCollected
-          ? _value.isCollected
-          : isCollected // ignore: cast_nullable_to_non_nullable
-              as bool,
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -245,6 +212,10 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
               as Temperature,
+      attribute: null == attribute
+          ? _value.attribute
+          : attribute // ignore: cast_nullable_to_non_nullable
+              as Attribute,
       specialAtk: null == specialAtk
           ? _value.specialAtk
           : specialAtk // ignore: cast_nullable_to_non_nullable
@@ -276,10 +247,6 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
       isMoving: null == isMoving
           ? _value.isMoving
           : isMoving // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAtkMode: null == isAtkMode
-          ? _value.isAtkMode
-          : isAtkMode // ignore: cast_nullable_to_non_nullable
               as bool,
       isAtkMotion: null == isAtkMotion
           ? _value.isAtkMotion
@@ -326,20 +293,16 @@ class _$KinCopyWithImpl<$Res, $Val extends Kin> implements $KinCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_KinCopyWith<$Res> implements $KinCopyWith<$Res> {
-  factory _$$_KinCopyWith(_$_Kin value, $Res Function(_$_Kin) then) =
-      __$$_KinCopyWithImpl<$Res>;
+abstract class _$$_KinStockCopyWith<$Res> implements $KinStockCopyWith<$Res> {
+  factory _$$_KinStockCopyWith(
+          _$_KinStock value, $Res Function(_$_KinStock) then) =
+      __$$_KinStockCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int id,
-      String name,
+      {String name,
       String owner,
       GetType getType,
-      Race race,
-      String explanation,
-      String langOfKin,
-      bool isCollected,
       int level,
       int hp,
       int atk,
@@ -352,6 +315,7 @@ abstract class _$$_KinCopyWith<$Res> implements $KinCopyWith<$Res> {
       Size size,
       PH ph,
       Temperature temperature,
+      Attribute attribute,
       SpecialAttack specialAtk,
       Activity activity,
       int x,
@@ -360,7 +324,6 @@ abstract class _$$_KinCopyWith<$Res> implements $KinCopyWith<$Res> {
       int dstY,
       bool isRounded,
       bool isMoving,
-      bool isAtkMode,
       bool isAtkMotion,
       bool isProlMotion,
       bool isAppealMotion,
@@ -374,22 +337,19 @@ abstract class _$$_KinCopyWith<$Res> implements $KinCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
-    implements _$$_KinCopyWith<$Res> {
-  __$$_KinCopyWithImpl(_$_Kin _value, $Res Function(_$_Kin) _then)
+class __$$_KinStockCopyWithImpl<$Res>
+    extends _$KinStockCopyWithImpl<$Res, _$_KinStock>
+    implements _$$_KinStockCopyWith<$Res> {
+  __$$_KinStockCopyWithImpl(
+      _$_KinStock _value, $Res Function(_$_KinStock) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? name = null,
     Object? owner = null,
     Object? getType = null,
-    Object? race = null,
-    Object? explanation = null,
-    Object? langOfKin = null,
-    Object? isCollected = null,
     Object? level = null,
     Object? hp = null,
     Object? atk = null,
@@ -402,6 +362,7 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
     Object? size = null,
     Object? ph = null,
     Object? temperature = null,
+    Object? attribute = null,
     Object? specialAtk = null,
     Object? activity = null,
     Object? x = null,
@@ -410,7 +371,6 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
     Object? dstY = null,
     Object? isRounded = null,
     Object? isMoving = null,
-    Object? isAtkMode = null,
     Object? isAtkMotion = null,
     Object? isProlMotion = null,
     Object? isAppealMotion = null,
@@ -422,11 +382,7 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
     Object? expMax = null,
     Object? expBase = null,
   }) {
-    return _then(_$_Kin(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+    return _then(_$_KinStock(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -439,22 +395,6 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
           ? _value.getType
           : getType // ignore: cast_nullable_to_non_nullable
               as GetType,
-      race: null == race
-          ? _value.race
-          : race // ignore: cast_nullable_to_non_nullable
-              as Race,
-      explanation: null == explanation
-          ? _value.explanation
-          : explanation // ignore: cast_nullable_to_non_nullable
-              as String,
-      langOfKin: null == langOfKin
-          ? _value.langOfKin
-          : langOfKin // ignore: cast_nullable_to_non_nullable
-              as String,
-      isCollected: null == isCollected
-          ? _value.isCollected
-          : isCollected // ignore: cast_nullable_to_non_nullable
-              as bool,
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -503,6 +443,10 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
               as Temperature,
+      attribute: null == attribute
+          ? _value.attribute
+          : attribute // ignore: cast_nullable_to_non_nullable
+              as Attribute,
       specialAtk: null == specialAtk
           ? _value.specialAtk
           : specialAtk // ignore: cast_nullable_to_non_nullable
@@ -534,10 +478,6 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
       isMoving: null == isMoving
           ? _value.isMoving
           : isMoving // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAtkMode: null == isAtkMode
-          ? _value.isAtkMode
-          : isAtkMode // ignore: cast_nullable_to_non_nullable
               as bool,
       isAtkMotion: null == isAtkMotion
           ? _value.isAtkMotion
@@ -585,16 +525,11 @@ class __$$_KinCopyWithImpl<$Res> extends _$KinCopyWithImpl<$Res, _$_Kin>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Kin with DiagnosticableTreeMixin implements _Kin {
-  const _$_Kin(
-      {required this.id,
-      required this.name,
+class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
+  const _$_KinStock(
+      {required this.name,
       required this.owner,
       required this.getType,
-      required this.race,
-      required this.explanation,
-      required this.langOfKin,
-      required this.isCollected,
       required this.level,
       required this.hp,
       required this.atk,
@@ -607,6 +542,7 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
       required this.size,
       required this.ph,
       required this.temperature,
+      required this.attribute,
       required this.specialAtk,
       required this.activity,
       required this.x,
@@ -615,7 +551,6 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
       required this.dstY,
       required this.isRounded,
       required this.isMoving,
-      required this.isAtkMode,
       required this.isAtkMotion,
       required this.isProlMotion,
       required this.isAppealMotion,
@@ -627,24 +562,15 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
       required this.expMax,
       required this.expBase});
 
-  factory _$_Kin.fromJson(Map<String, dynamic> json) => _$$_KinFromJson(json);
+  factory _$_KinStock.fromJson(Map<String, dynamic> json) =>
+      _$$_KinStockFromJson(json);
 
-  @override
-  final int id;
   @override
   final String name;
   @override
   final String owner;
   @override
   final GetType getType;
-  @override
-  final Race race;
-  @override
-  final String explanation;
-  @override
-  final String langOfKin;
-  @override
-  final bool isCollected;
   @override
   final int level;
   @override
@@ -670,6 +596,8 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
   @override
   final Temperature temperature;
   @override
+  final Attribute attribute;
+  @override
   final SpecialAttack specialAtk;
   @override
   final Activity activity;
@@ -685,8 +613,6 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
   final bool isRounded;
   @override
   final bool isMoving;
-  @override
-  final bool isAtkMode;
   @override
   final bool isAtkMotion;
   @override
@@ -710,22 +636,17 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Kin(id: $id, name: $name, owner: $owner, getType: $getType, race: $race, explanation: $explanation, langOfKin: $langOfKin, isCollected: $isCollected, level: $level, hp: $hp, atk: $atk, def: $def, prol: $prol, atkFreq: $atkFreq, hpBase: $hpBase, atkBase: $atkBase, speed: $speed, size: $size, ph: $ph, temperature: $temperature, specialAtk: $specialAtk, activity: $activity, x: $x, y: $y, dstX: $dstX, dstY: $dstY, isRounded: $isRounded, isMoving: $isMoving, isAtkMode: $isAtkMode, isAtkMotion: $isAtkMotion, isProlMotion: $isProlMotion, isAppealMotion: $isAppealMotion, isDamageMotion: $isDamageMotion, isDefeatMotion: $isDefeatMotion, waitTime: $waitTime, lifeTime: $lifeTime, exp: $exp, expMax: $expMax, expBase: $expBase)';
+    return 'KinStock(name: $name, owner: $owner, getType: $getType, level: $level, hp: $hp, atk: $atk, def: $def, prol: $prol, atkFreq: $atkFreq, hpBase: $hpBase, atkBase: $atkBase, speed: $speed, size: $size, ph: $ph, temperature: $temperature, attribute: $attribute, specialAtk: $specialAtk, activity: $activity, x: $x, y: $y, dstX: $dstX, dstY: $dstY, isRounded: $isRounded, isMoving: $isMoving, isAtkMotion: $isAtkMotion, isProlMotion: $isProlMotion, isAppealMotion: $isAppealMotion, isDamageMotion: $isDamageMotion, isDefeatMotion: $isDefeatMotion, waitTime: $waitTime, lifeTime: $lifeTime, exp: $exp, expMax: $expMax, expBase: $expBase)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Kin'))
-      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('type', 'KinStock'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('owner', owner))
       ..add(DiagnosticsProperty('getType', getType))
-      ..add(DiagnosticsProperty('race', race))
-      ..add(DiagnosticsProperty('explanation', explanation))
-      ..add(DiagnosticsProperty('langOfKin', langOfKin))
-      ..add(DiagnosticsProperty('isCollected', isCollected))
       ..add(DiagnosticsProperty('level', level))
       ..add(DiagnosticsProperty('hp', hp))
       ..add(DiagnosticsProperty('atk', atk))
@@ -738,6 +659,7 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
       ..add(DiagnosticsProperty('size', size))
       ..add(DiagnosticsProperty('ph', ph))
       ..add(DiagnosticsProperty('temperature', temperature))
+      ..add(DiagnosticsProperty('attribute', attribute))
       ..add(DiagnosticsProperty('specialAtk', specialAtk))
       ..add(DiagnosticsProperty('activity', activity))
       ..add(DiagnosticsProperty('x', x))
@@ -746,7 +668,6 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
       ..add(DiagnosticsProperty('dstY', dstY))
       ..add(DiagnosticsProperty('isRounded', isRounded))
       ..add(DiagnosticsProperty('isMoving', isMoving))
-      ..add(DiagnosticsProperty('isAtkMode', isAtkMode))
       ..add(DiagnosticsProperty('isAtkMotion', isAtkMotion))
       ..add(DiagnosticsProperty('isProlMotion', isProlMotion))
       ..add(DiagnosticsProperty('isAppealMotion', isAppealMotion))
@@ -763,18 +684,10 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Kin &&
-            (identical(other.id, id) || other.id == id) &&
+            other is _$_KinStock &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.owner, owner) || other.owner == owner) &&
             (identical(other.getType, getType) || other.getType == getType) &&
-            (identical(other.race, race) || other.race == race) &&
-            (identical(other.explanation, explanation) ||
-                other.explanation == explanation) &&
-            (identical(other.langOfKin, langOfKin) ||
-                other.langOfKin == langOfKin) &&
-            (identical(other.isCollected, isCollected) ||
-                other.isCollected == isCollected) &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.hp, hp) || other.hp == hp) &&
             (identical(other.atk, atk) || other.atk == atk) &&
@@ -788,6 +701,8 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
             (identical(other.ph, ph) || other.ph == ph) &&
             (identical(other.temperature, temperature) ||
                 other.temperature == temperature) &&
+            (identical(other.attribute, attribute) ||
+                other.attribute == attribute) &&
             (identical(other.specialAtk, specialAtk) ||
                 other.specialAtk == specialAtk) &&
             (identical(other.activity, activity) ||
@@ -800,8 +715,6 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
                 other.isRounded == isRounded) &&
             (identical(other.isMoving, isMoving) ||
                 other.isMoving == isMoving) &&
-            (identical(other.isAtkMode, isAtkMode) ||
-                other.isAtkMode == isAtkMode) &&
             (identical(other.isAtkMotion, isAtkMotion) ||
                 other.isAtkMotion == isAtkMotion) &&
             (identical(other.isProlMotion, isProlMotion) ||
@@ -825,14 +738,9 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        id,
         name,
         owner,
         getType,
-        race,
-        explanation,
-        langOfKin,
-        isCollected,
         level,
         hp,
         atk,
@@ -845,6 +753,7 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
         size,
         ph,
         temperature,
+        attribute,
         specialAtk,
         activity,
         x,
@@ -853,7 +762,6 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
         dstY,
         isRounded,
         isMoving,
-        isAtkMode,
         isAtkMotion,
         isProlMotion,
         isAppealMotion,
@@ -869,27 +777,22 @@ class _$_Kin with DiagnosticableTreeMixin implements _Kin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinCopyWith<_$_Kin> get copyWith =>
-      __$$_KinCopyWithImpl<_$_Kin>(this, _$identity);
+  _$$_KinStockCopyWith<_$_KinStock> get copyWith =>
+      __$$_KinStockCopyWithImpl<_$_KinStock>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinToJson(
+    return _$$_KinStockToJson(
       this,
     );
   }
 }
 
-abstract class _Kin implements Kin {
-  const factory _Kin(
-      {required final int id,
-      required final String name,
+abstract class _KinStock implements KinStock {
+  const factory _KinStock(
+      {required final String name,
       required final String owner,
       required final GetType getType,
-      required final Race race,
-      required final String explanation,
-      required final String langOfKin,
-      required final bool isCollected,
       required final int level,
       required final int hp,
       required final int atk,
@@ -902,6 +805,7 @@ abstract class _Kin implements Kin {
       required final Size size,
       required final PH ph,
       required final Temperature temperature,
+      required final Attribute attribute,
       required final SpecialAttack specialAtk,
       required final Activity activity,
       required final int x,
@@ -910,7 +814,6 @@ abstract class _Kin implements Kin {
       required final int dstY,
       required final bool isRounded,
       required final bool isMoving,
-      required final bool isAtkMode,
       required final bool isAtkMotion,
       required final bool isProlMotion,
       required final bool isAppealMotion,
@@ -920,26 +823,16 @@ abstract class _Kin implements Kin {
       required final int lifeTime,
       required final int exp,
       required final int expMax,
-      required final int expBase}) = _$_Kin;
+      required final int expBase}) = _$_KinStock;
 
-  factory _Kin.fromJson(Map<String, dynamic> json) = _$_Kin.fromJson;
+  factory _KinStock.fromJson(Map<String, dynamic> json) = _$_KinStock.fromJson;
 
-  @override
-  int get id;
   @override
   String get name;
   @override
   String get owner;
   @override
   GetType get getType;
-  @override
-  Race get race;
-  @override
-  String get explanation;
-  @override
-  String get langOfKin;
-  @override
-  bool get isCollected;
   @override
   int get level;
   @override
@@ -965,6 +858,8 @@ abstract class _Kin implements Kin {
   @override
   Temperature get temperature;
   @override
+  Attribute get attribute;
+  @override
   SpecialAttack get specialAtk;
   @override
   Activity get activity;
@@ -980,8 +875,6 @@ abstract class _Kin implements Kin {
   bool get isRounded;
   @override
   bool get isMoving;
-  @override
-  bool get isAtkMode;
   @override
   bool get isAtkMotion;
   @override
@@ -1004,5 +897,6 @@ abstract class _Kin implements Kin {
   int get expBase;
   @override
   @JsonKey(ignore: true)
-  _$$_KinCopyWith<_$_Kin> get copyWith => throw _privateConstructorUsedError;
+  _$$_KinStockCopyWith<_$_KinStock> get copyWith =>
+      throw _privateConstructorUsedError;
 }
