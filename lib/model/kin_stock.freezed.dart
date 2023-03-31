@@ -22,49 +22,34 @@ KinStock _$KinStockFromJson(Map<String, dynamic> json) {
 mixin _$KinStock {
   String get name => throw _privateConstructorUsedError;
   String get owner => throw _privateConstructorUsedError;
-  @JsonKey(name: "get-type")
   GetType get getType => throw _privateConstructorUsedError;
   int get level => throw _privateConstructorUsedError;
   int get hp => throw _privateConstructorUsedError;
   int get atk => throw _privateConstructorUsedError;
   int get def => throw _privateConstructorUsedError;
   int get prol => throw _privateConstructorUsedError;
-  @JsonKey(name: "atk-freq")
   int get atkFreq => throw _privateConstructorUsedError;
-  @JsonKey(name: "hp-base")
   int get hpBase => throw _privateConstructorUsedError;
-  @JsonKey(name: "atk-base")
   int get atkBase => throw _privateConstructorUsedError;
-  @JsonKey(name: "atk-freq-base")
   int get atkFreqBase => throw _privateConstructorUsedError;
   Speed get speed => throw _privateConstructorUsedError;
   Size get size => throw _privateConstructorUsedError;
   PH get ph => throw _privateConstructorUsedError;
   Temperature get temperature => throw _privateConstructorUsedError;
   Attribute get attribute => throw _privateConstructorUsedError;
-  @JsonKey(name: "special-atk")
   SpecialAttack get specialAtk => throw _privateConstructorUsedError;
   Activity get activity => throw _privateConstructorUsedError;
   int get x => throw _privateConstructorUsedError;
   int get y => throw _privateConstructorUsedError;
-  @JsonKey(name: "dst-x")
   int get dstX => throw _privateConstructorUsedError;
-  @JsonKey(name: "dst-y")
   int get dstY => throw _privateConstructorUsedError;
-  @JsonKey(name: "is-rounded")
   bool get isRounded => throw _privateConstructorUsedError;
-  @JsonKey(name: "is-moving")
   bool get isMoving => throw _privateConstructorUsedError;
-  @JsonKey(name: "motion-mode")
   MotionMode get motionMode => throw _privateConstructorUsedError;
-  @JsonKey(name: "wait-time")
   int get waitTime => throw _privateConstructorUsedError;
-  @JsonKey(name: "life-time")
   int get lifeTime => throw _privateConstructorUsedError;
   int get exp => throw _privateConstructorUsedError;
-  @JsonKey(name: "exp-max")
   int get expMax => throw _privateConstructorUsedError;
-  @JsonKey(name: "exp-base")
   int get expBase => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -81,35 +66,35 @@ abstract class $KinStockCopyWith<$Res> {
   $Res call(
       {String name,
       String owner,
-      @JsonKey(name: "get-type") GetType getType,
+      GetType getType,
       int level,
       int hp,
       int atk,
       int def,
       int prol,
-      @JsonKey(name: "atk-freq") int atkFreq,
-      @JsonKey(name: "hp-base") int hpBase,
-      @JsonKey(name: "atk-base") int atkBase,
-      @JsonKey(name: "atk-freq-base") int atkFreqBase,
+      int atkFreq,
+      int hpBase,
+      int atkBase,
+      int atkFreqBase,
       Speed speed,
       Size size,
       PH ph,
       Temperature temperature,
       Attribute attribute,
-      @JsonKey(name: "special-atk") SpecialAttack specialAtk,
+      SpecialAttack specialAtk,
       Activity activity,
       int x,
       int y,
-      @JsonKey(name: "dst-x") int dstX,
-      @JsonKey(name: "dst-y") int dstY,
-      @JsonKey(name: "is-rounded") bool isRounded,
-      @JsonKey(name: "is-moving") bool isMoving,
-      @JsonKey(name: "motion-mode") MotionMode motionMode,
-      @JsonKey(name: "wait-time") int waitTime,
-      @JsonKey(name: "life-time") int lifeTime,
+      int dstX,
+      int dstY,
+      bool isRounded,
+      bool isMoving,
+      MotionMode motionMode,
+      int waitTime,
+      int lifeTime,
       int exp,
-      @JsonKey(name: "exp-max") int expMax,
-      @JsonKey(name: "exp-base") int expBase});
+      int expMax,
+      int expBase});
 }
 
 /// @nodoc
@@ -296,35 +281,35 @@ abstract class _$$_KinStockCopyWith<$Res> implements $KinStockCopyWith<$Res> {
   $Res call(
       {String name,
       String owner,
-      @JsonKey(name: "get-type") GetType getType,
+      GetType getType,
       int level,
       int hp,
       int atk,
       int def,
       int prol,
-      @JsonKey(name: "atk-freq") int atkFreq,
-      @JsonKey(name: "hp-base") int hpBase,
-      @JsonKey(name: "atk-base") int atkBase,
-      @JsonKey(name: "atk-freq-base") int atkFreqBase,
+      int atkFreq,
+      int hpBase,
+      int atkBase,
+      int atkFreqBase,
       Speed speed,
       Size size,
       PH ph,
       Temperature temperature,
       Attribute attribute,
-      @JsonKey(name: "special-atk") SpecialAttack specialAtk,
+      SpecialAttack specialAtk,
       Activity activity,
       int x,
       int y,
-      @JsonKey(name: "dst-x") int dstX,
-      @JsonKey(name: "dst-y") int dstY,
-      @JsonKey(name: "is-rounded") bool isRounded,
-      @JsonKey(name: "is-moving") bool isMoving,
-      @JsonKey(name: "motion-mode") MotionMode motionMode,
-      @JsonKey(name: "wait-time") int waitTime,
-      @JsonKey(name: "life-time") int lifeTime,
+      int dstX,
+      int dstY,
+      bool isRounded,
+      bool isMoving,
+      MotionMode motionMode,
+      int waitTime,
+      int lifeTime,
       int exp,
-      @JsonKey(name: "exp-max") int expMax,
-      @JsonKey(name: "exp-base") int expBase});
+      int expMax,
+      int expBase});
 }
 
 /// @nodoc
@@ -501,40 +486,40 @@ class __$$_KinStockCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
 class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   const _$_KinStock(
       {required this.name,
       required this.owner,
-      @JsonKey(name: "get-type") required this.getType,
+      required this.getType,
       required this.level,
       required this.hp,
       required this.atk,
       required this.def,
       required this.prol,
-      @JsonKey(name: "atk-freq") required this.atkFreq,
-      @JsonKey(name: "hp-base") required this.hpBase,
-      @JsonKey(name: "atk-base") required this.atkBase,
-      @JsonKey(name: "atk-freq-base") required this.atkFreqBase,
+      required this.atkFreq,
+      required this.hpBase,
+      required this.atkBase,
+      required this.atkFreqBase,
       required this.speed,
       required this.size,
       required this.ph,
       required this.temperature,
       required this.attribute,
-      @JsonKey(name: "special-atk") required this.specialAtk,
+      required this.specialAtk,
       required this.activity,
       required this.x,
       required this.y,
-      @JsonKey(name: "dst-x") required this.dstX,
-      @JsonKey(name: "dst-y") required this.dstY,
-      @JsonKey(name: "is-rounded") required this.isRounded,
-      @JsonKey(name: "is-moving") required this.isMoving,
-      @JsonKey(name: "motion-mode") required this.motionMode,
-      @JsonKey(name: "wait-time") required this.waitTime,
-      @JsonKey(name: "life-time") required this.lifeTime,
+      required this.dstX,
+      required this.dstY,
+      required this.isRounded,
+      required this.isMoving,
+      required this.motionMode,
+      required this.waitTime,
+      required this.lifeTime,
       required this.exp,
-      @JsonKey(name: "exp-max") required this.expMax,
-      @JsonKey(name: "exp-base") required this.expBase});
+      required this.expMax,
+      required this.expBase});
 
   factory _$_KinStock.fromJson(Map<String, dynamic> json) =>
       _$$_KinStockFromJson(json);
@@ -544,7 +529,6 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   @override
   final String owner;
   @override
-  @JsonKey(name: "get-type")
   final GetType getType;
   @override
   final int level;
@@ -557,16 +541,12 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   @override
   final int prol;
   @override
-  @JsonKey(name: "atk-freq")
   final int atkFreq;
   @override
-  @JsonKey(name: "hp-base")
   final int hpBase;
   @override
-  @JsonKey(name: "atk-base")
   final int atkBase;
   @override
-  @JsonKey(name: "atk-freq-base")
   final int atkFreqBase;
   @override
   final Speed speed;
@@ -579,7 +559,6 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   @override
   final Attribute attribute;
   @override
-  @JsonKey(name: "special-atk")
   final SpecialAttack specialAtk;
   @override
   final Activity activity;
@@ -588,33 +567,24 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   @override
   final int y;
   @override
-  @JsonKey(name: "dst-x")
   final int dstX;
   @override
-  @JsonKey(name: "dst-y")
   final int dstY;
   @override
-  @JsonKey(name: "is-rounded")
   final bool isRounded;
   @override
-  @JsonKey(name: "is-moving")
   final bool isMoving;
   @override
-  @JsonKey(name: "motion-mode")
   final MotionMode motionMode;
   @override
-  @JsonKey(name: "wait-time")
   final int waitTime;
   @override
-  @JsonKey(name: "life-time")
   final int lifeTime;
   @override
   final int exp;
   @override
-  @JsonKey(name: "exp-max")
   final int expMax;
   @override
-  @JsonKey(name: "exp-base")
   final int expBase;
 
   @override
@@ -763,35 +733,35 @@ abstract class _KinStock implements KinStock {
   const factory _KinStock(
       {required final String name,
       required final String owner,
-      @JsonKey(name: "get-type") required final GetType getType,
+      required final GetType getType,
       required final int level,
       required final int hp,
       required final int atk,
       required final int def,
       required final int prol,
-      @JsonKey(name: "atk-freq") required final int atkFreq,
-      @JsonKey(name: "hp-base") required final int hpBase,
-      @JsonKey(name: "atk-base") required final int atkBase,
-      @JsonKey(name: "atk-freq-base") required final int atkFreqBase,
+      required final int atkFreq,
+      required final int hpBase,
+      required final int atkBase,
+      required final int atkFreqBase,
       required final Speed speed,
       required final Size size,
       required final PH ph,
       required final Temperature temperature,
       required final Attribute attribute,
-      @JsonKey(name: "special-atk") required final SpecialAttack specialAtk,
+      required final SpecialAttack specialAtk,
       required final Activity activity,
       required final int x,
       required final int y,
-      @JsonKey(name: "dst-x") required final int dstX,
-      @JsonKey(name: "dst-y") required final int dstY,
-      @JsonKey(name: "is-rounded") required final bool isRounded,
-      @JsonKey(name: "is-moving") required final bool isMoving,
-      @JsonKey(name: "motion-mode") required final MotionMode motionMode,
-      @JsonKey(name: "wait-time") required final int waitTime,
-      @JsonKey(name: "life-time") required final int lifeTime,
+      required final int dstX,
+      required final int dstY,
+      required final bool isRounded,
+      required final bool isMoving,
+      required final MotionMode motionMode,
+      required final int waitTime,
+      required final int lifeTime,
       required final int exp,
-      @JsonKey(name: "exp-max") required final int expMax,
-      @JsonKey(name: "exp-base") required final int expBase}) = _$_KinStock;
+      required final int expMax,
+      required final int expBase}) = _$_KinStock;
 
   factory _KinStock.fromJson(Map<String, dynamic> json) = _$_KinStock.fromJson;
 
@@ -800,7 +770,6 @@ abstract class _KinStock implements KinStock {
   @override
   String get owner;
   @override
-  @JsonKey(name: "get-type")
   GetType get getType;
   @override
   int get level;
@@ -813,16 +782,12 @@ abstract class _KinStock implements KinStock {
   @override
   int get prol;
   @override
-  @JsonKey(name: "atk-freq")
   int get atkFreq;
   @override
-  @JsonKey(name: "hp-base")
   int get hpBase;
   @override
-  @JsonKey(name: "atk-base")
   int get atkBase;
   @override
-  @JsonKey(name: "atk-freq-base")
   int get atkFreqBase;
   @override
   Speed get speed;
@@ -835,7 +800,6 @@ abstract class _KinStock implements KinStock {
   @override
   Attribute get attribute;
   @override
-  @JsonKey(name: "special-atk")
   SpecialAttack get specialAtk;
   @override
   Activity get activity;
@@ -844,33 +808,24 @@ abstract class _KinStock implements KinStock {
   @override
   int get y;
   @override
-  @JsonKey(name: "dst-x")
   int get dstX;
   @override
-  @JsonKey(name: "dst-y")
   int get dstY;
   @override
-  @JsonKey(name: "is-rounded")
   bool get isRounded;
   @override
-  @JsonKey(name: "is-moving")
   bool get isMoving;
   @override
-  @JsonKey(name: "motion-mode")
   MotionMode get motionMode;
   @override
-  @JsonKey(name: "wait-time")
   int get waitTime;
   @override
-  @JsonKey(name: "life-time")
   int get lifeTime;
   @override
   int get exp;
   @override
-  @JsonKey(name: "exp-max")
   int get expMax;
   @override
-  @JsonKey(name: "exp-base")
   int get expBase;
   @override
   @JsonKey(ignore: true)

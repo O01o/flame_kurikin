@@ -24,27 +24,20 @@ mixin _$KinDictionary {
   String get name => throw _privateConstructorUsedError;
   Race get race => throw _privateConstructorUsedError;
   String get explanation => throw _privateConstructorUsedError;
-  @JsonKey(name: "lang-of-kin")
   String get langOfKin => throw _privateConstructorUsedError;
-  @JsonKey(name: "is-collected")
   bool get isCollected => throw _privateConstructorUsedError;
   Size get size => throw _privateConstructorUsedError;
   PH get ph => throw _privateConstructorUsedError;
   Temperature get temperature => throw _privateConstructorUsedError;
   Attribute get attribute => throw _privateConstructorUsedError;
-  @JsonKey(name: "special-atk")
   SpecialAttack get specialAtk => throw _privateConstructorUsedError;
-  @JsonKey(name: "hp-base")
   int get hpBase => throw _privateConstructorUsedError;
-  @JsonKey(name: "atk-base")
   int get atkBase => throw _privateConstructorUsedError;
   int get def => throw _privateConstructorUsedError;
   int get prol => throw _privateConstructorUsedError;
   Speed get speed => throw _privateConstructorUsedError;
-  @JsonKey(name: "atk-freq-base")
   int get atkFreqBase => throw _privateConstructorUsedError;
   Activity get activity => throw _privateConstructorUsedError;
-  @JsonKey(name: "motion-mode")
   MotionMode get motionMode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -64,21 +57,21 @@ abstract class $KinDictionaryCopyWith<$Res> {
       String name,
       Race race,
       String explanation,
-      @JsonKey(name: "lang-of-kin") String langOfKin,
-      @JsonKey(name: "is-collected") bool isCollected,
+      String langOfKin,
+      bool isCollected,
       Size size,
       PH ph,
       Temperature temperature,
       Attribute attribute,
-      @JsonKey(name: "special-atk") SpecialAttack specialAtk,
-      @JsonKey(name: "hp-base") int hpBase,
-      @JsonKey(name: "atk-base") int atkBase,
+      SpecialAttack specialAtk,
+      int hpBase,
+      int atkBase,
       int def,
       int prol,
       Speed speed,
-      @JsonKey(name: "atk-freq-base") int atkFreqBase,
+      int atkFreqBase,
       Activity activity,
-      @JsonKey(name: "motion-mode") MotionMode motionMode});
+      MotionMode motionMode});
 }
 
 /// @nodoc
@@ -208,21 +201,21 @@ abstract class _$$_KinDictionaryCopyWith<$Res>
       String name,
       Race race,
       String explanation,
-      @JsonKey(name: "lang-of-kin") String langOfKin,
-      @JsonKey(name: "is-collected") bool isCollected,
+      String langOfKin,
+      bool isCollected,
       Size size,
       PH ph,
       Temperature temperature,
       Attribute attribute,
-      @JsonKey(name: "special-atk") SpecialAttack specialAtk,
-      @JsonKey(name: "hp-base") int hpBase,
-      @JsonKey(name: "atk-base") int atkBase,
+      SpecialAttack specialAtk,
+      int hpBase,
+      int atkBase,
       int def,
       int prol,
       Speed speed,
-      @JsonKey(name: "atk-freq-base") int atkFreqBase,
+      int atkFreqBase,
       Activity activity,
-      @JsonKey(name: "motion-mode") MotionMode motionMode});
+      MotionMode motionMode});
 }
 
 /// @nodoc
@@ -339,28 +332,28 @@ class __$$_KinDictionaryCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
 class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   const _$_KinDictionary(
       {required this.id,
       required this.name,
       required this.race,
       required this.explanation,
-      @JsonKey(name: "lang-of-kin") required this.langOfKin,
-      @JsonKey(name: "is-collected") required this.isCollected,
+      required this.langOfKin,
+      required this.isCollected,
       required this.size,
       required this.ph,
       required this.temperature,
       required this.attribute,
-      @JsonKey(name: "special-atk") required this.specialAtk,
-      @JsonKey(name: "hp-base") required this.hpBase,
-      @JsonKey(name: "atk-base") required this.atkBase,
+      required this.specialAtk,
+      required this.hpBase,
+      required this.atkBase,
       required this.def,
       required this.prol,
       required this.speed,
-      @JsonKey(name: "atk-freq-base") required this.atkFreqBase,
+      required this.atkFreqBase,
       required this.activity,
-      @JsonKey(name: "motion-mode") required this.motionMode});
+      required this.motionMode});
 
   factory _$_KinDictionary.fromJson(Map<String, dynamic> json) =>
       _$$_KinDictionaryFromJson(json);
@@ -374,10 +367,8 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   @override
   final String explanation;
   @override
-  @JsonKey(name: "lang-of-kin")
   final String langOfKin;
   @override
-  @JsonKey(name: "is-collected")
   final bool isCollected;
   @override
   final Size size;
@@ -388,13 +379,10 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   @override
   final Attribute attribute;
   @override
-  @JsonKey(name: "special-atk")
   final SpecialAttack specialAtk;
   @override
-  @JsonKey(name: "hp-base")
   final int hpBase;
   @override
-  @JsonKey(name: "atk-base")
   final int atkBase;
   @override
   final int def;
@@ -403,12 +391,10 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   @override
   final Speed speed;
   @override
-  @JsonKey(name: "atk-freq-base")
   final int atkFreqBase;
   @override
   final Activity activity;
   @override
-  @JsonKey(name: "motion-mode")
   final MotionMode motionMode;
 
   @override
@@ -518,26 +504,25 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
 
 abstract class _KinDictionary implements KinDictionary {
   const factory _KinDictionary(
-          {required final String id,
-          required final String name,
-          required final Race race,
-          required final String explanation,
-          @JsonKey(name: "lang-of-kin") required final String langOfKin,
-          @JsonKey(name: "is-collected") required final bool isCollected,
-          required final Size size,
-          required final PH ph,
-          required final Temperature temperature,
-          required final Attribute attribute,
-          @JsonKey(name: "special-atk") required final SpecialAttack specialAtk,
-          @JsonKey(name: "hp-base") required final int hpBase,
-          @JsonKey(name: "atk-base") required final int atkBase,
-          required final int def,
-          required final int prol,
-          required final Speed speed,
-          @JsonKey(name: "atk-freq-base") required final int atkFreqBase,
-          required final Activity activity,
-          @JsonKey(name: "motion-mode") required final MotionMode motionMode}) =
-      _$_KinDictionary;
+      {required final String id,
+      required final String name,
+      required final Race race,
+      required final String explanation,
+      required final String langOfKin,
+      required final bool isCollected,
+      required final Size size,
+      required final PH ph,
+      required final Temperature temperature,
+      required final Attribute attribute,
+      required final SpecialAttack specialAtk,
+      required final int hpBase,
+      required final int atkBase,
+      required final int def,
+      required final int prol,
+      required final Speed speed,
+      required final int atkFreqBase,
+      required final Activity activity,
+      required final MotionMode motionMode}) = _$_KinDictionary;
 
   factory _KinDictionary.fromJson(Map<String, dynamic> json) =
       _$_KinDictionary.fromJson;
@@ -551,10 +536,8 @@ abstract class _KinDictionary implements KinDictionary {
   @override
   String get explanation;
   @override
-  @JsonKey(name: "lang-of-kin")
   String get langOfKin;
   @override
-  @JsonKey(name: "is-collected")
   bool get isCollected;
   @override
   Size get size;
@@ -565,13 +548,10 @@ abstract class _KinDictionary implements KinDictionary {
   @override
   Attribute get attribute;
   @override
-  @JsonKey(name: "special-atk")
   SpecialAttack get specialAtk;
   @override
-  @JsonKey(name: "hp-base")
   int get hpBase;
   @override
-  @JsonKey(name: "atk-base")
   int get atkBase;
   @override
   int get def;
@@ -580,12 +560,10 @@ abstract class _KinDictionary implements KinDictionary {
   @override
   Speed get speed;
   @override
-  @JsonKey(name: "atk-freq-base")
   int get atkFreqBase;
   @override
   Activity get activity;
   @override
-  @JsonKey(name: "motion-mode")
   MotionMode get motionMode;
   @override
   @JsonKey(ignore: true)
