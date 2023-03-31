@@ -12,6 +12,7 @@ void main() {
     print(x);
   }
 
+  /*
   final kin = KinDictionary(
     id: "001", name: "くりキン", race: Race.primeval, 
     explanation: "アイウエオ", langOfKin: "新しい自分", 
@@ -23,6 +24,7 @@ void main() {
 
   String kinJsonString = json.encode(kin.toJson());
   print(kinJsonString);
+  */
 
   return;
 }
