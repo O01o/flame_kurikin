@@ -162,6 +162,24 @@ const _$GetTypeEnumMap = {
   GetType.trade: 'trade',
 };
 
+_$_KinCollectionConstantStatus _$$_KinCollectionConstantStatusFromJson(
+        Map<String, dynamic> json) =>
+    _$_KinCollectionConstantStatus(
+      kinIndex: json['kin-index'] as int,
+      minLevel: json['min-level'] as int,
+      maxLevel: json['max-level'] as int,
+      probability: (json['probability'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$$_KinCollectionConstantStatusToJson(
+        _$_KinCollectionConstantStatus instance) =>
+    <String, dynamic>{
+      'kin-index': instance.kinIndex,
+      'min-level': instance.minLevel,
+      'max-level': instance.maxLevel,
+      'probability': instance.probability,
+    };
+
 _$_KinGeneralVariableStatus _$$_KinGeneralVariableStatusFromJson(
         Map<String, dynamic> json) =>
     _$_KinGeneralVariableStatus(
@@ -213,29 +231,15 @@ Map<String, dynamic> _$$_KinStockVariableStatusToJson(
       'exp-max': instance.expMax,
     };
 
-_$_KinPositionDestination _$$_KinPositionDestinationFromJson(
-        Map<String, dynamic> json) =>
-    _$_KinPositionDestination(
-      x: (json['x'] as num).toDouble(),
-      y: (json['y'] as num).toDouble(),
-    );
-
-Map<String, dynamic> _$$_KinPositionDestinationToJson(
-        _$_KinPositionDestination instance) =>
-    <String, dynamic>{
-      'x': instance.x,
-      'y': instance.y,
-    };
-
 _$_KinBattleVariableStatus _$$_KinBattleVariableStatusFromJson(
         Map<String, dynamic> json) =>
     _$_KinBattleVariableStatus(
-      positionDst: KinPositionDestination.fromJson(
-          json['position-dst'] as Map<String, dynamic>),
-      isRounded: json['is-rounded'] as bool,
-      isMoving: json['is-moving'] as bool,
-      waitTime: json['wait-time'] as int,
-      lifeTime: json['life-time'] as int,
+      positionDst:
+          Position.fromJson(json['position-dst'] as Map<String, dynamic>),
+      isRounded: json['is-rounded'] as bool? ?? false,
+      isMoving: json['is-moving'] as bool? ?? false,
+      waitTime: json['wait-time'] as int? ?? 0,
+      lifeTime: json['life-time'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$_KinBattleVariableStatusToJson(

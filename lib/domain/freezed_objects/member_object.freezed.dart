@@ -14,33 +14,34 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Member _$MemberFromJson(Map<String, dynamic> json) {
-  return _Member.fromJson(json);
+PlayerInfo _$PlayerInfoFromJson(Map<String, dynamic> json) {
+  return _PlayerInfo.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Member {
-  Character get character => throw _privateConstructorUsedError;
+mixin _$PlayerInfo {
   String get name => throw _privateConstructorUsedError;
   Sex get sex => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MemberCopyWith<Member> get copyWith => throw _privateConstructorUsedError;
+  $PlayerInfoCopyWith<PlayerInfo> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MemberCopyWith<$Res> {
-  factory $MemberCopyWith(Member value, $Res Function(Member) then) =
-      _$MemberCopyWithImpl<$Res, Member>;
+abstract class $PlayerInfoCopyWith<$Res> {
+  factory $PlayerInfoCopyWith(
+          PlayerInfo value, $Res Function(PlayerInfo) then) =
+      _$PlayerInfoCopyWithImpl<$Res, PlayerInfo>;
   @useResult
-  $Res call({Character character, String name, Sex sex});
+  $Res call({String name, Sex sex});
 }
 
 /// @nodoc
-class _$MemberCopyWithImpl<$Res, $Val extends Member>
-    implements $MemberCopyWith<$Res> {
-  _$MemberCopyWithImpl(this._value, this._then);
+class _$PlayerInfoCopyWithImpl<$Res, $Val extends PlayerInfo>
+    implements $PlayerInfoCopyWith<$Res> {
+  _$PlayerInfoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -50,15 +51,10 @@ class _$MemberCopyWithImpl<$Res, $Val extends Member>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? character = null,
     Object? name = null,
     Object? sex = null,
   }) {
     return _then(_value.copyWith(
-      character: null == character
-          ? _value.character
-          : character // ignore: cast_nullable_to_non_nullable
-              as Character,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -72,33 +68,31 @@ class _$MemberCopyWithImpl<$Res, $Val extends Member>
 }
 
 /// @nodoc
-abstract class _$$_MemberCopyWith<$Res> implements $MemberCopyWith<$Res> {
-  factory _$$_MemberCopyWith(_$_Member value, $Res Function(_$_Member) then) =
-      __$$_MemberCopyWithImpl<$Res>;
+abstract class _$$_PlayerInfoCopyWith<$Res>
+    implements $PlayerInfoCopyWith<$Res> {
+  factory _$$_PlayerInfoCopyWith(
+          _$_PlayerInfo value, $Res Function(_$_PlayerInfo) then) =
+      __$$_PlayerInfoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Character character, String name, Sex sex});
+  $Res call({String name, Sex sex});
 }
 
 /// @nodoc
-class __$$_MemberCopyWithImpl<$Res>
-    extends _$MemberCopyWithImpl<$Res, _$_Member>
-    implements _$$_MemberCopyWith<$Res> {
-  __$$_MemberCopyWithImpl(_$_Member _value, $Res Function(_$_Member) _then)
+class __$$_PlayerInfoCopyWithImpl<$Res>
+    extends _$PlayerInfoCopyWithImpl<$Res, _$_PlayerInfo>
+    implements _$$_PlayerInfoCopyWith<$Res> {
+  __$$_PlayerInfoCopyWithImpl(
+      _$_PlayerInfo _value, $Res Function(_$_PlayerInfo) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? character = null,
     Object? name = null,
     Object? sex = null,
   }) {
-    return _then(_$_Member(
-      character: null == character
-          ? _value.character
-          : character // ignore: cast_nullable_to_non_nullable
-              as Character,
+    return _then(_$_PlayerInfo(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -114,15 +108,12 @@ class __$$_MemberCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_Member with DiagnosticableTreeMixin implements _Member {
-  const _$_Member(
-      {required this.character, required this.name, required this.sex});
+class _$_PlayerInfo with DiagnosticableTreeMixin implements _PlayerInfo {
+  const _$_PlayerInfo({required this.name, required this.sex});
 
-  factory _$_Member.fromJson(Map<String, dynamic> json) =>
-      _$$_MemberFromJson(json);
+  factory _$_PlayerInfo.fromJson(Map<String, dynamic> json) =>
+      _$$_PlayerInfoFromJson(json);
 
-  @override
-  final Character character;
   @override
   final String name;
   @override
@@ -130,15 +121,14 @@ class _$_Member with DiagnosticableTreeMixin implements _Member {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Member(character: $character, name: $name, sex: $sex)';
+    return 'PlayerInfo(name: $name, sex: $sex)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Member'))
-      ..add(DiagnosticsProperty('character', character))
+      ..add(DiagnosticsProperty('type', 'PlayerInfo'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('sex', sex));
   }
@@ -147,201 +137,42 @@ class _$_Member with DiagnosticableTreeMixin implements _Member {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Member &&
-            (identical(other.character, character) ||
-                other.character == character) &&
+            other is _$_PlayerInfo &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sex, sex) || other.sex == sex));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, character, name, sex);
+  int get hashCode => Object.hash(runtimeType, name, sex);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MemberCopyWith<_$_Member> get copyWith =>
-      __$$_MemberCopyWithImpl<_$_Member>(this, _$identity);
+  _$$_PlayerInfoCopyWith<_$_PlayerInfo> get copyWith =>
+      __$$_PlayerInfoCopyWithImpl<_$_PlayerInfo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MemberToJson(
+    return _$$_PlayerInfoToJson(
       this,
     );
   }
 }
 
-abstract class _Member implements Member {
-  const factory _Member(
-      {required final Character character,
-      required final String name,
-      required final Sex sex}) = _$_Member;
+abstract class _PlayerInfo implements PlayerInfo {
+  const factory _PlayerInfo(
+      {required final String name, required final Sex sex}) = _$_PlayerInfo;
 
-  factory _Member.fromJson(Map<String, dynamic> json) = _$_Member.fromJson;
+  factory _PlayerInfo.fromJson(Map<String, dynamic> json) =
+      _$_PlayerInfo.fromJson;
 
-  @override
-  Character get character;
   @override
   String get name;
   @override
   Sex get sex;
   @override
   @JsonKey(ignore: true)
-  _$$_MemberCopyWith<_$_Member> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-MemberList _$MemberListFromJson(Map<String, dynamic> json) {
-  return _MemberList.fromJson(json);
-}
-
-/// @nodoc
-mixin _$MemberList {
-  List<Member> get memberList => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MemberListCopyWith<MemberList> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MemberListCopyWith<$Res> {
-  factory $MemberListCopyWith(
-          MemberList value, $Res Function(MemberList) then) =
-      _$MemberListCopyWithImpl<$Res, MemberList>;
-  @useResult
-  $Res call({List<Member> memberList});
-}
-
-/// @nodoc
-class _$MemberListCopyWithImpl<$Res, $Val extends MemberList>
-    implements $MemberListCopyWith<$Res> {
-  _$MemberListCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? memberList = null,
-  }) {
-    return _then(_value.copyWith(
-      memberList: null == memberList
-          ? _value.memberList
-          : memberList // ignore: cast_nullable_to_non_nullable
-              as List<Member>,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_MemberListCopyWith<$Res>
-    implements $MemberListCopyWith<$Res> {
-  factory _$$_MemberListCopyWith(
-          _$_MemberList value, $Res Function(_$_MemberList) then) =
-      __$$_MemberListCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({List<Member> memberList});
-}
-
-/// @nodoc
-class __$$_MemberListCopyWithImpl<$Res>
-    extends _$MemberListCopyWithImpl<$Res, _$_MemberList>
-    implements _$$_MemberListCopyWith<$Res> {
-  __$$_MemberListCopyWithImpl(
-      _$_MemberList _value, $Res Function(_$_MemberList) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? memberList = null,
-  }) {
-    return _then(_$_MemberList(
-      memberList: null == memberList
-          ? _value._memberList
-          : memberList // ignore: cast_nullable_to_non_nullable
-              as List<Member>,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_MemberList with DiagnosticableTreeMixin implements _MemberList {
-  const _$_MemberList({required final List<Member> memberList})
-      : _memberList = memberList;
-
-  factory _$_MemberList.fromJson(Map<String, dynamic> json) =>
-      _$$_MemberListFromJson(json);
-
-  final List<Member> _memberList;
-  @override
-  List<Member> get memberList {
-    if (_memberList is EqualUnmodifiableListView) return _memberList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_memberList);
-  }
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MemberList(memberList: $memberList)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MemberList'))
-      ..add(DiagnosticsProperty('memberList', memberList));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_MemberList &&
-            const DeepCollectionEquality()
-                .equals(other._memberList, _memberList));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_memberList));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_MemberListCopyWith<_$_MemberList> get copyWith =>
-      __$$_MemberListCopyWithImpl<_$_MemberList>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MemberListToJson(
-      this,
-    );
-  }
-}
-
-abstract class _MemberList implements MemberList {
-  const factory _MemberList({required final List<Member> memberList}) =
-      _$_MemberList;
-
-  factory _MemberList.fromJson(Map<String, dynamic> json) =
-      _$_MemberList.fromJson;
-
-  @override
-  List<Member> get memberList;
-  @override
-  @JsonKey(ignore: true)
-  _$$_MemberListCopyWith<_$_MemberList> get copyWith =>
+  _$$_PlayerInfoCopyWith<_$_PlayerInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }

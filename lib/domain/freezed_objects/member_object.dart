@@ -7,6 +7,19 @@ part 'member_object.freezed.dart';
 part 'member_object.g.dart';
 
 @freezed
+class PlayerInfo with _$PlayerInfo {
+  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
+  const factory PlayerInfo({
+    required String name,
+    required Sex sex,
+  }) = _PlayerInfo;
+
+  factory PlayerInfo.fromJson(Map<String, dynamic> json) => _$PlayerInfoFromJson(json);
+}
+
+
+/*
+@freezed
 class Member with _$Member {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory Member({
@@ -27,3 +40,4 @@ class MemberList with _$MemberList {
 
   factory MemberList.fromJson(Map<String, dynamic> json) => _$MemberListFromJson(json);
 }
+*/

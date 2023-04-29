@@ -21,17 +21,6 @@ class KinStock with _$KinStock {
 }
 
 @freezed
-class KinBattle with _$KinBattle {
-  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-  const factory KinBattle({
-    required KinStock kinStock,
-    required KinBattleVariableStatus battleVariableStatus,
-  }) = _KinBattle;
-
-  factory KinBattle.fromJson(Map<String, dynamic> json) => _$KinBattleFromJson(json);
-}
-
-@freezed
 class KinStockOwner with _$KinStockOwner {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory KinStockOwner({

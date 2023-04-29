@@ -1,3 +1,4 @@
+import 'base_object.dart';
 import 'package:flame_kurikin/domain/types/kin.dart';
 import 'package:flame_kurikin/domain/types/member.dart';
 
@@ -31,6 +32,23 @@ class KinCongentialConstantStatus with _$KinCongentialConstantStatus {
   factory KinCongentialConstantStatus.fromJson(Map<String, dynamic> json) => _$KinCongentialConstantStatusFromJson(json);
 }
 
+int sizeToInitSpawnAmount(Size size) {
+  switch (size) {
+    case Size.S: return 50;
+    case Size.M: return 25;
+    case Size.L: return 10;
+  }
+}
+
+double getSpeedFromSpeedType(Speed speed) {
+  switch (speed) {
+    case Speed.A: return 10;
+    case Speed.B: return 7;
+    case Speed.C: return 5;
+    case Speed.D: return 3;
+  }
+}
+
 @freezed
 class KinAcquiredConstantStatus with _$KinAcquiredConstantStatus {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
@@ -40,6 +58,19 @@ class KinAcquiredConstantStatus with _$KinAcquiredConstantStatus {
   }) = _KinAcquiredConstantStatus;
 
   factory KinAcquiredConstantStatus.fromJson(Map<String, dynamic> json) => _$KinAcquiredConstantStatusFromJson(json);
+}
+
+@freezed
+class KinCollectionConstantStatus with _$KinCollectionConstantStatus {
+  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
+  const factory KinCollectionConstantStatus({
+    required int kinIndex,
+    required int minLevel,
+    required int maxLevel,
+    required double probability,
+  }) = _KinCollectionConstantStatus;
+
+  factory KinCollectionConstantStatus.fromJson(Map<String, dynamic> json) => _$KinCollectionConstantStatusFromJson(json);
 }
 
 @freezed
@@ -69,25 +100,14 @@ class KinStockVariableStatus with _$KinStockVariableStatus {
 }
 
 @freezed
-class KinPositionDestination with _$KinPositionDestination {
-  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-  const factory KinPositionDestination({
-    required double x,
-    required double y,
-  }) = _KinPositionDestination;
-
-  factory KinPositionDestination.fromJson(Map<String, dynamic> json) => _$KinPositionDestinationFromJson(json);
-}
-
-@freezed
 class KinBattleVariableStatus with _$KinBattleVariableStatus {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory KinBattleVariableStatus({
-    required KinPositionDestination positionDst,
-    required bool isRounded,
-    required bool isMoving,
-    required int waitTime,
-    required int lifeTime,
+    required Position positionDst,
+    @Default(false) bool isRounded,
+    @Default(false) bool isMoving,
+    @Default(0) int waitTime,
+    @Default(0) int lifeTime,
   }) = _KinBattleVariableStatus;
 
   factory KinBattleVariableStatus.fromJson(Map<String, dynamic> json) => _$KinBattleVariableStatusFromJson(json);

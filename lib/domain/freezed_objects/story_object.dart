@@ -11,7 +11,7 @@ part 'story_object.g.dart';
 class Task with _$Task {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory Task({
-    required String task,
+    required String taskName,
     required bool isDone,
   }) = _Task;
 
@@ -19,46 +19,49 @@ class Task with _$Task {
 }
 
 @freezed
-class TaskList with _$TaskList {
-  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-  const factory TaskList({
-    required List<Task> taskList,
-  }) = _TaskList;
-
-  factory TaskList.fromJson(Map<String, dynamic> json) => _$TaskListFromJson(json);
-}
-
-@freezed
 class Season with _$Season {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory Season({
-    required int season,
+    required String seasonName,
+    required List<Task> taskList,
+    required List<MessageBlock> messageBlockList
   }) = _Season;
 
   factory Season.fromJson(Map<String, dynamic> json) => _$SeasonFromJson(json);
 }
 
 @freezed
-class TalkMessage with _$TalkMessage {
+class MessageToken with _$MessageToken {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-  const factory TalkMessage({
+  const factory MessageToken({
     required Character character,
     required Emotion emotion,
+    required String message,
+  }) = _MessageToken;
 
-  }) = _TalkMessage;
-
-  factory TalkMessage.fromJson(Map<String, dynamic> json) => _$TalkMessageFromJson(json);
+  factory MessageToken.fromJson(Map<String, dynamic> json) => _$MessageTokenFromJson(json);
 }
 
 @freezed
-class TalkMessageList with _$TalkMessageList {
+class MessageBlock with _$MessageBlock {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-  const factory TalkMessageList({
+  const factory MessageBlock({
     required String talkId,
-    required Season season,
-    required List<TaskList> checkTaskList,
-    required List<TalkMessage> talkMessageList
-  }) = _TalkMessageList;
+    required List<int> checkTaskIndexList,
+    required List<List<MessageToken>> messageTokenList
+  }) = _MessageBlock;
 
-  factory TalkMessageList.fromJson(Map<String, dynamic> json) => _$TalkMessageListFromJson(json);
+  factory MessageBlock.fromJson(Map<String, dynamic> json) => _$MessageBlockFromJson(json);
+}
+
+
+@freezed
+class StoryInfo with _$StoryInfo {
+  @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
+  const factory StoryInfo({
+    required int currentSeason,
+    required List<Season> seasonList,
+  }) = _StoryInfo;
+
+  factory StoryInfo.fromJson(Map<String, dynamic> json) => _$StoryInfoFromJson(json);
 }

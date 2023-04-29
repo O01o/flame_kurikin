@@ -7,44 +7,44 @@ part of 'story_object.dart';
 // **************************************************************************
 
 _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
-      task: json['task'] as String,
+      taskName: json['task-name'] as String,
       isDone: json['is-done'] as bool,
     );
 
 Map<String, dynamic> _$$_TaskToJson(_$_Task instance) => <String, dynamic>{
-      'task': instance.task,
+      'task-name': instance.taskName,
       'is-done': instance.isDone,
     };
 
-_$_TaskList _$$_TaskListFromJson(Map<String, dynamic> json) => _$_TaskList(
+_$_Season _$$_SeasonFromJson(Map<String, dynamic> json) => _$_Season(
+      seasonName: json['season-name'] as String,
       taskList: (json['task-list'] as List<dynamic>)
           .map((e) => Task.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
-
-Map<String, dynamic> _$$_TaskListToJson(_$_TaskList instance) =>
-    <String, dynamic>{
-      'task-list': instance.taskList.map((e) => e.toJson()).toList(),
-    };
-
-_$_Season _$$_SeasonFromJson(Map<String, dynamic> json) => _$_Season(
-      season: json['season'] as int,
+      messageBlockList: (json['message-block-list'] as List<dynamic>)
+          .map((e) => MessageBlock.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_SeasonToJson(_$_Season instance) => <String, dynamic>{
-      'season': instance.season,
+      'season-name': instance.seasonName,
+      'task-list': instance.taskList.map((e) => e.toJson()).toList(),
+      'message-block-list':
+          instance.messageBlockList.map((e) => e.toJson()).toList(),
     };
 
-_$_TalkMessage _$$_TalkMessageFromJson(Map<String, dynamic> json) =>
-    _$_TalkMessage(
+_$_MessageToken _$$_MessageTokenFromJson(Map<String, dynamic> json) =>
+    _$_MessageToken(
       character: $enumDecode(_$CharacterEnumMap, json['character']),
       emotion: $enumDecode(_$EmotionEnumMap, json['emotion']),
+      message: json['message'] as String,
     );
 
-Map<String, dynamic> _$$_TalkMessageToJson(_$_TalkMessage instance) =>
+Map<String, dynamic> _$$_MessageTokenToJson(_$_MessageToken instance) =>
     <String, dynamic>{
       'character': _$CharacterEnumMap[instance.character]!,
       'emotion': _$EmotionEnumMap[instance.emotion]!,
+      'message': instance.message,
     };
 
 const _$CharacterEnumMap = {
@@ -100,23 +100,37 @@ const _$EmotionEnumMap = {
   Emotion.sad: 'sad',
 };
 
-_$_TalkMessageList _$$_TalkMessageListFromJson(Map<String, dynamic> json) =>
-    _$_TalkMessageList(
+_$_MessageBlock _$$_MessageBlockFromJson(Map<String, dynamic> json) =>
+    _$_MessageBlock(
       talkId: json['talk-id'] as String,
-      season: Season.fromJson(json['season'] as Map<String, dynamic>),
-      checkTaskList: (json['check-task-list'] as List<dynamic>)
-          .map((e) => TaskList.fromJson(e as Map<String, dynamic>))
+      checkTaskIndexList: (json['check-task-index-list'] as List<dynamic>)
+          .map((e) => e as int)
           .toList(),
-      talkMessageList: (json['talk-message-list'] as List<dynamic>)
-          .map((e) => TalkMessage.fromJson(e as Map<String, dynamic>))
+      messageTokenList: (json['message-token-list'] as List<dynamic>)
+          .map((e) => (e as List<dynamic>)
+              .map((e) => MessageToken.fromJson(e as Map<String, dynamic>))
+              .toList())
           .toList(),
     );
 
-Map<String, dynamic> _$$_TalkMessageListToJson(_$_TalkMessageList instance) =>
+Map<String, dynamic> _$$_MessageBlockToJson(_$_MessageBlock instance) =>
     <String, dynamic>{
       'talk-id': instance.talkId,
-      'season': instance.season.toJson(),
-      'check-task-list': instance.checkTaskList.map((e) => e.toJson()).toList(),
-      'talk-message-list':
-          instance.talkMessageList.map((e) => e.toJson()).toList(),
+      'check-task-index-list': instance.checkTaskIndexList,
+      'message-token-list': instance.messageTokenList
+          .map((e) => e.map((e) => e.toJson()).toList())
+          .toList(),
+    };
+
+_$_StoryInfo _$$_StoryInfoFromJson(Map<String, dynamic> json) => _$_StoryInfo(
+      currentSeason: json['current-season'] as int,
+      seasonList: (json['season-list'] as List<dynamic>)
+          .map((e) => Season.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_StoryInfoToJson(_$_StoryInfo instance) =>
+    <String, dynamic>{
+      'current-season': instance.currentSeason,
+      'season-list': instance.seasonList.map((e) => e.toJson()).toList(),
     };

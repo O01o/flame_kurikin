@@ -661,6 +661,226 @@ abstract class _KinAcquiredConstantStatus implements KinAcquiredConstantStatus {
       get copyWith => throw _privateConstructorUsedError;
 }
 
+KinCollectionConstantStatus _$KinCollectionConstantStatusFromJson(
+    Map<String, dynamic> json) {
+  return _KinCollectionConstantStatus.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KinCollectionConstantStatus {
+  int get kinIndex => throw _privateConstructorUsedError;
+  int get minLevel => throw _privateConstructorUsedError;
+  int get maxLevel => throw _privateConstructorUsedError;
+  double get probability => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $KinCollectionConstantStatusCopyWith<KinCollectionConstantStatus>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KinCollectionConstantStatusCopyWith<$Res> {
+  factory $KinCollectionConstantStatusCopyWith(
+          KinCollectionConstantStatus value,
+          $Res Function(KinCollectionConstantStatus) then) =
+      _$KinCollectionConstantStatusCopyWithImpl<$Res,
+          KinCollectionConstantStatus>;
+  @useResult
+  $Res call({int kinIndex, int minLevel, int maxLevel, double probability});
+}
+
+/// @nodoc
+class _$KinCollectionConstantStatusCopyWithImpl<$Res,
+        $Val extends KinCollectionConstantStatus>
+    implements $KinCollectionConstantStatusCopyWith<$Res> {
+  _$KinCollectionConstantStatusCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? kinIndex = null,
+    Object? minLevel = null,
+    Object? maxLevel = null,
+    Object? probability = null,
+  }) {
+    return _then(_value.copyWith(
+      kinIndex: null == kinIndex
+          ? _value.kinIndex
+          : kinIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      minLevel: null == minLevel
+          ? _value.minLevel
+          : minLevel // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxLevel: null == maxLevel
+          ? _value.maxLevel
+          : maxLevel // ignore: cast_nullable_to_non_nullable
+              as int,
+      probability: null == probability
+          ? _value.probability
+          : probability // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_KinCollectionConstantStatusCopyWith<$Res>
+    implements $KinCollectionConstantStatusCopyWith<$Res> {
+  factory _$$_KinCollectionConstantStatusCopyWith(
+          _$_KinCollectionConstantStatus value,
+          $Res Function(_$_KinCollectionConstantStatus) then) =
+      __$$_KinCollectionConstantStatusCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int kinIndex, int minLevel, int maxLevel, double probability});
+}
+
+/// @nodoc
+class __$$_KinCollectionConstantStatusCopyWithImpl<$Res>
+    extends _$KinCollectionConstantStatusCopyWithImpl<$Res,
+        _$_KinCollectionConstantStatus>
+    implements _$$_KinCollectionConstantStatusCopyWith<$Res> {
+  __$$_KinCollectionConstantStatusCopyWithImpl(
+      _$_KinCollectionConstantStatus _value,
+      $Res Function(_$_KinCollectionConstantStatus) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? kinIndex = null,
+    Object? minLevel = null,
+    Object? maxLevel = null,
+    Object? probability = null,
+  }) {
+    return _then(_$_KinCollectionConstantStatus(
+      kinIndex: null == kinIndex
+          ? _value.kinIndex
+          : kinIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      minLevel: null == minLevel
+          ? _value.minLevel
+          : minLevel // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxLevel: null == maxLevel
+          ? _value.maxLevel
+          : maxLevel // ignore: cast_nullable_to_non_nullable
+              as int,
+      probability: null == probability
+          ? _value.probability
+          : probability // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
+class _$_KinCollectionConstantStatus
+    with DiagnosticableTreeMixin
+    implements _KinCollectionConstantStatus {
+  const _$_KinCollectionConstantStatus(
+      {required this.kinIndex,
+      required this.minLevel,
+      required this.maxLevel,
+      required this.probability});
+
+  factory _$_KinCollectionConstantStatus.fromJson(Map<String, dynamic> json) =>
+      _$$_KinCollectionConstantStatusFromJson(json);
+
+  @override
+  final int kinIndex;
+  @override
+  final int minLevel;
+  @override
+  final int maxLevel;
+  @override
+  final double probability;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'KinCollectionConstantStatus(kinIndex: $kinIndex, minLevel: $minLevel, maxLevel: $maxLevel, probability: $probability)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'KinCollectionConstantStatus'))
+      ..add(DiagnosticsProperty('kinIndex', kinIndex))
+      ..add(DiagnosticsProperty('minLevel', minLevel))
+      ..add(DiagnosticsProperty('maxLevel', maxLevel))
+      ..add(DiagnosticsProperty('probability', probability));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_KinCollectionConstantStatus &&
+            (identical(other.kinIndex, kinIndex) ||
+                other.kinIndex == kinIndex) &&
+            (identical(other.minLevel, minLevel) ||
+                other.minLevel == minLevel) &&
+            (identical(other.maxLevel, maxLevel) ||
+                other.maxLevel == maxLevel) &&
+            (identical(other.probability, probability) ||
+                other.probability == probability));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, kinIndex, minLevel, maxLevel, probability);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_KinCollectionConstantStatusCopyWith<_$_KinCollectionConstantStatus>
+      get copyWith => __$$_KinCollectionConstantStatusCopyWithImpl<
+          _$_KinCollectionConstantStatus>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_KinCollectionConstantStatusToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KinCollectionConstantStatus
+    implements KinCollectionConstantStatus {
+  const factory _KinCollectionConstantStatus(
+      {required final int kinIndex,
+      required final int minLevel,
+      required final int maxLevel,
+      required final double probability}) = _$_KinCollectionConstantStatus;
+
+  factory _KinCollectionConstantStatus.fromJson(Map<String, dynamic> json) =
+      _$_KinCollectionConstantStatus.fromJson;
+
+  @override
+  int get kinIndex;
+  @override
+  int get minLevel;
+  @override
+  int get maxLevel;
+  @override
+  double get probability;
+  @override
+  @JsonKey(ignore: true)
+  _$$_KinCollectionConstantStatusCopyWith<_$_KinCollectionConstantStatus>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 KinGeneralVariableStatus _$KinGeneralVariableStatusFromJson(
     Map<String, dynamic> json) {
   return _KinGeneralVariableStatus.fromJson(json);
@@ -1084,176 +1304,6 @@ abstract class _KinStockVariableStatus implements KinStockVariableStatus {
       throw _privateConstructorUsedError;
 }
 
-KinPositionDestination _$KinPositionDestinationFromJson(
-    Map<String, dynamic> json) {
-  return _KinPositionDestination.fromJson(json);
-}
-
-/// @nodoc
-mixin _$KinPositionDestination {
-  double get x => throw _privateConstructorUsedError;
-  double get y => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $KinPositionDestinationCopyWith<KinPositionDestination> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $KinPositionDestinationCopyWith<$Res> {
-  factory $KinPositionDestinationCopyWith(KinPositionDestination value,
-          $Res Function(KinPositionDestination) then) =
-      _$KinPositionDestinationCopyWithImpl<$Res, KinPositionDestination>;
-  @useResult
-  $Res call({double x, double y});
-}
-
-/// @nodoc
-class _$KinPositionDestinationCopyWithImpl<$Res,
-        $Val extends KinPositionDestination>
-    implements $KinPositionDestinationCopyWith<$Res> {
-  _$KinPositionDestinationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? x = null,
-    Object? y = null,
-  }) {
-    return _then(_value.copyWith(
-      x: null == x
-          ? _value.x
-          : x // ignore: cast_nullable_to_non_nullable
-              as double,
-      y: null == y
-          ? _value.y
-          : y // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_KinPositionDestinationCopyWith<$Res>
-    implements $KinPositionDestinationCopyWith<$Res> {
-  factory _$$_KinPositionDestinationCopyWith(_$_KinPositionDestination value,
-          $Res Function(_$_KinPositionDestination) then) =
-      __$$_KinPositionDestinationCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double x, double y});
-}
-
-/// @nodoc
-class __$$_KinPositionDestinationCopyWithImpl<$Res>
-    extends _$KinPositionDestinationCopyWithImpl<$Res,
-        _$_KinPositionDestination>
-    implements _$$_KinPositionDestinationCopyWith<$Res> {
-  __$$_KinPositionDestinationCopyWithImpl(_$_KinPositionDestination _value,
-      $Res Function(_$_KinPositionDestination) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? x = null,
-    Object? y = null,
-  }) {
-    return _then(_$_KinPositionDestination(
-      x: null == x
-          ? _value.x
-          : x // ignore: cast_nullable_to_non_nullable
-              as double,
-      y: null == y
-          ? _value.y
-          : y // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinPositionDestination
-    with DiagnosticableTreeMixin
-    implements _KinPositionDestination {
-  const _$_KinPositionDestination({required this.x, required this.y});
-
-  factory _$_KinPositionDestination.fromJson(Map<String, dynamic> json) =>
-      _$$_KinPositionDestinationFromJson(json);
-
-  @override
-  final double x;
-  @override
-  final double y;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'KinPositionDestination(x: $x, y: $y)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'KinPositionDestination'))
-      ..add(DiagnosticsProperty('x', x))
-      ..add(DiagnosticsProperty('y', y));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_KinPositionDestination &&
-            (identical(other.x, x) || other.x == x) &&
-            (identical(other.y, y) || other.y == y));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, x, y);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_KinPositionDestinationCopyWith<_$_KinPositionDestination> get copyWith =>
-      __$$_KinPositionDestinationCopyWithImpl<_$_KinPositionDestination>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_KinPositionDestinationToJson(
-      this,
-    );
-  }
-}
-
-abstract class _KinPositionDestination implements KinPositionDestination {
-  const factory _KinPositionDestination(
-      {required final double x,
-      required final double y}) = _$_KinPositionDestination;
-
-  factory _KinPositionDestination.fromJson(Map<String, dynamic> json) =
-      _$_KinPositionDestination.fromJson;
-
-  @override
-  double get x;
-  @override
-  double get y;
-  @override
-  @JsonKey(ignore: true)
-  _$$_KinPositionDestinationCopyWith<_$_KinPositionDestination> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 KinBattleVariableStatus _$KinBattleVariableStatusFromJson(
     Map<String, dynamic> json) {
   return _KinBattleVariableStatus.fromJson(json);
@@ -1261,7 +1311,7 @@ KinBattleVariableStatus _$KinBattleVariableStatusFromJson(
 
 /// @nodoc
 mixin _$KinBattleVariableStatus {
-  KinPositionDestination get positionDst => throw _privateConstructorUsedError;
+  Position get positionDst => throw _privateConstructorUsedError;
   bool get isRounded => throw _privateConstructorUsedError;
   bool get isMoving => throw _privateConstructorUsedError;
   int get waitTime => throw _privateConstructorUsedError;
@@ -1280,13 +1330,13 @@ abstract class $KinBattleVariableStatusCopyWith<$Res> {
       _$KinBattleVariableStatusCopyWithImpl<$Res, KinBattleVariableStatus>;
   @useResult
   $Res call(
-      {KinPositionDestination positionDst,
+      {Position positionDst,
       bool isRounded,
       bool isMoving,
       int waitTime,
       int lifeTime});
 
-  $KinPositionDestinationCopyWith<$Res> get positionDst;
+  $PositionCopyWith<$Res> get positionDst;
 }
 
 /// @nodoc
@@ -1313,7 +1363,7 @@ class _$KinBattleVariableStatusCopyWithImpl<$Res,
       positionDst: null == positionDst
           ? _value.positionDst
           : positionDst // ignore: cast_nullable_to_non_nullable
-              as KinPositionDestination,
+              as Position,
       isRounded: null == isRounded
           ? _value.isRounded
           : isRounded // ignore: cast_nullable_to_non_nullable
@@ -1335,8 +1385,8 @@ class _$KinBattleVariableStatusCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $KinPositionDestinationCopyWith<$Res> get positionDst {
-    return $KinPositionDestinationCopyWith<$Res>(_value.positionDst, (value) {
+  $PositionCopyWith<$Res> get positionDst {
+    return $PositionCopyWith<$Res>(_value.positionDst, (value) {
       return _then(_value.copyWith(positionDst: value) as $Val);
     });
   }
@@ -1351,14 +1401,14 @@ abstract class _$$_KinBattleVariableStatusCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {KinPositionDestination positionDst,
+      {Position positionDst,
       bool isRounded,
       bool isMoving,
       int waitTime,
       int lifeTime});
 
   @override
-  $KinPositionDestinationCopyWith<$Res> get positionDst;
+  $PositionCopyWith<$Res> get positionDst;
 }
 
 /// @nodoc
@@ -1383,7 +1433,7 @@ class __$$_KinBattleVariableStatusCopyWithImpl<$Res>
       positionDst: null == positionDst
           ? _value.positionDst
           : positionDst // ignore: cast_nullable_to_non_nullable
-              as KinPositionDestination,
+              as Position,
       isRounded: null == isRounded
           ? _value.isRounded
           : isRounded // ignore: cast_nullable_to_non_nullable
@@ -1412,23 +1462,27 @@ class _$_KinBattleVariableStatus
     implements _KinBattleVariableStatus {
   const _$_KinBattleVariableStatus(
       {required this.positionDst,
-      required this.isRounded,
-      required this.isMoving,
-      required this.waitTime,
-      required this.lifeTime});
+      this.isRounded = false,
+      this.isMoving = false,
+      this.waitTime = 0,
+      this.lifeTime = 0});
 
   factory _$_KinBattleVariableStatus.fromJson(Map<String, dynamic> json) =>
       _$$_KinBattleVariableStatusFromJson(json);
 
   @override
-  final KinPositionDestination positionDst;
+  final Position positionDst;
   @override
+  @JsonKey()
   final bool isRounded;
   @override
+  @JsonKey()
   final bool isMoving;
   @override
+  @JsonKey()
   final int waitTime;
   @override
+  @JsonKey()
   final int lifeTime;
 
   @override
@@ -1488,17 +1542,17 @@ class _$_KinBattleVariableStatus
 
 abstract class _KinBattleVariableStatus implements KinBattleVariableStatus {
   const factory _KinBattleVariableStatus(
-      {required final KinPositionDestination positionDst,
-      required final bool isRounded,
-      required final bool isMoving,
-      required final int waitTime,
-      required final int lifeTime}) = _$_KinBattleVariableStatus;
+      {required final Position positionDst,
+      final bool isRounded,
+      final bool isMoving,
+      final int waitTime,
+      final int lifeTime}) = _$_KinBattleVariableStatus;
 
   factory _KinBattleVariableStatus.fromJson(Map<String, dynamic> json) =
       _$_KinBattleVariableStatus.fromJson;
 
   @override
-  KinPositionDestination get positionDst;
+  Position get positionDst;
   @override
   bool get isRounded;
   @override

@@ -25,18 +25,6 @@ Map<String, dynamic> _$$_KinStockToJson(_$_KinStock instance) =>
       'stock-variable-status': instance.stockVariableStatus.toJson(),
     };
 
-_$_KinBattle _$$_KinBattleFromJson(Map<String, dynamic> json) => _$_KinBattle(
-      kinStock: KinStock.fromJson(json['kin-stock'] as Map<String, dynamic>),
-      battleVariableStatus: KinBattleVariableStatus.fromJson(
-          json['battle-variable-status'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_KinBattleToJson(_$_KinBattle instance) =>
-    <String, dynamic>{
-      'kin-stock': instance.kinStock.toJson(),
-      'battle-variable-status': instance.battleVariableStatus.toJson(),
-    };
-
 _$_KinStockOwner _$$_KinStockOwnerFromJson(Map<String, dynamic> json) =>
     _$_KinStockOwner(
       owner: $enumDecode(_$CharacterEnumMap, json['owner']),
