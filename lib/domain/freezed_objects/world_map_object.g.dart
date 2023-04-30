@@ -26,7 +26,8 @@ const _$LocationTypeEnumMap = {
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       name: json['name'] as String,
       explanation: json['explanation'] as String,
-      position: Position.fromJson(json['position'] as Map<String, dynamic>),
+      location:
+          const Vector2ToJson().fromJson(json['location'] as FreezedVector2?),
       iconImagePath: json['icon-image-path'] as String,
       locationPath:
           LocationPath.fromJson(json['location-path'] as Map<String, dynamic>),
@@ -36,7 +37,7 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) =>
     <String, dynamic>{
       'name': instance.name,
       'explanation': instance.explanation,
-      'position': instance.position.toJson(),
+      'location': const Vector2ToJson().toJson(instance.location),
       'icon-image-path': instance.iconImagePath,
       'location-path': instance.locationPath.toJson(),
     };
@@ -59,8 +60,8 @@ _$_ExplorationMapList _$$_ExplorationMapListFromJson(
         Map<String, dynamic> json) =>
     _$_ExplorationMapList(
       currentExplorationMapIndex: json['current-exploration-map-index'] as int,
-      currentPosition:
-          Position.fromJson(json['current-position'] as Map<String, dynamic>),
+      currentLocation: const Vector2ToJson()
+          .fromJson(json['current-location'] as FreezedVector2?),
       explorationMapList: (json['exploration-map-list'] as List<dynamic>)
           .map((e) => ExplorationMap.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -70,7 +71,8 @@ Map<String, dynamic> _$$_ExplorationMapListToJson(
         _$_ExplorationMapList instance) =>
     <String, dynamic>{
       'current-exploration-map-index': instance.currentExplorationMapIndex,
-      'current-position': instance.currentPosition.toJson(),
+      'current-location':
+          const Vector2ToJson().toJson(instance.currentLocation),
       'exploration-map-list':
           instance.explorationMapList.map((e) => e.toJson()).toList(),
     };
@@ -82,9 +84,8 @@ _$_EventMap _$$_EventMapFromJson(Map<String, dynamic> json) => _$_EventMap(
           .map((e) =>
               KinCollectionConstantStatus.fromJson(e as Map<String, dynamic>))
           .toList(),
-      collectableArea: (json['collectable-area'] as List<dynamic>)
-          .map((e) => Position.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      collectableArea: const Vector2ListToJson()
+          .fromJson(json['collectable-area'] as List<FreezedVector2?>?),
       parentExplorationMap: ExplorationMap.fromJson(
           json['parent-exploration-map'] as Map<String, dynamic>),
       parentExplorationMapLocationIndex:
@@ -97,7 +98,7 @@ Map<String, dynamic> _$$_EventMapToJson(_$_EventMap instance) =>
       'collection-constant-status-list':
           instance.collectionConstantStatusList.map((e) => e.toJson()).toList(),
       'collectable-area':
-          instance.collectableArea.map((e) => e.toJson()).toList(),
+          const Vector2ListToJson().toJson(instance.collectableArea),
       'parent-exploration-map': instance.parentExplorationMap.toJson(),
       'parent-exploration-map-location-index':
           instance.parentExplorationMapLocationIndex,

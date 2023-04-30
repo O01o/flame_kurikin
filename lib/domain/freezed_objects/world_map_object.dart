@@ -1,14 +1,14 @@
-import 'base_object.dart';
 import 'member_object.dart';
+import 'vector_object.dart';
 import 'kin_base_object.dart';
 import 'package:flame_kurikin/domain/types/member.dart';
-
+import 'package:flame/geometry.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flame/components.dart';
 
 part 'world_map_object.freezed.dart';
 part 'world_map_object.g.dart';
-
 
 @JsonEnum(fieldRename: FieldRename.kebab)
 enum LocationType {
@@ -33,7 +33,7 @@ class Location with _$Location {
   const factory Location({
     required String name,
     required String explanation,
-    required Position position,
+    @Vector2ToJson() Vector2? location,
     required String iconImagePath,
     required LocationPath locationPath,
   }) = _Location;
@@ -57,7 +57,7 @@ class ExplorationMapList with _$ExplorationMapList {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
   const factory ExplorationMapList({
     required int currentExplorationMapIndex,
-    required Position currentPosition,
+    @Vector2ToJson() Vector2? currentLocation,
     required List<ExplorationMap> explorationMapList,
   }) = _ExplorationMapList;
 
@@ -70,7 +70,7 @@ class EventMap with _$EventMap {
   const factory EventMap({
     required String backgroundImagePath,
     required List<KinCollectionConstantStatus> collectionConstantStatusList,
-    required List<Position> collectableArea,
+    @Vector2ListToJson() List<Vector2?>? collectableArea,
     required ExplorationMap parentExplorationMap,
     required int parentExplorationMapLocationIndex,
   }) = _EventMap;

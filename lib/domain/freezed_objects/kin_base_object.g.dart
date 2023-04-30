@@ -231,27 +231,6 @@ Map<String, dynamic> _$$_KinStockVariableStatusToJson(
       'exp-max': instance.expMax,
     };
 
-_$_KinBattleVariableStatus _$$_KinBattleVariableStatusFromJson(
-        Map<String, dynamic> json) =>
-    _$_KinBattleVariableStatus(
-      positionDst:
-          Position.fromJson(json['position-dst'] as Map<String, dynamic>),
-      isRounded: json['is-rounded'] as bool? ?? false,
-      isMoving: json['is-moving'] as bool? ?? false,
-      waitTime: json['wait-time'] as int? ?? 0,
-      lifeTime: json['life-time'] as int? ?? 0,
-    );
-
-Map<String, dynamic> _$$_KinBattleVariableStatusToJson(
-        _$_KinBattleVariableStatus instance) =>
-    <String, dynamic>{
-      'position-dst': instance.positionDst.toJson(),
-      'is-rounded': instance.isRounded,
-      'is-moving': instance.isMoving,
-      'wait-time': instance.waitTime,
-      'life-time': instance.lifeTime,
-    };
-
 _$_KinExplanation _$$_KinExplanationFromJson(Map<String, dynamic> json) =>
     _$_KinExplanation(
       explanation: json['explanation'] as String,

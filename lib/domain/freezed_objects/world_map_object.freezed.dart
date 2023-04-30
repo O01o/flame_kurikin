@@ -187,7 +187,8 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 mixin _$Location {
   String get name => throw _privateConstructorUsedError;
   String get explanation => throw _privateConstructorUsedError;
-  Position get position => throw _privateConstructorUsedError;
+  @Vector2ToJson()
+  Vector2? get location => throw _privateConstructorUsedError;
   String get iconImagePath => throw _privateConstructorUsedError;
   LocationPath get locationPath => throw _privateConstructorUsedError;
 
@@ -205,11 +206,10 @@ abstract class $LocationCopyWith<$Res> {
   $Res call(
       {String name,
       String explanation,
-      Position position,
+      @Vector2ToJson() Vector2? location,
       String iconImagePath,
       LocationPath locationPath});
 
-  $PositionCopyWith<$Res> get position;
   $LocationPathCopyWith<$Res> get locationPath;
 }
 
@@ -228,7 +228,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   $Res call({
     Object? name = null,
     Object? explanation = null,
-    Object? position = null,
+    Object? location = freezed,
     Object? iconImagePath = null,
     Object? locationPath = null,
   }) {
@@ -241,10 +241,10 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as Position,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Vector2?,
       iconImagePath: null == iconImagePath
           ? _value.iconImagePath
           : iconImagePath // ignore: cast_nullable_to_non_nullable
@@ -254,14 +254,6 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           : locationPath // ignore: cast_nullable_to_non_nullable
               as LocationPath,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PositionCopyWith<$Res> get position {
-    return $PositionCopyWith<$Res>(_value.position, (value) {
-      return _then(_value.copyWith(position: value) as $Val);
-    });
   }
 
   @override
@@ -283,12 +275,10 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $Res call(
       {String name,
       String explanation,
-      Position position,
+      @Vector2ToJson() Vector2? location,
       String iconImagePath,
       LocationPath locationPath});
 
-  @override
-  $PositionCopyWith<$Res> get position;
   @override
   $LocationPathCopyWith<$Res> get locationPath;
 }
@@ -306,7 +296,7 @@ class __$$_LocationCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? explanation = null,
-    Object? position = null,
+    Object? location = freezed,
     Object? iconImagePath = null,
     Object? locationPath = null,
   }) {
@@ -319,10 +309,10 @@ class __$$_LocationCopyWithImpl<$Res>
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
-      position: null == position
-          ? _value.position
-          : position // ignore: cast_nullable_to_non_nullable
-              as Position,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Vector2?,
       iconImagePath: null == iconImagePath
           ? _value.iconImagePath
           : iconImagePath // ignore: cast_nullable_to_non_nullable
@@ -342,7 +332,7 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
   const _$_Location(
       {required this.name,
       required this.explanation,
-      required this.position,
+      @Vector2ToJson() this.location,
       required this.iconImagePath,
       required this.locationPath});
 
@@ -354,7 +344,8 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
   @override
   final String explanation;
   @override
-  final Position position;
+  @Vector2ToJson()
+  final Vector2? location;
   @override
   final String iconImagePath;
   @override
@@ -362,7 +353,7 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Location(name: $name, explanation: $explanation, position: $position, iconImagePath: $iconImagePath, locationPath: $locationPath)';
+    return 'Location(name: $name, explanation: $explanation, location: $location, iconImagePath: $iconImagePath, locationPath: $locationPath)';
   }
 
   @override
@@ -372,7 +363,7 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
       ..add(DiagnosticsProperty('type', 'Location'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('explanation', explanation))
-      ..add(DiagnosticsProperty('position', position))
+      ..add(DiagnosticsProperty('location', location))
       ..add(DiagnosticsProperty('iconImagePath', iconImagePath))
       ..add(DiagnosticsProperty('locationPath', locationPath));
   }
@@ -385,8 +376,8 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.explanation, explanation) ||
                 other.explanation == explanation) &&
-            (identical(other.position, position) ||
-                other.position == position) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.iconImagePath, iconImagePath) ||
                 other.iconImagePath == iconImagePath) &&
             (identical(other.locationPath, locationPath) ||
@@ -396,7 +387,7 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, explanation, position, iconImagePath, locationPath);
+      runtimeType, name, explanation, location, iconImagePath, locationPath);
 
   @JsonKey(ignore: true)
   @override
@@ -416,7 +407,7 @@ abstract class _Location implements Location {
   const factory _Location(
       {required final String name,
       required final String explanation,
-      required final Position position,
+      @Vector2ToJson() final Vector2? location,
       required final String iconImagePath,
       required final LocationPath locationPath}) = _$_Location;
 
@@ -427,7 +418,8 @@ abstract class _Location implements Location {
   @override
   String get explanation;
   @override
-  Position get position;
+  @Vector2ToJson()
+  Vector2? get location;
   @override
   String get iconImagePath;
   @override
@@ -622,7 +614,8 @@ ExplorationMapList _$ExplorationMapListFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ExplorationMapList {
   int get currentExplorationMapIndex => throw _privateConstructorUsedError;
-  Position get currentPosition => throw _privateConstructorUsedError;
+  @Vector2ToJson()
+  Vector2? get currentLocation => throw _privateConstructorUsedError;
   List<ExplorationMap> get explorationMapList =>
       throw _privateConstructorUsedError;
 
@@ -640,10 +633,8 @@ abstract class $ExplorationMapListCopyWith<$Res> {
   @useResult
   $Res call(
       {int currentExplorationMapIndex,
-      Position currentPosition,
+      @Vector2ToJson() Vector2? currentLocation,
       List<ExplorationMap> explorationMapList});
-
-  $PositionCopyWith<$Res> get currentPosition;
 }
 
 /// @nodoc
@@ -660,7 +651,7 @@ class _$ExplorationMapListCopyWithImpl<$Res, $Val extends ExplorationMapList>
   @override
   $Res call({
     Object? currentExplorationMapIndex = null,
-    Object? currentPosition = null,
+    Object? currentLocation = freezed,
     Object? explorationMapList = null,
   }) {
     return _then(_value.copyWith(
@@ -668,23 +659,15 @@ class _$ExplorationMapListCopyWithImpl<$Res, $Val extends ExplorationMapList>
           ? _value.currentExplorationMapIndex
           : currentExplorationMapIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      currentPosition: null == currentPosition
-          ? _value.currentPosition
-          : currentPosition // ignore: cast_nullable_to_non_nullable
-              as Position,
+      currentLocation: freezed == currentLocation
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as Vector2?,
       explorationMapList: null == explorationMapList
           ? _value.explorationMapList
           : explorationMapList // ignore: cast_nullable_to_non_nullable
               as List<ExplorationMap>,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PositionCopyWith<$Res> get currentPosition {
-    return $PositionCopyWith<$Res>(_value.currentPosition, (value) {
-      return _then(_value.copyWith(currentPosition: value) as $Val);
-    });
   }
 }
 
@@ -698,11 +681,8 @@ abstract class _$$_ExplorationMapListCopyWith<$Res>
   @useResult
   $Res call(
       {int currentExplorationMapIndex,
-      Position currentPosition,
+      @Vector2ToJson() Vector2? currentLocation,
       List<ExplorationMap> explorationMapList});
-
-  @override
-  $PositionCopyWith<$Res> get currentPosition;
 }
 
 /// @nodoc
@@ -717,7 +697,7 @@ class __$$_ExplorationMapListCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentExplorationMapIndex = null,
-    Object? currentPosition = null,
+    Object? currentLocation = freezed,
     Object? explorationMapList = null,
   }) {
     return _then(_$_ExplorationMapList(
@@ -725,10 +705,10 @@ class __$$_ExplorationMapListCopyWithImpl<$Res>
           ? _value.currentExplorationMapIndex
           : currentExplorationMapIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      currentPosition: null == currentPosition
-          ? _value.currentPosition
-          : currentPosition // ignore: cast_nullable_to_non_nullable
-              as Position,
+      currentLocation: freezed == currentLocation
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as Vector2?,
       explorationMapList: null == explorationMapList
           ? _value._explorationMapList
           : explorationMapList // ignore: cast_nullable_to_non_nullable
@@ -745,7 +725,7 @@ class _$_ExplorationMapList
     implements _ExplorationMapList {
   const _$_ExplorationMapList(
       {required this.currentExplorationMapIndex,
-      required this.currentPosition,
+      @Vector2ToJson() this.currentLocation,
       required final List<ExplorationMap> explorationMapList})
       : _explorationMapList = explorationMapList;
 
@@ -755,7 +735,8 @@ class _$_ExplorationMapList
   @override
   final int currentExplorationMapIndex;
   @override
-  final Position currentPosition;
+  @Vector2ToJson()
+  final Vector2? currentLocation;
   final List<ExplorationMap> _explorationMapList;
   @override
   List<ExplorationMap> get explorationMapList {
@@ -767,7 +748,7 @@ class _$_ExplorationMapList
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ExplorationMapList(currentExplorationMapIndex: $currentExplorationMapIndex, currentPosition: $currentPosition, explorationMapList: $explorationMapList)';
+    return 'ExplorationMapList(currentExplorationMapIndex: $currentExplorationMapIndex, currentLocation: $currentLocation, explorationMapList: $explorationMapList)';
   }
 
   @override
@@ -777,7 +758,7 @@ class _$_ExplorationMapList
       ..add(DiagnosticsProperty('type', 'ExplorationMapList'))
       ..add(DiagnosticsProperty(
           'currentExplorationMapIndex', currentExplorationMapIndex))
-      ..add(DiagnosticsProperty('currentPosition', currentPosition))
+      ..add(DiagnosticsProperty('currentLocation', currentLocation))
       ..add(DiagnosticsProperty('explorationMapList', explorationMapList));
   }
 
@@ -790,8 +771,8 @@ class _$_ExplorationMapList
                     currentExplorationMapIndex) ||
                 other.currentExplorationMapIndex ==
                     currentExplorationMapIndex) &&
-            (identical(other.currentPosition, currentPosition) ||
-                other.currentPosition == currentPosition) &&
+            (identical(other.currentLocation, currentLocation) ||
+                other.currentLocation == currentLocation) &&
             const DeepCollectionEquality()
                 .equals(other._explorationMapList, _explorationMapList));
   }
@@ -801,7 +782,7 @@ class _$_ExplorationMapList
   int get hashCode => Object.hash(
       runtimeType,
       currentExplorationMapIndex,
-      currentPosition,
+      currentLocation,
       const DeepCollectionEquality().hash(_explorationMapList));
 
   @JsonKey(ignore: true)
@@ -822,7 +803,7 @@ class _$_ExplorationMapList
 abstract class _ExplorationMapList implements ExplorationMapList {
   const factory _ExplorationMapList(
           {required final int currentExplorationMapIndex,
-          required final Position currentPosition,
+          @Vector2ToJson() final Vector2? currentLocation,
           required final List<ExplorationMap> explorationMapList}) =
       _$_ExplorationMapList;
 
@@ -832,7 +813,8 @@ abstract class _ExplorationMapList implements ExplorationMapList {
   @override
   int get currentExplorationMapIndex;
   @override
-  Position get currentPosition;
+  @Vector2ToJson()
+  Vector2? get currentLocation;
   @override
   List<ExplorationMap> get explorationMapList;
   @override
@@ -850,7 +832,8 @@ mixin _$EventMap {
   String get backgroundImagePath => throw _privateConstructorUsedError;
   List<KinCollectionConstantStatus> get collectionConstantStatusList =>
       throw _privateConstructorUsedError;
-  List<Position> get collectableArea => throw _privateConstructorUsedError;
+  @Vector2ListToJson()
+  List<Vector2?>? get collectableArea => throw _privateConstructorUsedError;
   ExplorationMap get parentExplorationMap => throw _privateConstructorUsedError;
   int get parentExplorationMapLocationIndex =>
       throw _privateConstructorUsedError;
@@ -869,7 +852,7 @@ abstract class $EventMapCopyWith<$Res> {
   $Res call(
       {String backgroundImagePath,
       List<KinCollectionConstantStatus> collectionConstantStatusList,
-      List<Position> collectableArea,
+      @Vector2ListToJson() List<Vector2?>? collectableArea,
       ExplorationMap parentExplorationMap,
       int parentExplorationMapLocationIndex});
 
@@ -891,7 +874,7 @@ class _$EventMapCopyWithImpl<$Res, $Val extends EventMap>
   $Res call({
     Object? backgroundImagePath = null,
     Object? collectionConstantStatusList = null,
-    Object? collectableArea = null,
+    Object? collectableArea = freezed,
     Object? parentExplorationMap = null,
     Object? parentExplorationMapLocationIndex = null,
   }) {
@@ -904,10 +887,10 @@ class _$EventMapCopyWithImpl<$Res, $Val extends EventMap>
           ? _value.collectionConstantStatusList
           : collectionConstantStatusList // ignore: cast_nullable_to_non_nullable
               as List<KinCollectionConstantStatus>,
-      collectableArea: null == collectableArea
+      collectableArea: freezed == collectableArea
           ? _value.collectableArea
           : collectableArea // ignore: cast_nullable_to_non_nullable
-              as List<Position>,
+              as List<Vector2?>?,
       parentExplorationMap: null == parentExplorationMap
           ? _value.parentExplorationMap
           : parentExplorationMap // ignore: cast_nullable_to_non_nullable
@@ -939,7 +922,7 @@ abstract class _$$_EventMapCopyWith<$Res> implements $EventMapCopyWith<$Res> {
   $Res call(
       {String backgroundImagePath,
       List<KinCollectionConstantStatus> collectionConstantStatusList,
-      List<Position> collectableArea,
+      @Vector2ListToJson() List<Vector2?>? collectableArea,
       ExplorationMap parentExplorationMap,
       int parentExplorationMapLocationIndex});
 
@@ -960,7 +943,7 @@ class __$$_EventMapCopyWithImpl<$Res>
   $Res call({
     Object? backgroundImagePath = null,
     Object? collectionConstantStatusList = null,
-    Object? collectableArea = null,
+    Object? collectableArea = freezed,
     Object? parentExplorationMap = null,
     Object? parentExplorationMapLocationIndex = null,
   }) {
@@ -973,10 +956,10 @@ class __$$_EventMapCopyWithImpl<$Res>
           ? _value._collectionConstantStatusList
           : collectionConstantStatusList // ignore: cast_nullable_to_non_nullable
               as List<KinCollectionConstantStatus>,
-      collectableArea: null == collectableArea
+      collectableArea: freezed == collectableArea
           ? _value._collectableArea
           : collectableArea // ignore: cast_nullable_to_non_nullable
-              as List<Position>,
+              as List<Vector2?>?,
       parentExplorationMap: null == parentExplorationMap
           ? _value.parentExplorationMap
           : parentExplorationMap // ignore: cast_nullable_to_non_nullable
@@ -998,7 +981,7 @@ class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
       {required this.backgroundImagePath,
       required final List<KinCollectionConstantStatus>
           collectionConstantStatusList,
-      required final List<Position> collectableArea,
+      @Vector2ListToJson() final List<Vector2?>? collectableArea,
       required this.parentExplorationMap,
       required this.parentExplorationMapLocationIndex})
       : _collectionConstantStatusList = collectionConstantStatusList,
@@ -1018,12 +1001,15 @@ class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
     return EqualUnmodifiableListView(_collectionConstantStatusList);
   }
 
-  final List<Position> _collectableArea;
+  final List<Vector2?>? _collectableArea;
   @override
-  List<Position> get collectableArea {
+  @Vector2ListToJson()
+  List<Vector2?>? get collectableArea {
+    final value = _collectableArea;
+    if (value == null) return null;
     if (_collectableArea is EqualUnmodifiableListView) return _collectableArea;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_collectableArea);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -1099,7 +1085,7 @@ abstract class _EventMap implements EventMap {
       {required final String backgroundImagePath,
       required final List<KinCollectionConstantStatus>
           collectionConstantStatusList,
-      required final List<Position> collectableArea,
+      @Vector2ListToJson() final List<Vector2?>? collectableArea,
       required final ExplorationMap parentExplorationMap,
       required final int parentExplorationMapLocationIndex}) = _$_EventMap;
 
@@ -1110,7 +1096,8 @@ abstract class _EventMap implements EventMap {
   @override
   List<KinCollectionConstantStatus> get collectionConstantStatusList;
   @override
-  List<Position> get collectableArea;
+  @Vector2ListToJson()
+  List<Vector2?>? get collectableArea;
   @override
   ExplorationMap get parentExplorationMap;
   @override

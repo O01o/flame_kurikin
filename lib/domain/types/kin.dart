@@ -64,13 +64,6 @@ enum GetType {
   trade,
 }
 
-@JsonEnum(fieldRename: FieldRename.kebab)
-enum Race {
-  primeval,
-  newSpecies,
-  unique,
-  phantom
-}
 
 @JsonEnum(fieldRename: FieldRename.kebab)
 enum MotionMode {
@@ -80,4 +73,27 @@ enum MotionMode {
   appeal,
   damage,
   defeat
+}
+
+@JsonEnum(fieldRename: FieldRename.kebab)
+enum Race {
+  primeval,
+  newSpecies,
+  rareSpecies,
+  superRareSpecies,
+  unique,
+  phantom
+}
+
+
+String raceToString(Race? race) {
+  switch (race) {
+    case Race.primeval: return "原生キン";
+    case Race.newSpecies: return "新種キン";
+    case Race.rareSpecies: return "新種キン";
+    case Race.superRareSpecies: return "新種キン";
+    case Race.unique: return "コユウキン";
+    case Race.phantom: return "隠れキン";
+    default: return "謎キン";
+  }
 }

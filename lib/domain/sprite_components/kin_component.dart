@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:flame_kurikin/domain/freezed_objects/base_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_base_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_dictionary_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
@@ -13,14 +12,15 @@ import 'package:flame/components.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
 
 class KinComponent extends SpriteComponent {
-  KinComponent({required this.sprite}) : super(sprite: sprite);
+  KinComponent({required this.kinStock}) : super();
 
-  final Sprite sprite;
+  final KinStock kinStock;
   
   bool isRounded = false;
   bool isMoving = false;
   int waitTime = 0;
   Vector2 destination = Vector2.all(0);
+  Activity activity = Activity.active;
   MotionMode motionMode = MotionMode.neutral;
   int lifeTime = 0;
 
@@ -28,13 +28,14 @@ class KinComponent extends SpriteComponent {
   Future<void> onLoad() async {
     super.onLoad();
 
-    // print("${kinComponent.sprite}, ${kinComponent.position}");
-    Sprite sprite = await Sprite.load('kurikin_package.jpg');
-    // Sprite sprite = await Sprite.load('download.png');
-    SpriteComponent spriteComponent = SpriteComponent(
-      sprite: sprite,
-      size: Vector2.all(20),
-      position: Vector2(position.x, position.y)
+    KinCongentialConstantStatus status = kinStock.congentialConstantStatus;
+    sprite = await Sprite.load(
+      "${status.id}_${activity.toString()}.jpg",
+      srcSize: sizeToVector2Size(status.size),
+      srcPosition: Vector2(
+        math.Random().nextDouble() * 100 + 100, 
+        math.Random().nextDouble() * 100 + 100, 
+      ),
     );
 
     // print("${spriteComponent.sprite!.originalSize}, ");
@@ -65,13 +66,7 @@ class KinGroupComponent extends PositionComponent {
     for (int i=0; i<sizeToInitSpawnAmount(kinStock.congentialConstantStatus.size); i++) {
       kinComponents.add(
         KinComponent(
-          sprite: await Sprite.load(
-            'kurikin_package.jpg', 
-            srcPosition: Vector2(
-              math.Random().nextDouble() * 100 + 100, 
-              math.Random().nextDouble() * 100 + 100, 
-            ),
-          ),
+          kinStock: kinStock
         )
       );
     }

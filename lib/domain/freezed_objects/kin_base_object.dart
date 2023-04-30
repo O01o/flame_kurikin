@@ -1,4 +1,5 @@
-import 'base_object.dart';
+import 'package:flame/game.dart';
+
 import 'package:flame_kurikin/domain/types/kin.dart';
 import 'package:flame_kurikin/domain/types/member.dart';
 
@@ -37,6 +38,14 @@ int sizeToInitSpawnAmount(Size size) {
     case Size.S: return 50;
     case Size.M: return 25;
     case Size.L: return 10;
+  }
+}
+
+Vector2 sizeToVector2Size(Size size) {
+  switch (size) {
+    case Size.S: return Vector2.all(10);
+    case Size.M: return Vector2.all(15);
+    case Size.L: return Vector2.all(20);
   }
 }
 
@@ -99,6 +108,7 @@ class KinStockVariableStatus with _$KinStockVariableStatus {
   factory KinStockVariableStatus.fromJson(Map<String, dynamic> json) => _$KinStockVariableStatusFromJson(json);
 }
 
+/*
 @freezed
 class KinBattleVariableStatus with _$KinBattleVariableStatus {
   @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
@@ -112,6 +122,7 @@ class KinBattleVariableStatus with _$KinBattleVariableStatus {
 
   factory KinBattleVariableStatus.fromJson(Map<String, dynamic> json) => _$KinBattleVariableStatusFromJson(json);
 }
+*/
 
 @freezed
 class KinExplanation with _$KinExplanation {

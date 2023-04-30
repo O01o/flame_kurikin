@@ -3,7 +3,6 @@ import 'dart:math' as math;
 import 'package:flame_kurikin/domain/types/kin.dart';
 import 'package:flame_kurikin/domain/types/member.dart';
 
-import 'package:flame_kurikin/domain/freezed_objects/base_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_base_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_dictionary_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
