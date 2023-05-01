@@ -49,6 +49,8 @@ Map<String, dynamic> _$$_KinCongentialConstantStatusToJson(
 const _$RaceEnumMap = {
   Race.primeval: 'primeval',
   Race.newSpecies: 'new-species',
+  Race.rareSpecies: 'rare-species',
+  Race.superRareSpecies: 'super-rare-species',
   Race.unique: 'unique',
   Race.phantom: 'phantom',
 };

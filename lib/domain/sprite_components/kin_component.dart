@@ -2,17 +2,13 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flame_kurikin/domain/freezed_objects/kin_base_object.dart';
-import 'package:flame_kurikin/domain/freezed_objects/kin_dictionary_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
-import 'package:flame_kurikin/domain/sprite_components/kin_component.dart';
 import 'package:flame_kurikin/domain/types/kin.dart';
-import 'package:flame_kurikin/utils/test_json_deserialize.dart';
 
 import 'package:flame/components.dart';
-import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
 
 class KinComponent extends SpriteComponent {
-  KinComponent({required this.kinStock}) : super();
+  KinComponent({required this.kinStock, sprite, position}) : super(sprite: sprite, position: position, anchor: Anchor.center);
 
   final KinStock kinStock;
   
@@ -26,18 +22,24 @@ class KinComponent extends SpriteComponent {
 
   @override
   Future<void> onLoad() async {
-    super.onLoad();
+    await super.onLoad();
 
     KinCongentialConstantStatus status = kinStock.congentialConstantStatus;
+    // String fileName = "${status.id}_${activity.toString().split(".").last}.gif";
+    /*
+    String fileName = "kurikin_package.jpg";
     sprite = await Sprite.load(
-      "${status.id}_${activity.toString()}.jpg",
+      fileName,
       srcSize: sizeToVector2Size(status.size),
-      srcPosition: Vector2(
-        math.Random().nextDouble() * 100 + 100, 
-        math.Random().nextDouble() * 100 + 100, 
-      ),
     );
+    position = Vector2(
+      math.Random().nextDouble() * 100 + 100, 
+      math.Random().nextDouble() * 100 + 100, 
+    );
+    anchor = Anchor.center;
+    */
 
+    // print("$fileName, ${sprite!.srcSize}, ${sprite!.srcPosition}");
     // print("${spriteComponent.sprite!.originalSize}, ");
     // print(children.length);
   }
@@ -60,7 +62,7 @@ class KinGroupComponent extends PositionComponent {
 
   @override
   Future<void> onLoad() async {
-    super.onLoad();
+    await super.onLoad();
 
     List<KinComponent> kinComponents = [];
     for (int i=0; i<sizeToInitSpawnAmount(kinStock.congentialConstantStatus.size); i++) {
@@ -71,7 +73,52 @@ class KinGroupComponent extends PositionComponent {
       );
     }
 
-    await addAll(kinComponents);
+    List<SpriteComponent> spriteComponents = [];
+    for (int i=0; i<sizeToInitSpawnAmount(kinStock.congentialConstantStatus.size); i++) {
+      spriteComponents.add(
+        KinComponent(
+          kinStock: kinStock,
+          sprite: await Sprite.load(
+            'kurikin_package.jpg',
+            srcSize: Vector2.all(10)
+          ),
+          position:  Vector2(
+            math.Random().nextDouble() * 100 + 100, 
+            math.Random().nextDouble() * 100 + 100, 
+          ),
+        )
+      );
+    }
+
+    addAll(spriteComponents);
+
+    /*
+    final sprite1 = SpriteComponent(
+      priority: 3,
+      position: Vector2(0, 200),
+      sprite: await Sprite.load(
+        'kurikin_package.jpg',
+        srcSize: Vector2.all(30)
+      )
+    );
+    final sprite2 = SpriteComponent(
+      priority: 3,
+      position: Vector2(200, 200),
+      sprite: await Sprite.load(
+        'kurikin_package.jpg',
+        srcSize: Vector2.all(30)
+      )
+    );
+    final sprite3 = SpriteComponent(
+      priority: 3,
+      position: Vector2(200, 0),
+      sprite: await Sprite.load(
+        'kurikin_package.jpg',
+        srcSize: Vector2.all(30)
+      )
+    );
+    addAll([sprite1, sprite2, sprite3]);
+    */
 
     print("kin component list: ${children.length}");
   }

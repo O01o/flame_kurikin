@@ -4,19 +4,24 @@ import 'package:flame_kurikin/domain/types/kin.dart';
 import 'package:flame_kurikin/domain/types/member.dart';
 
 import 'package:flame_kurikin/domain/freezed_objects/kin_base_object.dart';
-import 'package:flame_kurikin/domain/freezed_objects/kin_dictionary_object.dart';
 import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
+
 import 'package:flame_kurikin/domain/sprite_components/kin_component.dart';
-import 'package:flame_kurikin/utils/test_json_deserialize.dart';
+import 'package:flame_kurikin/domain/sprite_components/polygonal_line_component.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
+
 import 'package:flame/components.dart';
+import 'package:flame_kurikin/router.dart';
+
+import 'package:flame_kurikin/widgets/elements/title_elements.dart';
 
 
 
-class BattleScreen extends FlameGame {
+class BattleScreen extends Component with HasGameRef<RouterGame> {
 
   @override
   Future<void> onLoad() async {
@@ -60,26 +65,14 @@ class BattleScreen extends FlameGame {
       )
     );
 
-    // print(kinGroupComponent.children.length);
+    PolygonalLineComponent polygonalLineComponent = PolygonalLineComponent();
 
-    add(kinGroupComponent);
-    
-    /*
-    PositionComponent parentPosition = PositionComponent(
-      children: [
-        SpriteComponent(
-          sprite: await Sprite.load('kurikin_package.jpg')
-        )
-      ],
-    );
-    SpriteComponent parentSprite = SpriteComponent(
-      children: [
-        SpriteComponent(
-          sprite: await Sprite.load('kurikin_package.jpg')
-        )
-      ],
-    );
-    add(parentPosition);
-    */
+    // print(kinGroupComponent.children.length);
+    addAll([
+      Background(const Color.fromARGB(255, 0, 100, 100)),
+      kinGroupComponent,
+      polygonalLineComponent,
+      PolygonComponent.relative([Vector2(0, 0), Vector2(120, 60), Vector2(60, 120)], parentSize: Vector2.all(1))
+    ]);
   }
 }
