@@ -1,7 +1,7 @@
 import 'package:flame/game.dart';
 
-import 'package:flame_kurikin/domain/types/kin.dart';
-import 'package:flame_kurikin/domain/types/member.dart';
+import 'package:flame_kurikin/types/kin.dart';
+import 'package:flame_kurikin/types/member.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';

@@ -1,6 +1,6 @@
-import 'package:flame_kurikin/domain/freezed_objects/member_object.dart';
+import 'package:flame_kurikin/domain/member_object.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flame_kurikin/domain/types/member.dart';
+
 
 @JsonEnum(fieldRename: FieldRename.kebab)
 enum Sex {

@@ -1,8 +1,8 @@
-import 'dart:io';
 import 'dart:convert';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
+import 'package:flame_kurikin/domain/kin_stock_object.dart';
+
 
 Future<void> json_deserializer(int index) async {
   String jsonString = await rootBundle.loadString("assets/data/kin_dictionary.json");

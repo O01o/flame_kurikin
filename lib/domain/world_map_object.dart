@@ -1,14 +1,12 @@
-import 'member_object.dart';
 import 'vector_object.dart';
 import 'kin_base_object.dart';
-import 'package:flame_kurikin/domain/types/member.dart';
-import 'package:flame/geometry.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flame/components.dart';
 
 part 'world_map_object.freezed.dart';
 part 'world_map_object.g.dart';
+
 
 @JsonEnum(fieldRename: FieldRename.kebab)
 enum LocationType {

@@ -1,13 +1,13 @@
 import 'dart:math' as math;
 
-import 'package:flame_kurikin/domain/types/kin.dart';
-import 'package:flame_kurikin/domain/types/member.dart';
+import 'package:flame_kurikin/types/kin.dart';
+import 'package:flame_kurikin/types/member.dart';
 
-import 'package:flame_kurikin/domain/freezed_objects/kin_base_object.dart';
-import 'package:flame_kurikin/domain/freezed_objects/kin_stock_object.dart';
+import 'package:flame_kurikin/domain/kin_base_object.dart';
+import 'package:flame_kurikin/domain/kin_stock_object.dart';
 
-import 'package:flame_kurikin/domain/sprite_components/kin_component.dart';
-import 'package:flame_kurikin/domain/sprite_components/polygonal_line_component.dart';
+import 'package:flame_kurikin/components/kin_component.dart';
+import 'package:flame_kurikin/components/polygonal_line_component.dart';
 
 
 import 'package:flutter/material.dart';

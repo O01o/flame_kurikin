@@ -90,25 +90,3 @@ List<Vector2> lineToPolygon(LineSegment line, double stroke) {
   return [p0, p1, p2, p3];
 }
 
-class Node {
-  Node({required this.point}) : super();
-
-  final Vector2 point;
-  List<Vector2> neighbors = [];
-}
-
-class Triangle {
-  Triangle({required this.p0, required this.p1, required this.p2}) : super();
-
-  final Vector2 p0;
-  final Vector2 p1;
-  final Vector2 p2;
-
-  bool isNotObtuseTriangle() {
-    if (angleByArctan2(p0, LineSegment(p1, p2)) > math.pi / 2) return false;
-    if (angleByArctan2(p1, LineSegment(p0, p2)) > math.pi / 2) return false;
-    if (angleByArctan2(p2, LineSegment(p0, p1)) > math.pi / 2) return false;
-    
-    return true;
-  }
-}
