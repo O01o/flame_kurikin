@@ -6,10 +6,10 @@ import 'package:flame_kurikin/domain/value_objects/member.dart';
 import 'package:flame_kurikin/domain/entities/kin_base_object.dart';
 import 'package:flame_kurikin/domain/entities/kin_stock_object.dart';
 
-import 'package:flame_kurikin/domain/config/sample_kin.dart';
+import 'package:flame_kurikin/config/sample_kin.dart';
 
-import 'package:flame_kurikin/components/kin_component.dart';
-import 'package:flame_kurikin/components/polygonal_line_component.dart';
+import 'package:flame_kurikin/domain/components/kin_component.dart';
+// import 'package:flame_kurikin/components/polygonal_line_component.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flame/flame.dart';

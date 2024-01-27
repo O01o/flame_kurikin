@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'package:flame/game.dart';
 import 'package:flame/geometry.dart';
-import 'line_component.dart';
+// import 'line_component.dart';
 
 double distancePointAndPoint(Vector2 p0, Vector2 p1) {
   double dx = p1.x - p0.x;

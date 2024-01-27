@@ -49,7 +49,7 @@ class KinComponent extends SpriteComponent {
   void update(double dt) {
     super.update(dt);
 
-    // this.position += 
+    // this.position += Vector2(1.0, 0);
   }
 }
 
@@ -60,6 +60,9 @@ class KinGroupComponent extends PositionComponent {
 
   bool colorToggle = false;
   bool isControlable = false;
+
+  double variance = 100;
+  double initPoint = 60;
 
   @override
   Future<void> onLoad() async {
@@ -84,8 +87,8 @@ class KinGroupComponent extends PositionComponent {
             srcSize: Vector2.all(10)
           ),
           position:  Vector2(
-            math.Random().nextDouble() * 100 + 100, 
-            math.Random().nextDouble() * 100 + 100, 
+            math.Random().nextDouble() * variance + initPoint, 
+            math.Random().nextDouble() * variance + initPoint, 
           ),
         )
       );
