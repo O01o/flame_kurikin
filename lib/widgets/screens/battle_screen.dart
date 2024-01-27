@@ -21,7 +21,7 @@ import 'package:flame_kurikin/router.dart';
 import 'package:flame_kurikin/widgets/elements/title_elements.dart';
 
 import 'package:flame_kurikin/widgets/screens/hoge_screen.dart' as hoge;
-import 'package:flame_kurikin/widgets/elements/draw_line_element.dart';
+import 'package:flame_kurikin/widgets/elements/battle_tact_element.dart';
 
 
 class BattleScreen extends Component with HasGameRef<RouterGame> {
@@ -39,7 +39,7 @@ class BattleScreen extends Component with HasGameRef<RouterGame> {
     addAll([
       Background(const Color.fromARGB(255, 0, 100, 100)),
       // hoge.DragTarget(),
-      FenceLineElement(),
+      BattleTact(),
       // LeadingLineElement(),
       kinGroupComponent,
       // polygonalLineComponent,
