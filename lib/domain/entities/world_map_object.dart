@@ -4,8 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flame/components.dart';
 
-part 'world_map_object.freezed.dart';
-part 'world_map_object.g.dart';
+part '../../generated/world_map_object.freezed.dart';
+part '../../generated/world_map_object.g.dart';
 
 
 @JsonEnum(fieldRename: FieldRename.kebab)

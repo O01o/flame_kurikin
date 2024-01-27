@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'world_map_object.dart';
+part of '../domain/entities/world_map_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LocationPath _$$_LocationPathFromJson(Map<String, dynamic> json) =>
-    _$_LocationPath(
+_$LocationPathImpl _$$LocationPathImplFromJson(Map<String, dynamic> json) =>
+    _$LocationPathImpl(
       path: json['path'] as String,
       locationType: $enumDecode(_$LocationTypeEnumMap, json['location-type']),
     );
 
-Map<String, dynamic> _$$_LocationPathToJson(_$_LocationPath instance) =>
+Map<String, dynamic> _$$LocationPathImplToJson(_$LocationPathImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
       'location-type': _$LocationTypeEnumMap[instance.locationType]!,
@@ -23,7 +23,8 @@ const _$LocationTypeEnumMap = {
   LocationType.eventMap: 'event-map',
 };
 
-_$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
+_$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
+    _$LocationImpl(
       name: json['name'] as String,
       explanation: json['explanation'] as String,
       location:
@@ -33,7 +34,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           LocationPath.fromJson(json['location-path'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LocationToJson(_$_Location instance) =>
+Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'explanation': instance.explanation,
@@ -42,23 +43,24 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) =>
       'location-path': instance.locationPath.toJson(),
     };
 
-_$_ExplorationMap _$$_ExplorationMapFromJson(Map<String, dynamic> json) =>
-    _$_ExplorationMap(
+_$ExplorationMapImpl _$$ExplorationMapImplFromJson(Map<String, dynamic> json) =>
+    _$ExplorationMapImpl(
       backgroundImagePath: json['background-image-path'] as String,
       locationList: (json['location-list'] as List<dynamic>)
           .map((e) => Location.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplorationMapToJson(_$_ExplorationMap instance) =>
+Map<String, dynamic> _$$ExplorationMapImplToJson(
+        _$ExplorationMapImpl instance) =>
     <String, dynamic>{
       'background-image-path': instance.backgroundImagePath,
       'location-list': instance.locationList.map((e) => e.toJson()).toList(),
     };
 
-_$_ExplorationMapList _$$_ExplorationMapListFromJson(
+_$ExplorationMapListImpl _$$ExplorationMapListImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplorationMapList(
+    _$ExplorationMapListImpl(
       currentExplorationMapIndex: json['current-exploration-map-index'] as int,
       currentLocation: const Vector2ToJson()
           .fromJson(json['current-location'] as FreezedVector2?),
@@ -67,8 +69,8 @@ _$_ExplorationMapList _$$_ExplorationMapListFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplorationMapListToJson(
-        _$_ExplorationMapList instance) =>
+Map<String, dynamic> _$$ExplorationMapListImplToJson(
+        _$ExplorationMapListImpl instance) =>
     <String, dynamic>{
       'current-exploration-map-index': instance.currentExplorationMapIndex,
       'current-location':
@@ -77,7 +79,8 @@ Map<String, dynamic> _$$_ExplorationMapListToJson(
           instance.explorationMapList.map((e) => e.toJson()).toList(),
     };
 
-_$_EventMap _$$_EventMapFromJson(Map<String, dynamic> json) => _$_EventMap(
+_$EventMapImpl _$$EventMapImplFromJson(Map<String, dynamic> json) =>
+    _$EventMapImpl(
       backgroundImagePath: json['background-image-path'] as String,
       collectionConstantStatusList: (json['collection-constant-status-list']
               as List<dynamic>)
@@ -92,7 +95,7 @@ _$_EventMap _$$_EventMapFromJson(Map<String, dynamic> json) => _$_EventMap(
           json['parent-exploration-map-location-index'] as int,
     );
 
-Map<String, dynamic> _$$_EventMapToJson(_$_EventMap instance) =>
+Map<String, dynamic> _$$EventMapImplToJson(_$EventMapImpl instance) =>
     <String, dynamic>{
       'background-image-path': instance.backgroundImagePath,
       'collection-constant-status-list':

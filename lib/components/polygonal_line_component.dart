@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flame/events.dart';
 import 'package:flame/geometry.dart';
 import 'package:flame/src/gestures/events.dart';
 
@@ -7,7 +8,7 @@ import 'math_kit.dart';
 import 'line_component.dart';
 import 'package:flame/components.dart';
 
-class PolygonalLineComponent extends PositionComponent with Tappable, Draggable {
+class PolygonalLineComponent extends PositionComponent with TapCallbacks, DragCallbacks {
   PolygonalLineComponent() : super();
 
   PolygonComponent leadLine = PolygonComponent([Vector2.all(0), Vector2.all(0)]);
@@ -25,7 +26,8 @@ class PolygonalLineComponent extends PositionComponent with Tappable, Draggable 
   void update(double dt) {
     super.update(dt);
   }
-
+  
+  /*
   @override
   bool onTapDown(TapDownInfo info) {
     if (polygonNodes == []) {
@@ -64,5 +66,6 @@ class PolygonalLineComponent extends PositionComponent with Tappable, Draggable 
 
     return super.onTapUp(info);
   }
+  */
 }
 

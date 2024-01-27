@@ -1,22 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'story_object.dart';
+part of '../domain/entities/story_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
+_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
       taskName: json['task-name'] as String,
       isDone: json['is-done'] as bool,
     );
 
-Map<String, dynamic> _$$_TaskToJson(_$_Task instance) => <String, dynamic>{
+Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) =>
+    <String, dynamic>{
       'task-name': instance.taskName,
       'is-done': instance.isDone,
     };
 
-_$_Season _$$_SeasonFromJson(Map<String, dynamic> json) => _$_Season(
+_$SeasonImpl _$$SeasonImplFromJson(Map<String, dynamic> json) => _$SeasonImpl(
       seasonName: json['season-name'] as String,
       taskList: (json['task-list'] as List<dynamic>)
           .map((e) => Task.fromJson(e as Map<String, dynamic>))
@@ -26,21 +27,22 @@ _$_Season _$$_SeasonFromJson(Map<String, dynamic> json) => _$_Season(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SeasonToJson(_$_Season instance) => <String, dynamic>{
+Map<String, dynamic> _$$SeasonImplToJson(_$SeasonImpl instance) =>
+    <String, dynamic>{
       'season-name': instance.seasonName,
       'task-list': instance.taskList.map((e) => e.toJson()).toList(),
       'message-block-list':
           instance.messageBlockList.map((e) => e.toJson()).toList(),
     };
 
-_$_MessageToken _$$_MessageTokenFromJson(Map<String, dynamic> json) =>
-    _$_MessageToken(
+_$MessageTokenImpl _$$MessageTokenImplFromJson(Map<String, dynamic> json) =>
+    _$MessageTokenImpl(
       character: $enumDecode(_$CharacterEnumMap, json['character']),
       emotion: $enumDecode(_$EmotionEnumMap, json['emotion']),
       message: json['message'] as String,
     );
 
-Map<String, dynamic> _$$_MessageTokenToJson(_$_MessageToken instance) =>
+Map<String, dynamic> _$$MessageTokenImplToJson(_$MessageTokenImpl instance) =>
     <String, dynamic>{
       'character': _$CharacterEnumMap[instance.character]!,
       'emotion': _$EmotionEnumMap[instance.emotion]!,
@@ -100,8 +102,8 @@ const _$EmotionEnumMap = {
   Emotion.sad: 'sad',
 };
 
-_$_MessageBlock _$$_MessageBlockFromJson(Map<String, dynamic> json) =>
-    _$_MessageBlock(
+_$MessageBlockImpl _$$MessageBlockImplFromJson(Map<String, dynamic> json) =>
+    _$MessageBlockImpl(
       talkId: json['talk-id'] as String,
       checkTaskIndexList: (json['check-task-index-list'] as List<dynamic>)
           .map((e) => e as int)
@@ -113,7 +115,7 @@ _$_MessageBlock _$$_MessageBlockFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_MessageBlockToJson(_$_MessageBlock instance) =>
+Map<String, dynamic> _$$MessageBlockImplToJson(_$MessageBlockImpl instance) =>
     <String, dynamic>{
       'talk-id': instance.talkId,
       'check-task-index-list': instance.checkTaskIndexList,
@@ -122,14 +124,15 @@ Map<String, dynamic> _$$_MessageBlockToJson(_$_MessageBlock instance) =>
           .toList(),
     };
 
-_$_StoryInfo _$$_StoryInfoFromJson(Map<String, dynamic> json) => _$_StoryInfo(
+_$StoryInfoImpl _$$StoryInfoImplFromJson(Map<String, dynamic> json) =>
+    _$StoryInfoImpl(
       currentSeason: json['current-season'] as int,
       seasonList: (json['season-list'] as List<dynamic>)
           .map((e) => Season.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_StoryInfoToJson(_$_StoryInfo instance) =>
+Map<String, dynamic> _$$StoryInfoImplToJson(_$StoryInfoImpl instance) =>
     <String, dynamic>{
       'current-season': instance.currentSeason,
       'season-list': instance.seasonList.map((e) => e.toJson()).toList(),

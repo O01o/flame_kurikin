@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'kin_stock_object.dart';
+part of '../domain/entities/kin_stock_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KinStock _$$_KinStockFromJson(Map<String, dynamic> json) => _$_KinStock(
+_$KinStockImpl _$$KinStockImplFromJson(Map<String, dynamic> json) =>
+    _$KinStockImpl(
       congentialConstantStatus: KinCongentialConstantStatus.fromJson(
           json['congential-constant-status'] as Map<String, dynamic>),
       acquiredConstantStatus: KinAcquiredConstantStatus.fromJson(
@@ -17,7 +18,7 @@ _$_KinStock _$$_KinStockFromJson(Map<String, dynamic> json) => _$_KinStock(
           json['stock-variable-status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KinStockToJson(_$_KinStock instance) =>
+Map<String, dynamic> _$$KinStockImplToJson(_$KinStockImpl instance) =>
     <String, dynamic>{
       'congential-constant-status': instance.congentialConstantStatus.toJson(),
       'acquired-constant-status': instance.acquiredConstantStatus.toJson(),
@@ -25,15 +26,15 @@ Map<String, dynamic> _$$_KinStockToJson(_$_KinStock instance) =>
       'stock-variable-status': instance.stockVariableStatus.toJson(),
     };
 
-_$_KinStockOwner _$$_KinStockOwnerFromJson(Map<String, dynamic> json) =>
-    _$_KinStockOwner(
+_$KinStockOwnerImpl _$$KinStockOwnerImplFromJson(Map<String, dynamic> json) =>
+    _$KinStockOwnerImpl(
       owner: $enumDecode(_$CharacterEnumMap, json['owner']),
       stockList: (json['stock-list'] as List<dynamic>)
           .map((e) => KinStock.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_KinStockOwnerToJson(_$_KinStockOwner instance) =>
+Map<String, dynamic> _$$KinStockOwnerImplToJson(_$KinStockOwnerImpl instance) =>
     <String, dynamic>{
       'owner': _$CharacterEnumMap[instance.owner]!,
       'stock-list': instance.stockList.map((e) => e.toJson()).toList(),

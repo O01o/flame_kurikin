@@ -2,8 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'kin_base_object.dart';
 
-part 'kin_dictionary_object.freezed.dart';
-part 'kin_dictionary_object.g.dart';
+part '../../generated/kin_dictionary_object.freezed.dart';
+part '../../generated/kin_dictionary_object.g.dart';
 
 @freezed
 class KinDictionary with _$KinDictionary {

@@ -1,3 +1,4 @@
+import 'package:flame/events.dart';
 import 'package:flame/experimental.dart';
 import 'package:flame_kurikin/main.dart';
 import 'package:flutter/material.dart';

@@ -1,11 +1,12 @@
-import 'package:flame_kurikin/types/member.dart';
+import 'package:flame_kurikin/domain/value_objects/kin.dart';
+import 'package:flame_kurikin/domain/value_objects/member.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'kin_base_object.dart';
 
-part 'kin_stock_object.freezed.dart';
-part 'kin_stock_object.g.dart';
+part '../../generated/kin_stock_object.freezed.dart';
+part '../../generated/kin_stock_object.g.dart';
 
 @freezed
 class KinStock with _$KinStock {

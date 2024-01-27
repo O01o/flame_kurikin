@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'kin_stock_object.dart';
+part of '../domain/entities/kin_stock_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -128,10 +128,11 @@ class _$KinStockCopyWithImpl<$Res, $Val extends KinStock>
 }
 
 /// @nodoc
-abstract class _$$_KinStockCopyWith<$Res> implements $KinStockCopyWith<$Res> {
-  factory _$$_KinStockCopyWith(
-          _$_KinStock value, $Res Function(_$_KinStock) then) =
-      __$$_KinStockCopyWithImpl<$Res>;
+abstract class _$$KinStockImplCopyWith<$Res>
+    implements $KinStockCopyWith<$Res> {
+  factory _$$KinStockImplCopyWith(
+          _$KinStockImpl value, $Res Function(_$KinStockImpl) then) =
+      __$$KinStockImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -151,11 +152,11 @@ abstract class _$$_KinStockCopyWith<$Res> implements $KinStockCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KinStockCopyWithImpl<$Res>
-    extends _$KinStockCopyWithImpl<$Res, _$_KinStock>
-    implements _$$_KinStockCopyWith<$Res> {
-  __$$_KinStockCopyWithImpl(
-      _$_KinStock _value, $Res Function(_$_KinStock) _then)
+class __$$KinStockImplCopyWithImpl<$Res>
+    extends _$KinStockCopyWithImpl<$Res, _$KinStockImpl>
+    implements _$$KinStockImplCopyWith<$Res> {
+  __$$KinStockImplCopyWithImpl(
+      _$KinStockImpl _value, $Res Function(_$KinStockImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -166,7 +167,7 @@ class __$$_KinStockCopyWithImpl<$Res>
     Object? generalVariableStatus = null,
     Object? stockVariableStatus = null,
   }) {
-    return _then(_$_KinStock(
+    return _then(_$KinStockImpl(
       congentialConstantStatus: null == congentialConstantStatus
           ? _value.congentialConstantStatus
           : congentialConstantStatus // ignore: cast_nullable_to_non_nullable
@@ -190,15 +191,15 @@ class __$$_KinStockCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
-  const _$_KinStock(
+class _$KinStockImpl with DiagnosticableTreeMixin implements _KinStock {
+  const _$KinStockImpl(
       {required this.congentialConstantStatus,
       required this.acquiredConstantStatus,
       required this.generalVariableStatus,
       required this.stockVariableStatus});
 
-  factory _$_KinStock.fromJson(Map<String, dynamic> json) =>
-      _$$_KinStockFromJson(json);
+  factory _$KinStockImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinStockImplFromJson(json);
 
   @override
   final KinCongentialConstantStatus congentialConstantStatus;
@@ -228,10 +229,10 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinStock &&
+            other is _$KinStockImpl &&
             (identical(
                     other.congentialConstantStatus, congentialConstantStatus) ||
                 other.congentialConstantStatus == congentialConstantStatus) &&
@@ -251,12 +252,12 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinStockCopyWith<_$_KinStock> get copyWith =>
-      __$$_KinStockCopyWithImpl<_$_KinStock>(this, _$identity);
+  _$$KinStockImplCopyWith<_$KinStockImpl> get copyWith =>
+      __$$KinStockImplCopyWithImpl<_$KinStockImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinStockToJson(
+    return _$$KinStockImplToJson(
       this,
     );
   }
@@ -264,12 +265,14 @@ class _$_KinStock with DiagnosticableTreeMixin implements _KinStock {
 
 abstract class _KinStock implements KinStock {
   const factory _KinStock(
-      {required final KinCongentialConstantStatus congentialConstantStatus,
-      required final KinAcquiredConstantStatus acquiredConstantStatus,
-      required final KinGeneralVariableStatus generalVariableStatus,
-      required final KinStockVariableStatus stockVariableStatus}) = _$_KinStock;
+          {required final KinCongentialConstantStatus congentialConstantStatus,
+          required final KinAcquiredConstantStatus acquiredConstantStatus,
+          required final KinGeneralVariableStatus generalVariableStatus,
+          required final KinStockVariableStatus stockVariableStatus}) =
+      _$KinStockImpl;
 
-  factory _KinStock.fromJson(Map<String, dynamic> json) = _$_KinStock.fromJson;
+  factory _KinStock.fromJson(Map<String, dynamic> json) =
+      _$KinStockImpl.fromJson;
 
   @override
   KinCongentialConstantStatus get congentialConstantStatus;
@@ -281,7 +284,7 @@ abstract class _KinStock implements KinStock {
   KinStockVariableStatus get stockVariableStatus;
   @override
   @JsonKey(ignore: true)
-  _$$_KinStockCopyWith<_$_KinStock> get copyWith =>
+  _$$KinStockImplCopyWith<_$KinStockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -339,22 +342,22 @@ class _$KinStockOwnerCopyWithImpl<$Res, $Val extends KinStockOwner>
 }
 
 /// @nodoc
-abstract class _$$_KinStockOwnerCopyWith<$Res>
+abstract class _$$KinStockOwnerImplCopyWith<$Res>
     implements $KinStockOwnerCopyWith<$Res> {
-  factory _$$_KinStockOwnerCopyWith(
-          _$_KinStockOwner value, $Res Function(_$_KinStockOwner) then) =
-      __$$_KinStockOwnerCopyWithImpl<$Res>;
+  factory _$$KinStockOwnerImplCopyWith(
+          _$KinStockOwnerImpl value, $Res Function(_$KinStockOwnerImpl) then) =
+      __$$KinStockOwnerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Character owner, List<KinStock> stockList});
 }
 
 /// @nodoc
-class __$$_KinStockOwnerCopyWithImpl<$Res>
-    extends _$KinStockOwnerCopyWithImpl<$Res, _$_KinStockOwner>
-    implements _$$_KinStockOwnerCopyWith<$Res> {
-  __$$_KinStockOwnerCopyWithImpl(
-      _$_KinStockOwner _value, $Res Function(_$_KinStockOwner) _then)
+class __$$KinStockOwnerImplCopyWithImpl<$Res>
+    extends _$KinStockOwnerCopyWithImpl<$Res, _$KinStockOwnerImpl>
+    implements _$$KinStockOwnerImplCopyWith<$Res> {
+  __$$KinStockOwnerImplCopyWithImpl(
+      _$KinStockOwnerImpl _value, $Res Function(_$KinStockOwnerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -363,7 +366,7 @@ class __$$_KinStockOwnerCopyWithImpl<$Res>
     Object? owner = null,
     Object? stockList = null,
   }) {
-    return _then(_$_KinStockOwner(
+    return _then(_$KinStockOwnerImpl(
       owner: null == owner
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
@@ -379,13 +382,15 @@ class __$$_KinStockOwnerCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinStockOwner with DiagnosticableTreeMixin implements _KinStockOwner {
-  const _$_KinStockOwner(
+class _$KinStockOwnerImpl
+    with DiagnosticableTreeMixin
+    implements _KinStockOwner {
+  const _$KinStockOwnerImpl(
       {required this.owner, required final List<KinStock> stockList})
       : _stockList = stockList;
 
-  factory _$_KinStockOwner.fromJson(Map<String, dynamic> json) =>
-      _$$_KinStockOwnerFromJson(json);
+  factory _$KinStockOwnerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinStockOwnerImplFromJson(json);
 
   @override
   final Character owner;
@@ -412,10 +417,10 @@ class _$_KinStockOwner with DiagnosticableTreeMixin implements _KinStockOwner {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinStockOwner &&
+            other is _$KinStockOwnerImpl &&
             (identical(other.owner, owner) || other.owner == owner) &&
             const DeepCollectionEquality()
                 .equals(other._stockList, _stockList));
@@ -429,12 +434,12 @@ class _$_KinStockOwner with DiagnosticableTreeMixin implements _KinStockOwner {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinStockOwnerCopyWith<_$_KinStockOwner> get copyWith =>
-      __$$_KinStockOwnerCopyWithImpl<_$_KinStockOwner>(this, _$identity);
+  _$$KinStockOwnerImplCopyWith<_$KinStockOwnerImpl> get copyWith =>
+      __$$KinStockOwnerImplCopyWithImpl<_$KinStockOwnerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinStockOwnerToJson(
+    return _$$KinStockOwnerImplToJson(
       this,
     );
   }
@@ -443,10 +448,10 @@ class _$_KinStockOwner with DiagnosticableTreeMixin implements _KinStockOwner {
 abstract class _KinStockOwner implements KinStockOwner {
   const factory _KinStockOwner(
       {required final Character owner,
-      required final List<KinStock> stockList}) = _$_KinStockOwner;
+      required final List<KinStock> stockList}) = _$KinStockOwnerImpl;
 
   factory _KinStockOwner.fromJson(Map<String, dynamic> json) =
-      _$_KinStockOwner.fromJson;
+      _$KinStockOwnerImpl.fromJson;
 
   @override
   Character get owner;
@@ -454,6 +459,6 @@ abstract class _KinStockOwner implements KinStockOwner {
   List<KinStock> get stockList;
   @override
   @JsonKey(ignore: true)
-  _$$_KinStockOwnerCopyWith<_$_KinStockOwner> get copyWith =>
+  _$$KinStockOwnerImplCopyWith<_$KinStockOwnerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'kin_base_object.dart';
+part of '../domain/entities/kin_base_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -165,12 +165,12 @@ class _$KinCongentialConstantStatusCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KinCongentialConstantStatusCopyWith<$Res>
+abstract class _$$KinCongentialConstantStatusImplCopyWith<$Res>
     implements $KinCongentialConstantStatusCopyWith<$Res> {
-  factory _$$_KinCongentialConstantStatusCopyWith(
-          _$_KinCongentialConstantStatus value,
-          $Res Function(_$_KinCongentialConstantStatus) then) =
-      __$$_KinCongentialConstantStatusCopyWithImpl<$Res>;
+  factory _$$KinCongentialConstantStatusImplCopyWith(
+          _$KinCongentialConstantStatusImpl value,
+          $Res Function(_$KinCongentialConstantStatusImpl) then) =
+      __$$KinCongentialConstantStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -192,13 +192,13 @@ abstract class _$$_KinCongentialConstantStatusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KinCongentialConstantStatusCopyWithImpl<$Res>
+class __$$KinCongentialConstantStatusImplCopyWithImpl<$Res>
     extends _$KinCongentialConstantStatusCopyWithImpl<$Res,
-        _$_KinCongentialConstantStatus>
-    implements _$$_KinCongentialConstantStatusCopyWith<$Res> {
-  __$$_KinCongentialConstantStatusCopyWithImpl(
-      _$_KinCongentialConstantStatus _value,
-      $Res Function(_$_KinCongentialConstantStatus) _then)
+        _$KinCongentialConstantStatusImpl>
+    implements _$$KinCongentialConstantStatusImplCopyWith<$Res> {
+  __$$KinCongentialConstantStatusImplCopyWithImpl(
+      _$KinCongentialConstantStatusImpl _value,
+      $Res Function(_$KinCongentialConstantStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -220,7 +220,7 @@ class __$$_KinCongentialConstantStatusCopyWithImpl<$Res>
     Object? prol = null,
     Object? speed = null,
   }) {
-    return _then(_$_KinCongentialConstantStatus(
+    return _then(_$KinCongentialConstantStatusImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -288,10 +288,10 @@ class __$$_KinCongentialConstantStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinCongentialConstantStatus
+class _$KinCongentialConstantStatusImpl
     with DiagnosticableTreeMixin
     implements _KinCongentialConstantStatus {
-  const _$_KinCongentialConstantStatus(
+  const _$KinCongentialConstantStatusImpl(
       {required this.id,
       required this.name,
       required this.race,
@@ -308,8 +308,9 @@ class _$_KinCongentialConstantStatus
       required this.prol,
       required this.speed});
 
-  factory _$_KinCongentialConstantStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_KinCongentialConstantStatusFromJson(json);
+  factory _$KinCongentialConstantStatusImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KinCongentialConstantStatusImplFromJson(json);
 
   @override
   final String id;
@@ -370,10 +371,10 @@ class _$_KinCongentialConstantStatus
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinCongentialConstantStatus &&
+            other is _$KinCongentialConstantStatusImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.race, race) || other.race == race) &&
@@ -418,13 +419,13 @@ class _$_KinCongentialConstantStatus
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinCongentialConstantStatusCopyWith<_$_KinCongentialConstantStatus>
-      get copyWith => __$$_KinCongentialConstantStatusCopyWithImpl<
-          _$_KinCongentialConstantStatus>(this, _$identity);
+  _$$KinCongentialConstantStatusImplCopyWith<_$KinCongentialConstantStatusImpl>
+      get copyWith => __$$KinCongentialConstantStatusImplCopyWithImpl<
+          _$KinCongentialConstantStatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinCongentialConstantStatusToJson(
+    return _$$KinCongentialConstantStatusImplToJson(
       this,
     );
   }
@@ -447,10 +448,10 @@ abstract class _KinCongentialConstantStatus
       required final int atkFreqBase,
       required final int def,
       required final int prol,
-      required final Speed speed}) = _$_KinCongentialConstantStatus;
+      required final Speed speed}) = _$KinCongentialConstantStatusImpl;
 
   factory _KinCongentialConstantStatus.fromJson(Map<String, dynamic> json) =
-      _$_KinCongentialConstantStatus.fromJson;
+      _$KinCongentialConstantStatusImpl.fromJson;
 
   @override
   String get id;
@@ -484,7 +485,7 @@ abstract class _KinCongentialConstantStatus
   Speed get speed;
   @override
   @JsonKey(ignore: true)
-  _$$_KinCongentialConstantStatusCopyWith<_$_KinCongentialConstantStatus>
+  _$$KinCongentialConstantStatusImplCopyWith<_$KinCongentialConstantStatusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -544,25 +545,25 @@ class _$KinAcquiredConstantStatusCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KinAcquiredConstantStatusCopyWith<$Res>
+abstract class _$$KinAcquiredConstantStatusImplCopyWith<$Res>
     implements $KinAcquiredConstantStatusCopyWith<$Res> {
-  factory _$$_KinAcquiredConstantStatusCopyWith(
-          _$_KinAcquiredConstantStatus value,
-          $Res Function(_$_KinAcquiredConstantStatus) then) =
-      __$$_KinAcquiredConstantStatusCopyWithImpl<$Res>;
+  factory _$$KinAcquiredConstantStatusImplCopyWith(
+          _$KinAcquiredConstantStatusImpl value,
+          $Res Function(_$KinAcquiredConstantStatusImpl) then) =
+      __$$KinAcquiredConstantStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Character owner, GetType getType});
 }
 
 /// @nodoc
-class __$$_KinAcquiredConstantStatusCopyWithImpl<$Res>
+class __$$KinAcquiredConstantStatusImplCopyWithImpl<$Res>
     extends _$KinAcquiredConstantStatusCopyWithImpl<$Res,
-        _$_KinAcquiredConstantStatus>
-    implements _$$_KinAcquiredConstantStatusCopyWith<$Res> {
-  __$$_KinAcquiredConstantStatusCopyWithImpl(
-      _$_KinAcquiredConstantStatus _value,
-      $Res Function(_$_KinAcquiredConstantStatus) _then)
+        _$KinAcquiredConstantStatusImpl>
+    implements _$$KinAcquiredConstantStatusImplCopyWith<$Res> {
+  __$$KinAcquiredConstantStatusImplCopyWithImpl(
+      _$KinAcquiredConstantStatusImpl _value,
+      $Res Function(_$KinAcquiredConstantStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -571,7 +572,7 @@ class __$$_KinAcquiredConstantStatusCopyWithImpl<$Res>
     Object? owner = null,
     Object? getType = null,
   }) {
-    return _then(_$_KinAcquiredConstantStatus(
+    return _then(_$KinAcquiredConstantStatusImpl(
       owner: null == owner
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
@@ -587,14 +588,14 @@ class __$$_KinAcquiredConstantStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinAcquiredConstantStatus
+class _$KinAcquiredConstantStatusImpl
     with DiagnosticableTreeMixin
     implements _KinAcquiredConstantStatus {
-  const _$_KinAcquiredConstantStatus(
+  const _$KinAcquiredConstantStatusImpl(
       {required this.owner, required this.getType});
 
-  factory _$_KinAcquiredConstantStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_KinAcquiredConstantStatusFromJson(json);
+  factory _$KinAcquiredConstantStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinAcquiredConstantStatusImplFromJson(json);
 
   @override
   final Character owner;
@@ -616,10 +617,10 @@ class _$_KinAcquiredConstantStatus
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinAcquiredConstantStatus &&
+            other is _$KinAcquiredConstantStatusImpl &&
             (identical(other.owner, owner) || other.owner == owner) &&
             (identical(other.getType, getType) || other.getType == getType));
   }
@@ -631,13 +632,13 @@ class _$_KinAcquiredConstantStatus
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinAcquiredConstantStatusCopyWith<_$_KinAcquiredConstantStatus>
-      get copyWith => __$$_KinAcquiredConstantStatusCopyWithImpl<
-          _$_KinAcquiredConstantStatus>(this, _$identity);
+  _$$KinAcquiredConstantStatusImplCopyWith<_$KinAcquiredConstantStatusImpl>
+      get copyWith => __$$KinAcquiredConstantStatusImplCopyWithImpl<
+          _$KinAcquiredConstantStatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinAcquiredConstantStatusToJson(
+    return _$$KinAcquiredConstantStatusImplToJson(
       this,
     );
   }
@@ -646,10 +647,10 @@ class _$_KinAcquiredConstantStatus
 abstract class _KinAcquiredConstantStatus implements KinAcquiredConstantStatus {
   const factory _KinAcquiredConstantStatus(
       {required final Character owner,
-      required final GetType getType}) = _$_KinAcquiredConstantStatus;
+      required final GetType getType}) = _$KinAcquiredConstantStatusImpl;
 
   factory _KinAcquiredConstantStatus.fromJson(Map<String, dynamic> json) =
-      _$_KinAcquiredConstantStatus.fromJson;
+      _$KinAcquiredConstantStatusImpl.fromJson;
 
   @override
   Character get owner;
@@ -657,7 +658,7 @@ abstract class _KinAcquiredConstantStatus implements KinAcquiredConstantStatus {
   GetType get getType;
   @override
   @JsonKey(ignore: true)
-  _$$_KinAcquiredConstantStatusCopyWith<_$_KinAcquiredConstantStatus>
+  _$$KinAcquiredConstantStatusImplCopyWith<_$KinAcquiredConstantStatusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -731,25 +732,25 @@ class _$KinCollectionConstantStatusCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KinCollectionConstantStatusCopyWith<$Res>
+abstract class _$$KinCollectionConstantStatusImplCopyWith<$Res>
     implements $KinCollectionConstantStatusCopyWith<$Res> {
-  factory _$$_KinCollectionConstantStatusCopyWith(
-          _$_KinCollectionConstantStatus value,
-          $Res Function(_$_KinCollectionConstantStatus) then) =
-      __$$_KinCollectionConstantStatusCopyWithImpl<$Res>;
+  factory _$$KinCollectionConstantStatusImplCopyWith(
+          _$KinCollectionConstantStatusImpl value,
+          $Res Function(_$KinCollectionConstantStatusImpl) then) =
+      __$$KinCollectionConstantStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int kinIndex, int minLevel, int maxLevel, double probability});
 }
 
 /// @nodoc
-class __$$_KinCollectionConstantStatusCopyWithImpl<$Res>
+class __$$KinCollectionConstantStatusImplCopyWithImpl<$Res>
     extends _$KinCollectionConstantStatusCopyWithImpl<$Res,
-        _$_KinCollectionConstantStatus>
-    implements _$$_KinCollectionConstantStatusCopyWith<$Res> {
-  __$$_KinCollectionConstantStatusCopyWithImpl(
-      _$_KinCollectionConstantStatus _value,
-      $Res Function(_$_KinCollectionConstantStatus) _then)
+        _$KinCollectionConstantStatusImpl>
+    implements _$$KinCollectionConstantStatusImplCopyWith<$Res> {
+  __$$KinCollectionConstantStatusImplCopyWithImpl(
+      _$KinCollectionConstantStatusImpl _value,
+      $Res Function(_$KinCollectionConstantStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -760,7 +761,7 @@ class __$$_KinCollectionConstantStatusCopyWithImpl<$Res>
     Object? maxLevel = null,
     Object? probability = null,
   }) {
-    return _then(_$_KinCollectionConstantStatus(
+    return _then(_$KinCollectionConstantStatusImpl(
       kinIndex: null == kinIndex
           ? _value.kinIndex
           : kinIndex // ignore: cast_nullable_to_non_nullable
@@ -784,17 +785,18 @@ class __$$_KinCollectionConstantStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinCollectionConstantStatus
+class _$KinCollectionConstantStatusImpl
     with DiagnosticableTreeMixin
     implements _KinCollectionConstantStatus {
-  const _$_KinCollectionConstantStatus(
+  const _$KinCollectionConstantStatusImpl(
       {required this.kinIndex,
       required this.minLevel,
       required this.maxLevel,
       required this.probability});
 
-  factory _$_KinCollectionConstantStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_KinCollectionConstantStatusFromJson(json);
+  factory _$KinCollectionConstantStatusImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KinCollectionConstantStatusImplFromJson(json);
 
   @override
   final int kinIndex;
@@ -822,10 +824,10 @@ class _$_KinCollectionConstantStatus
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinCollectionConstantStatus &&
+            other is _$KinCollectionConstantStatusImpl &&
             (identical(other.kinIndex, kinIndex) ||
                 other.kinIndex == kinIndex) &&
             (identical(other.minLevel, minLevel) ||
@@ -844,13 +846,13 @@ class _$_KinCollectionConstantStatus
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinCollectionConstantStatusCopyWith<_$_KinCollectionConstantStatus>
-      get copyWith => __$$_KinCollectionConstantStatusCopyWithImpl<
-          _$_KinCollectionConstantStatus>(this, _$identity);
+  _$$KinCollectionConstantStatusImplCopyWith<_$KinCollectionConstantStatusImpl>
+      get copyWith => __$$KinCollectionConstantStatusImplCopyWithImpl<
+          _$KinCollectionConstantStatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinCollectionConstantStatusToJson(
+    return _$$KinCollectionConstantStatusImplToJson(
       this,
     );
   }
@@ -862,10 +864,10 @@ abstract class _KinCollectionConstantStatus
       {required final int kinIndex,
       required final int minLevel,
       required final int maxLevel,
-      required final double probability}) = _$_KinCollectionConstantStatus;
+      required final double probability}) = _$KinCollectionConstantStatusImpl;
 
   factory _KinCollectionConstantStatus.fromJson(Map<String, dynamic> json) =
-      _$_KinCollectionConstantStatus.fromJson;
+      _$KinCollectionConstantStatusImpl.fromJson;
 
   @override
   int get kinIndex;
@@ -877,7 +879,7 @@ abstract class _KinCollectionConstantStatus
   double get probability;
   @override
   @JsonKey(ignore: true)
-  _$$_KinCollectionConstantStatusCopyWith<_$_KinCollectionConstantStatus>
+  _$$KinCollectionConstantStatusImplCopyWith<_$KinCollectionConstantStatusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -937,24 +939,25 @@ class _$KinGeneralVariableStatusCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KinGeneralVariableStatusCopyWith<$Res>
+abstract class _$$KinGeneralVariableStatusImplCopyWith<$Res>
     implements $KinGeneralVariableStatusCopyWith<$Res> {
-  factory _$$_KinGeneralVariableStatusCopyWith(
-          _$_KinGeneralVariableStatus value,
-          $Res Function(_$_KinGeneralVariableStatus) then) =
-      __$$_KinGeneralVariableStatusCopyWithImpl<$Res>;
+  factory _$$KinGeneralVariableStatusImplCopyWith(
+          _$KinGeneralVariableStatusImpl value,
+          $Res Function(_$KinGeneralVariableStatusImpl) then) =
+      __$$KinGeneralVariableStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Activity activity, MotionMode motionMode});
 }
 
 /// @nodoc
-class __$$_KinGeneralVariableStatusCopyWithImpl<$Res>
+class __$$KinGeneralVariableStatusImplCopyWithImpl<$Res>
     extends _$KinGeneralVariableStatusCopyWithImpl<$Res,
-        _$_KinGeneralVariableStatus>
-    implements _$$_KinGeneralVariableStatusCopyWith<$Res> {
-  __$$_KinGeneralVariableStatusCopyWithImpl(_$_KinGeneralVariableStatus _value,
-      $Res Function(_$_KinGeneralVariableStatus) _then)
+        _$KinGeneralVariableStatusImpl>
+    implements _$$KinGeneralVariableStatusImplCopyWith<$Res> {
+  __$$KinGeneralVariableStatusImplCopyWithImpl(
+      _$KinGeneralVariableStatusImpl _value,
+      $Res Function(_$KinGeneralVariableStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -963,7 +966,7 @@ class __$$_KinGeneralVariableStatusCopyWithImpl<$Res>
     Object? activity = null,
     Object? motionMode = null,
   }) {
-    return _then(_$_KinGeneralVariableStatus(
+    return _then(_$KinGeneralVariableStatusImpl(
       activity: null == activity
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
@@ -979,14 +982,14 @@ class __$$_KinGeneralVariableStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinGeneralVariableStatus
+class _$KinGeneralVariableStatusImpl
     with DiagnosticableTreeMixin
     implements _KinGeneralVariableStatus {
-  const _$_KinGeneralVariableStatus(
+  const _$KinGeneralVariableStatusImpl(
       {required this.activity, required this.motionMode});
 
-  factory _$_KinGeneralVariableStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_KinGeneralVariableStatusFromJson(json);
+  factory _$KinGeneralVariableStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinGeneralVariableStatusImplFromJson(json);
 
   @override
   final Activity activity;
@@ -1008,10 +1011,10 @@ class _$_KinGeneralVariableStatus
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinGeneralVariableStatus &&
+            other is _$KinGeneralVariableStatusImpl &&
             (identical(other.activity, activity) ||
                 other.activity == activity) &&
             (identical(other.motionMode, motionMode) ||
@@ -1025,13 +1028,13 @@ class _$_KinGeneralVariableStatus
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinGeneralVariableStatusCopyWith<_$_KinGeneralVariableStatus>
-      get copyWith => __$$_KinGeneralVariableStatusCopyWithImpl<
-          _$_KinGeneralVariableStatus>(this, _$identity);
+  _$$KinGeneralVariableStatusImplCopyWith<_$KinGeneralVariableStatusImpl>
+      get copyWith => __$$KinGeneralVariableStatusImplCopyWithImpl<
+          _$KinGeneralVariableStatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinGeneralVariableStatusToJson(
+    return _$$KinGeneralVariableStatusImplToJson(
       this,
     );
   }
@@ -1040,10 +1043,10 @@ class _$_KinGeneralVariableStatus
 abstract class _KinGeneralVariableStatus implements KinGeneralVariableStatus {
   const factory _KinGeneralVariableStatus(
       {required final Activity activity,
-      required final MotionMode motionMode}) = _$_KinGeneralVariableStatus;
+      required final MotionMode motionMode}) = _$KinGeneralVariableStatusImpl;
 
   factory _KinGeneralVariableStatus.fromJson(Map<String, dynamic> json) =
-      _$_KinGeneralVariableStatus.fromJson;
+      _$KinGeneralVariableStatusImpl.fromJson;
 
   @override
   Activity get activity;
@@ -1051,7 +1054,7 @@ abstract class _KinGeneralVariableStatus implements KinGeneralVariableStatus {
   MotionMode get motionMode;
   @override
   @JsonKey(ignore: true)
-  _$$_KinGeneralVariableStatusCopyWith<_$_KinGeneralVariableStatus>
+  _$$KinGeneralVariableStatusImplCopyWith<_$KinGeneralVariableStatusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1135,23 +1138,25 @@ class _$KinStockVariableStatusCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KinStockVariableStatusCopyWith<$Res>
+abstract class _$$KinStockVariableStatusImplCopyWith<$Res>
     implements $KinStockVariableStatusCopyWith<$Res> {
-  factory _$$_KinStockVariableStatusCopyWith(_$_KinStockVariableStatus value,
-          $Res Function(_$_KinStockVariableStatus) then) =
-      __$$_KinStockVariableStatusCopyWithImpl<$Res>;
+  factory _$$KinStockVariableStatusImplCopyWith(
+          _$KinStockVariableStatusImpl value,
+          $Res Function(_$KinStockVariableStatusImpl) then) =
+      __$$KinStockVariableStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int level, int hp, int atk, int atkFreq, int exp, int expMax});
 }
 
 /// @nodoc
-class __$$_KinStockVariableStatusCopyWithImpl<$Res>
+class __$$KinStockVariableStatusImplCopyWithImpl<$Res>
     extends _$KinStockVariableStatusCopyWithImpl<$Res,
-        _$_KinStockVariableStatus>
-    implements _$$_KinStockVariableStatusCopyWith<$Res> {
-  __$$_KinStockVariableStatusCopyWithImpl(_$_KinStockVariableStatus _value,
-      $Res Function(_$_KinStockVariableStatus) _then)
+        _$KinStockVariableStatusImpl>
+    implements _$$KinStockVariableStatusImplCopyWith<$Res> {
+  __$$KinStockVariableStatusImplCopyWithImpl(
+      _$KinStockVariableStatusImpl _value,
+      $Res Function(_$KinStockVariableStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1164,7 +1169,7 @@ class __$$_KinStockVariableStatusCopyWithImpl<$Res>
     Object? exp = null,
     Object? expMax = null,
   }) {
-    return _then(_$_KinStockVariableStatus(
+    return _then(_$KinStockVariableStatusImpl(
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -1196,10 +1201,10 @@ class __$$_KinStockVariableStatusCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinStockVariableStatus
+class _$KinStockVariableStatusImpl
     with DiagnosticableTreeMixin
     implements _KinStockVariableStatus {
-  const _$_KinStockVariableStatus(
+  const _$KinStockVariableStatusImpl(
       {required this.level,
       required this.hp,
       required this.atk,
@@ -1207,8 +1212,8 @@ class _$_KinStockVariableStatus
       required this.exp,
       required this.expMax});
 
-  factory _$_KinStockVariableStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_KinStockVariableStatusFromJson(json);
+  factory _$KinStockVariableStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinStockVariableStatusImplFromJson(json);
 
   @override
   final int level;
@@ -1242,10 +1247,10 @@ class _$_KinStockVariableStatus
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinStockVariableStatus &&
+            other is _$KinStockVariableStatusImpl &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.hp, hp) || other.hp == hp) &&
             (identical(other.atk, atk) || other.atk == atk) &&
@@ -1262,13 +1267,13 @@ class _$_KinStockVariableStatus
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinStockVariableStatusCopyWith<_$_KinStockVariableStatus> get copyWith =>
-      __$$_KinStockVariableStatusCopyWithImpl<_$_KinStockVariableStatus>(
-          this, _$identity);
+  _$$KinStockVariableStatusImplCopyWith<_$KinStockVariableStatusImpl>
+      get copyWith => __$$KinStockVariableStatusImplCopyWithImpl<
+          _$KinStockVariableStatusImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinStockVariableStatusToJson(
+    return _$$KinStockVariableStatusImplToJson(
       this,
     );
   }
@@ -1281,10 +1286,10 @@ abstract class _KinStockVariableStatus implements KinStockVariableStatus {
       required final int atk,
       required final int atkFreq,
       required final int exp,
-      required final int expMax}) = _$_KinStockVariableStatus;
+      required final int expMax}) = _$KinStockVariableStatusImpl;
 
   factory _KinStockVariableStatus.fromJson(Map<String, dynamic> json) =
-      _$_KinStockVariableStatus.fromJson;
+      _$KinStockVariableStatusImpl.fromJson;
 
   @override
   int get level;
@@ -1300,8 +1305,8 @@ abstract class _KinStockVariableStatus implements KinStockVariableStatus {
   int get expMax;
   @override
   @JsonKey(ignore: true)
-  _$$_KinStockVariableStatusCopyWith<_$_KinStockVariableStatus> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$KinStockVariableStatusImplCopyWith<_$KinStockVariableStatusImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 KinExplanation _$KinExplanationFromJson(Map<String, dynamic> json) {
@@ -1364,22 +1369,22 @@ class _$KinExplanationCopyWithImpl<$Res, $Val extends KinExplanation>
 }
 
 /// @nodoc
-abstract class _$$_KinExplanationCopyWith<$Res>
+abstract class _$$KinExplanationImplCopyWith<$Res>
     implements $KinExplanationCopyWith<$Res> {
-  factory _$$_KinExplanationCopyWith(
-          _$_KinExplanation value, $Res Function(_$_KinExplanation) then) =
-      __$$_KinExplanationCopyWithImpl<$Res>;
+  factory _$$KinExplanationImplCopyWith(_$KinExplanationImpl value,
+          $Res Function(_$KinExplanationImpl) then) =
+      __$$KinExplanationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String explanation, String langOfKin, bool isCollected});
 }
 
 /// @nodoc
-class __$$_KinExplanationCopyWithImpl<$Res>
-    extends _$KinExplanationCopyWithImpl<$Res, _$_KinExplanation>
-    implements _$$_KinExplanationCopyWith<$Res> {
-  __$$_KinExplanationCopyWithImpl(
-      _$_KinExplanation _value, $Res Function(_$_KinExplanation) _then)
+class __$$KinExplanationImplCopyWithImpl<$Res>
+    extends _$KinExplanationCopyWithImpl<$Res, _$KinExplanationImpl>
+    implements _$$KinExplanationImplCopyWith<$Res> {
+  __$$KinExplanationImplCopyWithImpl(
+      _$KinExplanationImpl _value, $Res Function(_$KinExplanationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1389,7 +1394,7 @@ class __$$_KinExplanationCopyWithImpl<$Res>
     Object? langOfKin = null,
     Object? isCollected = null,
   }) {
-    return _then(_$_KinExplanation(
+    return _then(_$KinExplanationImpl(
       explanation: null == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
@@ -1409,16 +1414,16 @@ class __$$_KinExplanationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinExplanation
+class _$KinExplanationImpl
     with DiagnosticableTreeMixin
     implements _KinExplanation {
-  const _$_KinExplanation(
+  const _$KinExplanationImpl(
       {required this.explanation,
       required this.langOfKin,
       required this.isCollected});
 
-  factory _$_KinExplanation.fromJson(Map<String, dynamic> json) =>
-      _$$_KinExplanationFromJson(json);
+  factory _$KinExplanationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinExplanationImplFromJson(json);
 
   @override
   final String explanation;
@@ -1443,10 +1448,10 @@ class _$_KinExplanation
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinExplanation &&
+            other is _$KinExplanationImpl &&
             (identical(other.explanation, explanation) ||
                 other.explanation == explanation) &&
             (identical(other.langOfKin, langOfKin) ||
@@ -1463,12 +1468,13 @@ class _$_KinExplanation
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinExplanationCopyWith<_$_KinExplanation> get copyWith =>
-      __$$_KinExplanationCopyWithImpl<_$_KinExplanation>(this, _$identity);
+  _$$KinExplanationImplCopyWith<_$KinExplanationImpl> get copyWith =>
+      __$$KinExplanationImplCopyWithImpl<_$KinExplanationImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinExplanationToJson(
+    return _$$KinExplanationImplToJson(
       this,
     );
   }
@@ -1478,10 +1484,10 @@ abstract class _KinExplanation implements KinExplanation {
   const factory _KinExplanation(
       {required final String explanation,
       required final String langOfKin,
-      required final bool isCollected}) = _$_KinExplanation;
+      required final bool isCollected}) = _$KinExplanationImpl;
 
   factory _KinExplanation.fromJson(Map<String, dynamic> json) =
-      _$_KinExplanation.fromJson;
+      _$KinExplanationImpl.fromJson;
 
   @override
   String get explanation;
@@ -1491,6 +1497,6 @@ abstract class _KinExplanation implements KinExplanation {
   bool get isCollected;
   @override
   @JsonKey(ignore: true)
-  _$$_KinExplanationCopyWith<_$_KinExplanation> get copyWith =>
+  _$$KinExplanationImplCopyWith<_$KinExplanationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

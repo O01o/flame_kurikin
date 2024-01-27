@@ -1,10 +1,11 @@
-import 'package:flame_kurikin/types/member.dart';
+import 'package:flame_kurikin/domain/value_objects/kin.dart';
+import 'package:flame_kurikin/domain/value_objects/member.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
-part 'member_object.freezed.dart';
-part 'member_object.g.dart';
+part '../../generated/member_object.freezed.dart';
+part '../../generated/member_object.g.dart';
 
 @freezed
 class PlayerInfo with _$PlayerInfo {

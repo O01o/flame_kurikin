@@ -1,11 +1,12 @@
 import 'member_object.dart';
-import 'package:flame_kurikin/types/member.dart';
+import 'package:flame_kurikin/domain/value_objects/kin.dart';
+import 'package:flame_kurikin/domain/value_objects/member.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
-part 'story_object.freezed.dart';
-part 'story_object.g.dart';
+part '../../generated/story_object.freezed.dart';
+part '../../generated/story_object.g.dart';
 
 @freezed
 class Task with _$Task {

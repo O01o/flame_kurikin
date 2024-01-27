@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'kin_dictionary_object.dart';
+part of '../domain/entities/kin_dictionary_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -109,11 +109,11 @@ class _$KinDictionaryCopyWithImpl<$Res, $Val extends KinDictionary>
 }
 
 /// @nodoc
-abstract class _$$_KinDictionaryCopyWith<$Res>
+abstract class _$$KinDictionaryImplCopyWith<$Res>
     implements $KinDictionaryCopyWith<$Res> {
-  factory _$$_KinDictionaryCopyWith(
-          _$_KinDictionary value, $Res Function(_$_KinDictionary) then) =
-      __$$_KinDictionaryCopyWithImpl<$Res>;
+  factory _$$KinDictionaryImplCopyWith(
+          _$KinDictionaryImpl value, $Res Function(_$KinDictionaryImpl) then) =
+      __$$KinDictionaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -130,11 +130,11 @@ abstract class _$$_KinDictionaryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KinDictionaryCopyWithImpl<$Res>
-    extends _$KinDictionaryCopyWithImpl<$Res, _$_KinDictionary>
-    implements _$$_KinDictionaryCopyWith<$Res> {
-  __$$_KinDictionaryCopyWithImpl(
-      _$_KinDictionary _value, $Res Function(_$_KinDictionary) _then)
+class __$$KinDictionaryImplCopyWithImpl<$Res>
+    extends _$KinDictionaryCopyWithImpl<$Res, _$KinDictionaryImpl>
+    implements _$$KinDictionaryImplCopyWith<$Res> {
+  __$$KinDictionaryImplCopyWithImpl(
+      _$KinDictionaryImpl _value, $Res Function(_$KinDictionaryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -144,7 +144,7 @@ class __$$_KinDictionaryCopyWithImpl<$Res>
     Object? generalVariableStatus = null,
     Object? explanation = null,
   }) {
-    return _then(_$_KinDictionary(
+    return _then(_$KinDictionaryImpl(
       congentialConstantStatus: null == congentialConstantStatus
           ? _value.congentialConstantStatus
           : congentialConstantStatus // ignore: cast_nullable_to_non_nullable
@@ -164,14 +164,16 @@ class __$$_KinDictionaryCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
-  const _$_KinDictionary(
+class _$KinDictionaryImpl
+    with DiagnosticableTreeMixin
+    implements _KinDictionary {
+  const _$KinDictionaryImpl(
       {required this.congentialConstantStatus,
       required this.generalVariableStatus,
       required this.explanation});
 
-  factory _$_KinDictionary.fromJson(Map<String, dynamic> json) =>
-      _$$_KinDictionaryFromJson(json);
+  factory _$KinDictionaryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinDictionaryImplFromJson(json);
 
   @override
   final KinCongentialConstantStatus congentialConstantStatus;
@@ -197,10 +199,10 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinDictionary &&
+            other is _$KinDictionaryImpl &&
             (identical(
                     other.congentialConstantStatus, congentialConstantStatus) ||
                 other.congentialConstantStatus == congentialConstantStatus) &&
@@ -218,12 +220,12 @@ class _$_KinDictionary with DiagnosticableTreeMixin implements _KinDictionary {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinDictionaryCopyWith<_$_KinDictionary> get copyWith =>
-      __$$_KinDictionaryCopyWithImpl<_$_KinDictionary>(this, _$identity);
+  _$$KinDictionaryImplCopyWith<_$KinDictionaryImpl> get copyWith =>
+      __$$KinDictionaryImplCopyWithImpl<_$KinDictionaryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinDictionaryToJson(
+    return _$$KinDictionaryImplToJson(
       this,
     );
   }
@@ -233,10 +235,10 @@ abstract class _KinDictionary implements KinDictionary {
   const factory _KinDictionary(
       {required final KinCongentialConstantStatus congentialConstantStatus,
       required final KinGeneralVariableStatus generalVariableStatus,
-      required final KinExplanation explanation}) = _$_KinDictionary;
+      required final KinExplanation explanation}) = _$KinDictionaryImpl;
 
   factory _KinDictionary.fromJson(Map<String, dynamic> json) =
-      _$_KinDictionary.fromJson;
+      _$KinDictionaryImpl.fromJson;
 
   @override
   KinCongentialConstantStatus get congentialConstantStatus;
@@ -246,7 +248,7 @@ abstract class _KinDictionary implements KinDictionary {
   KinExplanation get explanation;
   @override
   @JsonKey(ignore: true)
-  _$$_KinDictionaryCopyWith<_$_KinDictionary> get copyWith =>
+  _$$KinDictionaryImplCopyWith<_$KinDictionaryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -299,22 +301,22 @@ class _$KinDictionaryListCopyWithImpl<$Res, $Val extends KinDictionaryList>
 }
 
 /// @nodoc
-abstract class _$$_KinDictionaryListCopyWith<$Res>
+abstract class _$$KinDictionaryListImplCopyWith<$Res>
     implements $KinDictionaryListCopyWith<$Res> {
-  factory _$$_KinDictionaryListCopyWith(_$_KinDictionaryList value,
-          $Res Function(_$_KinDictionaryList) then) =
-      __$$_KinDictionaryListCopyWithImpl<$Res>;
+  factory _$$KinDictionaryListImplCopyWith(_$KinDictionaryListImpl value,
+          $Res Function(_$KinDictionaryListImpl) then) =
+      __$$KinDictionaryListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KinDictionary> kinDictionaryList});
 }
 
 /// @nodoc
-class __$$_KinDictionaryListCopyWithImpl<$Res>
-    extends _$KinDictionaryListCopyWithImpl<$Res, _$_KinDictionaryList>
-    implements _$$_KinDictionaryListCopyWith<$Res> {
-  __$$_KinDictionaryListCopyWithImpl(
-      _$_KinDictionaryList _value, $Res Function(_$_KinDictionaryList) _then)
+class __$$KinDictionaryListImplCopyWithImpl<$Res>
+    extends _$KinDictionaryListCopyWithImpl<$Res, _$KinDictionaryListImpl>
+    implements _$$KinDictionaryListImplCopyWith<$Res> {
+  __$$KinDictionaryListImplCopyWithImpl(_$KinDictionaryListImpl _value,
+      $Res Function(_$KinDictionaryListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -322,7 +324,7 @@ class __$$_KinDictionaryListCopyWithImpl<$Res>
   $Res call({
     Object? kinDictionaryList = null,
   }) {
-    return _then(_$_KinDictionaryList(
+    return _then(_$KinDictionaryListImpl(
       kinDictionaryList: null == kinDictionaryList
           ? _value._kinDictionaryList
           : kinDictionaryList // ignore: cast_nullable_to_non_nullable
@@ -334,15 +336,15 @@ class __$$_KinDictionaryListCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_KinDictionaryList
+class _$KinDictionaryListImpl
     with DiagnosticableTreeMixin
     implements _KinDictionaryList {
-  const _$_KinDictionaryList(
+  const _$KinDictionaryListImpl(
       {required final List<KinDictionary> kinDictionaryList})
       : _kinDictionaryList = kinDictionaryList;
 
-  factory _$_KinDictionaryList.fromJson(Map<String, dynamic> json) =>
-      _$$_KinDictionaryListFromJson(json);
+  factory _$KinDictionaryListImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KinDictionaryListImplFromJson(json);
 
   final List<KinDictionary> _kinDictionaryList;
   @override
@@ -367,10 +369,10 @@ class _$_KinDictionaryList
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KinDictionaryList &&
+            other is _$KinDictionaryListImpl &&
             const DeepCollectionEquality()
                 .equals(other._kinDictionaryList, _kinDictionaryList));
   }
@@ -383,13 +385,13 @@ class _$_KinDictionaryList
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KinDictionaryListCopyWith<_$_KinDictionaryList> get copyWith =>
-      __$$_KinDictionaryListCopyWithImpl<_$_KinDictionaryList>(
+  _$$KinDictionaryListImplCopyWith<_$KinDictionaryListImpl> get copyWith =>
+      __$$KinDictionaryListImplCopyWithImpl<_$KinDictionaryListImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KinDictionaryListToJson(
+    return _$$KinDictionaryListImplToJson(
       this,
     );
   }
@@ -398,15 +400,15 @@ class _$_KinDictionaryList
 abstract class _KinDictionaryList implements KinDictionaryList {
   const factory _KinDictionaryList(
           {required final List<KinDictionary> kinDictionaryList}) =
-      _$_KinDictionaryList;
+      _$KinDictionaryListImpl;
 
   factory _KinDictionaryList.fromJson(Map<String, dynamic> json) =
-      _$_KinDictionaryList.fromJson;
+      _$KinDictionaryListImpl.fromJson;
 
   @override
   List<KinDictionary> get kinDictionaryList;
   @override
   @JsonKey(ignore: true)
-  _$$_KinDictionaryListCopyWith<_$_KinDictionaryList> get copyWith =>
+  _$$KinDictionaryListImplCopyWith<_$KinDictionaryListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

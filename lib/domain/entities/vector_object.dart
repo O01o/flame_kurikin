@@ -1,8 +1,8 @@
 import 'package:flame/components.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'vector_object.freezed.dart';
-part 'vector_object.g.dart';
+part '../../generated/vector_object.freezed.dart';
+part '../../generated/vector_object.g.dart';
 
 @freezed
 class FreezedVector2 with _$FreezedVector2 {

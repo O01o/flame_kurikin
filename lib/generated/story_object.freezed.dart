@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'story_object.dart';
+part of '../domain/entities/story_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -66,18 +66,20 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
 }
 
 /// @nodoc
-abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
-  factory _$$_TaskCopyWith(_$_Task value, $Res Function(_$_Task) then) =
-      __$$_TaskCopyWithImpl<$Res>;
+abstract class _$$TaskImplCopyWith<$Res> implements $TaskCopyWith<$Res> {
+  factory _$$TaskImplCopyWith(
+          _$TaskImpl value, $Res Function(_$TaskImpl) then) =
+      __$$TaskImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String taskName, bool isDone});
 }
 
 /// @nodoc
-class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
-    implements _$$_TaskCopyWith<$Res> {
-  __$$_TaskCopyWithImpl(_$_Task _value, $Res Function(_$_Task) _then)
+class __$$TaskImplCopyWithImpl<$Res>
+    extends _$TaskCopyWithImpl<$Res, _$TaskImpl>
+    implements _$$TaskImplCopyWith<$Res> {
+  __$$TaskImplCopyWithImpl(_$TaskImpl _value, $Res Function(_$TaskImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +88,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
     Object? taskName = null,
     Object? isDone = null,
   }) {
-    return _then(_$_Task(
+    return _then(_$TaskImpl(
       taskName: null == taskName
           ? _value.taskName
           : taskName // ignore: cast_nullable_to_non_nullable
@@ -102,10 +104,11 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_Task with DiagnosticableTreeMixin implements _Task {
-  const _$_Task({required this.taskName, required this.isDone});
+class _$TaskImpl with DiagnosticableTreeMixin implements _Task {
+  const _$TaskImpl({required this.taskName, required this.isDone});
 
-  factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
+  factory _$TaskImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TaskImplFromJson(json);
 
   @override
   final String taskName;
@@ -127,10 +130,10 @@ class _$_Task with DiagnosticableTreeMixin implements _Task {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Task &&
+            other is _$TaskImpl &&
             (identical(other.taskName, taskName) ||
                 other.taskName == taskName) &&
             (identical(other.isDone, isDone) || other.isDone == isDone));
@@ -143,12 +146,12 @@ class _$_Task with DiagnosticableTreeMixin implements _Task {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TaskCopyWith<_$_Task> get copyWith =>
-      __$$_TaskCopyWithImpl<_$_Task>(this, _$identity);
+  _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
+      __$$TaskImplCopyWithImpl<_$TaskImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaskToJson(
+    return _$$TaskImplToJson(
       this,
     );
   }
@@ -156,9 +159,10 @@ class _$_Task with DiagnosticableTreeMixin implements _Task {
 
 abstract class _Task implements Task {
   const factory _Task(
-      {required final String taskName, required final bool isDone}) = _$_Task;
+      {required final String taskName,
+      required final bool isDone}) = _$TaskImpl;
 
-  factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
+  factory _Task.fromJson(Map<String, dynamic> json) = _$TaskImpl.fromJson;
 
   @override
   String get taskName;
@@ -166,7 +170,8 @@ abstract class _Task implements Task {
   bool get isDone;
   @override
   @JsonKey(ignore: true)
-  _$$_TaskCopyWith<_$_Task> get copyWith => throw _privateConstructorUsedError;
+  _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Season _$SeasonFromJson(Map<String, dynamic> json) {
@@ -230,9 +235,10 @@ class _$SeasonCopyWithImpl<$Res, $Val extends Season>
 }
 
 /// @nodoc
-abstract class _$$_SeasonCopyWith<$Res> implements $SeasonCopyWith<$Res> {
-  factory _$$_SeasonCopyWith(_$_Season value, $Res Function(_$_Season) then) =
-      __$$_SeasonCopyWithImpl<$Res>;
+abstract class _$$SeasonImplCopyWith<$Res> implements $SeasonCopyWith<$Res> {
+  factory _$$SeasonImplCopyWith(
+          _$SeasonImpl value, $Res Function(_$SeasonImpl) then) =
+      __$$SeasonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -242,10 +248,11 @@ abstract class _$$_SeasonCopyWith<$Res> implements $SeasonCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SeasonCopyWithImpl<$Res>
-    extends _$SeasonCopyWithImpl<$Res, _$_Season>
-    implements _$$_SeasonCopyWith<$Res> {
-  __$$_SeasonCopyWithImpl(_$_Season _value, $Res Function(_$_Season) _then)
+class __$$SeasonImplCopyWithImpl<$Res>
+    extends _$SeasonCopyWithImpl<$Res, _$SeasonImpl>
+    implements _$$SeasonImplCopyWith<$Res> {
+  __$$SeasonImplCopyWithImpl(
+      _$SeasonImpl _value, $Res Function(_$SeasonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -255,7 +262,7 @@ class __$$_SeasonCopyWithImpl<$Res>
     Object? taskList = null,
     Object? messageBlockList = null,
   }) {
-    return _then(_$_Season(
+    return _then(_$SeasonImpl(
       seasonName: null == seasonName
           ? _value.seasonName
           : seasonName // ignore: cast_nullable_to_non_nullable
@@ -275,16 +282,16 @@ class __$$_SeasonCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_Season with DiagnosticableTreeMixin implements _Season {
-  const _$_Season(
+class _$SeasonImpl with DiagnosticableTreeMixin implements _Season {
+  const _$SeasonImpl(
       {required this.seasonName,
       required final List<Task> taskList,
       required final List<MessageBlock> messageBlockList})
       : _taskList = taskList,
         _messageBlockList = messageBlockList;
 
-  factory _$_Season.fromJson(Map<String, dynamic> json) =>
-      _$$_SeasonFromJson(json);
+  factory _$SeasonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SeasonImplFromJson(json);
 
   @override
   final String seasonName;
@@ -321,10 +328,10 @@ class _$_Season with DiagnosticableTreeMixin implements _Season {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Season &&
+            other is _$SeasonImpl &&
             (identical(other.seasonName, seasonName) ||
                 other.seasonName == seasonName) &&
             const DeepCollectionEquality().equals(other._taskList, _taskList) &&
@@ -343,12 +350,12 @@ class _$_Season with DiagnosticableTreeMixin implements _Season {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SeasonCopyWith<_$_Season> get copyWith =>
-      __$$_SeasonCopyWithImpl<_$_Season>(this, _$identity);
+  _$$SeasonImplCopyWith<_$SeasonImpl> get copyWith =>
+      __$$SeasonImplCopyWithImpl<_$SeasonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeasonToJson(
+    return _$$SeasonImplToJson(
       this,
     );
   }
@@ -358,9 +365,9 @@ abstract class _Season implements Season {
   const factory _Season(
       {required final String seasonName,
       required final List<Task> taskList,
-      required final List<MessageBlock> messageBlockList}) = _$_Season;
+      required final List<MessageBlock> messageBlockList}) = _$SeasonImpl;
 
-  factory _Season.fromJson(Map<String, dynamic> json) = _$_Season.fromJson;
+  factory _Season.fromJson(Map<String, dynamic> json) = _$SeasonImpl.fromJson;
 
   @override
   String get seasonName;
@@ -370,7 +377,7 @@ abstract class _Season implements Season {
   List<MessageBlock> get messageBlockList;
   @override
   @JsonKey(ignore: true)
-  _$$_SeasonCopyWith<_$_Season> get copyWith =>
+  _$$SeasonImplCopyWith<_$SeasonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -434,22 +441,22 @@ class _$MessageTokenCopyWithImpl<$Res, $Val extends MessageToken>
 }
 
 /// @nodoc
-abstract class _$$_MessageTokenCopyWith<$Res>
+abstract class _$$MessageTokenImplCopyWith<$Res>
     implements $MessageTokenCopyWith<$Res> {
-  factory _$$_MessageTokenCopyWith(
-          _$_MessageToken value, $Res Function(_$_MessageToken) then) =
-      __$$_MessageTokenCopyWithImpl<$Res>;
+  factory _$$MessageTokenImplCopyWith(
+          _$MessageTokenImpl value, $Res Function(_$MessageTokenImpl) then) =
+      __$$MessageTokenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Character character, Emotion emotion, String message});
 }
 
 /// @nodoc
-class __$$_MessageTokenCopyWithImpl<$Res>
-    extends _$MessageTokenCopyWithImpl<$Res, _$_MessageToken>
-    implements _$$_MessageTokenCopyWith<$Res> {
-  __$$_MessageTokenCopyWithImpl(
-      _$_MessageToken _value, $Res Function(_$_MessageToken) _then)
+class __$$MessageTokenImplCopyWithImpl<$Res>
+    extends _$MessageTokenCopyWithImpl<$Res, _$MessageTokenImpl>
+    implements _$$MessageTokenImplCopyWith<$Res> {
+  __$$MessageTokenImplCopyWithImpl(
+      _$MessageTokenImpl _value, $Res Function(_$MessageTokenImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -459,7 +466,7 @@ class __$$_MessageTokenCopyWithImpl<$Res>
     Object? emotion = null,
     Object? message = null,
   }) {
-    return _then(_$_MessageToken(
+    return _then(_$MessageTokenImpl(
       character: null == character
           ? _value.character
           : character // ignore: cast_nullable_to_non_nullable
@@ -479,12 +486,12 @@ class __$$_MessageTokenCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_MessageToken with DiagnosticableTreeMixin implements _MessageToken {
-  const _$_MessageToken(
+class _$MessageTokenImpl with DiagnosticableTreeMixin implements _MessageToken {
+  const _$MessageTokenImpl(
       {required this.character, required this.emotion, required this.message});
 
-  factory _$_MessageToken.fromJson(Map<String, dynamic> json) =>
-      _$$_MessageTokenFromJson(json);
+  factory _$MessageTokenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MessageTokenImplFromJson(json);
 
   @override
   final Character character;
@@ -509,10 +516,10 @@ class _$_MessageToken with DiagnosticableTreeMixin implements _MessageToken {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MessageToken &&
+            other is _$MessageTokenImpl &&
             (identical(other.character, character) ||
                 other.character == character) &&
             (identical(other.emotion, emotion) || other.emotion == emotion) &&
@@ -526,12 +533,12 @@ class _$_MessageToken with DiagnosticableTreeMixin implements _MessageToken {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MessageTokenCopyWith<_$_MessageToken> get copyWith =>
-      __$$_MessageTokenCopyWithImpl<_$_MessageToken>(this, _$identity);
+  _$$MessageTokenImplCopyWith<_$MessageTokenImpl> get copyWith =>
+      __$$MessageTokenImplCopyWithImpl<_$MessageTokenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageTokenToJson(
+    return _$$MessageTokenImplToJson(
       this,
     );
   }
@@ -541,10 +548,10 @@ abstract class _MessageToken implements MessageToken {
   const factory _MessageToken(
       {required final Character character,
       required final Emotion emotion,
-      required final String message}) = _$_MessageToken;
+      required final String message}) = _$MessageTokenImpl;
 
   factory _MessageToken.fromJson(Map<String, dynamic> json) =
-      _$_MessageToken.fromJson;
+      _$MessageTokenImpl.fromJson;
 
   @override
   Character get character;
@@ -554,7 +561,7 @@ abstract class _MessageToken implements MessageToken {
   String get message;
   @override
   @JsonKey(ignore: true)
-  _$$_MessageTokenCopyWith<_$_MessageToken> get copyWith =>
+  _$$MessageTokenImplCopyWith<_$MessageTokenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -622,11 +629,11 @@ class _$MessageBlockCopyWithImpl<$Res, $Val extends MessageBlock>
 }
 
 /// @nodoc
-abstract class _$$_MessageBlockCopyWith<$Res>
+abstract class _$$MessageBlockImplCopyWith<$Res>
     implements $MessageBlockCopyWith<$Res> {
-  factory _$$_MessageBlockCopyWith(
-          _$_MessageBlock value, $Res Function(_$_MessageBlock) then) =
-      __$$_MessageBlockCopyWithImpl<$Res>;
+  factory _$$MessageBlockImplCopyWith(
+          _$MessageBlockImpl value, $Res Function(_$MessageBlockImpl) then) =
+      __$$MessageBlockImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -636,11 +643,11 @@ abstract class _$$_MessageBlockCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MessageBlockCopyWithImpl<$Res>
-    extends _$MessageBlockCopyWithImpl<$Res, _$_MessageBlock>
-    implements _$$_MessageBlockCopyWith<$Res> {
-  __$$_MessageBlockCopyWithImpl(
-      _$_MessageBlock _value, $Res Function(_$_MessageBlock) _then)
+class __$$MessageBlockImplCopyWithImpl<$Res>
+    extends _$MessageBlockCopyWithImpl<$Res, _$MessageBlockImpl>
+    implements _$$MessageBlockImplCopyWith<$Res> {
+  __$$MessageBlockImplCopyWithImpl(
+      _$MessageBlockImpl _value, $Res Function(_$MessageBlockImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -650,7 +657,7 @@ class __$$_MessageBlockCopyWithImpl<$Res>
     Object? checkTaskIndexList = null,
     Object? messageTokenList = null,
   }) {
-    return _then(_$_MessageBlock(
+    return _then(_$MessageBlockImpl(
       talkId: null == talkId
           ? _value.talkId
           : talkId // ignore: cast_nullable_to_non_nullable
@@ -670,16 +677,16 @@ class __$$_MessageBlockCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_MessageBlock with DiagnosticableTreeMixin implements _MessageBlock {
-  const _$_MessageBlock(
+class _$MessageBlockImpl with DiagnosticableTreeMixin implements _MessageBlock {
+  const _$MessageBlockImpl(
       {required this.talkId,
       required final List<int> checkTaskIndexList,
       required final List<List<MessageToken>> messageTokenList})
       : _checkTaskIndexList = checkTaskIndexList,
         _messageTokenList = messageTokenList;
 
-  factory _$_MessageBlock.fromJson(Map<String, dynamic> json) =>
-      _$$_MessageBlockFromJson(json);
+  factory _$MessageBlockImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MessageBlockImplFromJson(json);
 
   @override
   final String talkId;
@@ -717,10 +724,10 @@ class _$_MessageBlock with DiagnosticableTreeMixin implements _MessageBlock {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MessageBlock &&
+            other is _$MessageBlockImpl &&
             (identical(other.talkId, talkId) || other.talkId == talkId) &&
             const DeepCollectionEquality()
                 .equals(other._checkTaskIndexList, _checkTaskIndexList) &&
@@ -739,12 +746,12 @@ class _$_MessageBlock with DiagnosticableTreeMixin implements _MessageBlock {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MessageBlockCopyWith<_$_MessageBlock> get copyWith =>
-      __$$_MessageBlockCopyWithImpl<_$_MessageBlock>(this, _$identity);
+  _$$MessageBlockImplCopyWith<_$MessageBlockImpl> get copyWith =>
+      __$$MessageBlockImplCopyWithImpl<_$MessageBlockImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageBlockToJson(
+    return _$$MessageBlockImplToJson(
       this,
     );
   }
@@ -755,10 +762,10 @@ abstract class _MessageBlock implements MessageBlock {
           {required final String talkId,
           required final List<int> checkTaskIndexList,
           required final List<List<MessageToken>> messageTokenList}) =
-      _$_MessageBlock;
+      _$MessageBlockImpl;
 
   factory _MessageBlock.fromJson(Map<String, dynamic> json) =
-      _$_MessageBlock.fromJson;
+      _$MessageBlockImpl.fromJson;
 
   @override
   String get talkId;
@@ -768,7 +775,7 @@ abstract class _MessageBlock implements MessageBlock {
   List<List<MessageToken>> get messageTokenList;
   @override
   @JsonKey(ignore: true)
-  _$$_MessageBlockCopyWith<_$_MessageBlock> get copyWith =>
+  _$$MessageBlockImplCopyWith<_$MessageBlockImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -825,21 +832,22 @@ class _$StoryInfoCopyWithImpl<$Res, $Val extends StoryInfo>
 }
 
 /// @nodoc
-abstract class _$$_StoryInfoCopyWith<$Res> implements $StoryInfoCopyWith<$Res> {
-  factory _$$_StoryInfoCopyWith(
-          _$_StoryInfo value, $Res Function(_$_StoryInfo) then) =
-      __$$_StoryInfoCopyWithImpl<$Res>;
+abstract class _$$StoryInfoImplCopyWith<$Res>
+    implements $StoryInfoCopyWith<$Res> {
+  factory _$$StoryInfoImplCopyWith(
+          _$StoryInfoImpl value, $Res Function(_$StoryInfoImpl) then) =
+      __$$StoryInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int currentSeason, List<Season> seasonList});
 }
 
 /// @nodoc
-class __$$_StoryInfoCopyWithImpl<$Res>
-    extends _$StoryInfoCopyWithImpl<$Res, _$_StoryInfo>
-    implements _$$_StoryInfoCopyWith<$Res> {
-  __$$_StoryInfoCopyWithImpl(
-      _$_StoryInfo _value, $Res Function(_$_StoryInfo) _then)
+class __$$StoryInfoImplCopyWithImpl<$Res>
+    extends _$StoryInfoCopyWithImpl<$Res, _$StoryInfoImpl>
+    implements _$$StoryInfoImplCopyWith<$Res> {
+  __$$StoryInfoImplCopyWithImpl(
+      _$StoryInfoImpl _value, $Res Function(_$StoryInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -848,7 +856,7 @@ class __$$_StoryInfoCopyWithImpl<$Res>
     Object? currentSeason = null,
     Object? seasonList = null,
   }) {
-    return _then(_$_StoryInfo(
+    return _then(_$StoryInfoImpl(
       currentSeason: null == currentSeason
           ? _value.currentSeason
           : currentSeason // ignore: cast_nullable_to_non_nullable
@@ -864,13 +872,13 @@ class __$$_StoryInfoCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_StoryInfo with DiagnosticableTreeMixin implements _StoryInfo {
-  const _$_StoryInfo(
+class _$StoryInfoImpl with DiagnosticableTreeMixin implements _StoryInfo {
+  const _$StoryInfoImpl(
       {required this.currentSeason, required final List<Season> seasonList})
       : _seasonList = seasonList;
 
-  factory _$_StoryInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_StoryInfoFromJson(json);
+  factory _$StoryInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StoryInfoImplFromJson(json);
 
   @override
   final int currentSeason;
@@ -897,10 +905,10 @@ class _$_StoryInfo with DiagnosticableTreeMixin implements _StoryInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StoryInfo &&
+            other is _$StoryInfoImpl &&
             (identical(other.currentSeason, currentSeason) ||
                 other.currentSeason == currentSeason) &&
             const DeepCollectionEquality()
@@ -915,12 +923,12 @@ class _$_StoryInfo with DiagnosticableTreeMixin implements _StoryInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StoryInfoCopyWith<_$_StoryInfo> get copyWith =>
-      __$$_StoryInfoCopyWithImpl<_$_StoryInfo>(this, _$identity);
+  _$$StoryInfoImplCopyWith<_$StoryInfoImpl> get copyWith =>
+      __$$StoryInfoImplCopyWithImpl<_$StoryInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StoryInfoToJson(
+    return _$$StoryInfoImplToJson(
       this,
     );
   }
@@ -929,10 +937,10 @@ class _$_StoryInfo with DiagnosticableTreeMixin implements _StoryInfo {
 abstract class _StoryInfo implements StoryInfo {
   const factory _StoryInfo(
       {required final int currentSeason,
-      required final List<Season> seasonList}) = _$_StoryInfo;
+      required final List<Season> seasonList}) = _$StoryInfoImpl;
 
   factory _StoryInfo.fromJson(Map<String, dynamic> json) =
-      _$_StoryInfo.fromJson;
+      _$StoryInfoImpl.fromJson;
 
   @override
   int get currentSeason;
@@ -940,6 +948,6 @@ abstract class _StoryInfo implements StoryInfo {
   List<Season> get seasonList;
   @override
   @JsonKey(ignore: true)
-  _$$_StoryInfoCopyWith<_$_StoryInfo> get copyWith =>
+  _$$StoryInfoImplCopyWith<_$StoryInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

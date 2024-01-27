@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'kin_dictionary_object.dart';
+part of '../domain/entities/kin_dictionary_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KinDictionary _$$_KinDictionaryFromJson(Map<String, dynamic> json) =>
-    _$_KinDictionary(
+_$KinDictionaryImpl _$$KinDictionaryImplFromJson(Map<String, dynamic> json) =>
+    _$KinDictionaryImpl(
       congentialConstantStatus: KinCongentialConstantStatus.fromJson(
           json['congential-constant-status'] as Map<String, dynamic>),
       generalVariableStatus: KinGeneralVariableStatus.fromJson(
@@ -16,22 +16,23 @@ _$_KinDictionary _$$_KinDictionaryFromJson(Map<String, dynamic> json) =>
           KinExplanation.fromJson(json['explanation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KinDictionaryToJson(_$_KinDictionary instance) =>
+Map<String, dynamic> _$$KinDictionaryImplToJson(_$KinDictionaryImpl instance) =>
     <String, dynamic>{
       'congential-constant-status': instance.congentialConstantStatus.toJson(),
       'general-variable-status': instance.generalVariableStatus.toJson(),
       'explanation': instance.explanation.toJson(),
     };
 
-_$_KinDictionaryList _$$_KinDictionaryListFromJson(Map<String, dynamic> json) =>
-    _$_KinDictionaryList(
+_$KinDictionaryListImpl _$$KinDictionaryListImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KinDictionaryListImpl(
       kinDictionaryList: (json['kin-dictionary-list'] as List<dynamic>)
           .map((e) => KinDictionary.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_KinDictionaryListToJson(
-        _$_KinDictionaryList instance) =>
+Map<String, dynamic> _$$KinDictionaryListImplToJson(
+        _$KinDictionaryListImpl instance) =>
     <String, dynamic>{
       'kin-dictionary-list':
           instance.kinDictionaryList.map((e) => e.toJson()).toList(),

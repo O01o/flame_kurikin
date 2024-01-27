@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'member_object.dart';
+part of '../domain/entities/member_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -68,22 +68,22 @@ class _$PlayerInfoCopyWithImpl<$Res, $Val extends PlayerInfo>
 }
 
 /// @nodoc
-abstract class _$$_PlayerInfoCopyWith<$Res>
+abstract class _$$PlayerInfoImplCopyWith<$Res>
     implements $PlayerInfoCopyWith<$Res> {
-  factory _$$_PlayerInfoCopyWith(
-          _$_PlayerInfo value, $Res Function(_$_PlayerInfo) then) =
-      __$$_PlayerInfoCopyWithImpl<$Res>;
+  factory _$$PlayerInfoImplCopyWith(
+          _$PlayerInfoImpl value, $Res Function(_$PlayerInfoImpl) then) =
+      __$$PlayerInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, Sex sex});
 }
 
 /// @nodoc
-class __$$_PlayerInfoCopyWithImpl<$Res>
-    extends _$PlayerInfoCopyWithImpl<$Res, _$_PlayerInfo>
-    implements _$$_PlayerInfoCopyWith<$Res> {
-  __$$_PlayerInfoCopyWithImpl(
-      _$_PlayerInfo _value, $Res Function(_$_PlayerInfo) _then)
+class __$$PlayerInfoImplCopyWithImpl<$Res>
+    extends _$PlayerInfoCopyWithImpl<$Res, _$PlayerInfoImpl>
+    implements _$$PlayerInfoImplCopyWith<$Res> {
+  __$$PlayerInfoImplCopyWithImpl(
+      _$PlayerInfoImpl _value, $Res Function(_$PlayerInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_PlayerInfoCopyWithImpl<$Res>
     Object? name = null,
     Object? sex = null,
   }) {
-    return _then(_$_PlayerInfo(
+    return _then(_$PlayerInfoImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,11 @@ class __$$_PlayerInfoCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_PlayerInfo with DiagnosticableTreeMixin implements _PlayerInfo {
-  const _$_PlayerInfo({required this.name, required this.sex});
+class _$PlayerInfoImpl with DiagnosticableTreeMixin implements _PlayerInfo {
+  const _$PlayerInfoImpl({required this.name, required this.sex});
 
-  factory _$_PlayerInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_PlayerInfoFromJson(json);
+  factory _$PlayerInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlayerInfoImplFromJson(json);
 
   @override
   final String name;
@@ -134,10 +134,10 @@ class _$_PlayerInfo with DiagnosticableTreeMixin implements _PlayerInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlayerInfo &&
+            other is _$PlayerInfoImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sex, sex) || other.sex == sex));
   }
@@ -149,12 +149,12 @@ class _$_PlayerInfo with DiagnosticableTreeMixin implements _PlayerInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlayerInfoCopyWith<_$_PlayerInfo> get copyWith =>
-      __$$_PlayerInfoCopyWithImpl<_$_PlayerInfo>(this, _$identity);
+  _$$PlayerInfoImplCopyWith<_$PlayerInfoImpl> get copyWith =>
+      __$$PlayerInfoImplCopyWithImpl<_$PlayerInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayerInfoToJson(
+    return _$$PlayerInfoImplToJson(
       this,
     );
   }
@@ -162,10 +162,10 @@ class _$_PlayerInfo with DiagnosticableTreeMixin implements _PlayerInfo {
 
 abstract class _PlayerInfo implements PlayerInfo {
   const factory _PlayerInfo(
-      {required final String name, required final Sex sex}) = _$_PlayerInfo;
+      {required final String name, required final Sex sex}) = _$PlayerInfoImpl;
 
   factory _PlayerInfo.fromJson(Map<String, dynamic> json) =
-      _$_PlayerInfo.fromJson;
+      _$PlayerInfoImpl.fromJson;
 
   @override
   String get name;
@@ -173,6 +173,6 @@ abstract class _PlayerInfo implements PlayerInfo {
   Sex get sex;
   @override
   @JsonKey(ignore: true)
-  _$$_PlayerInfoCopyWith<_$_PlayerInfo> get copyWith =>
+  _$$PlayerInfoImplCopyWith<_$PlayerInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

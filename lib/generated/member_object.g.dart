@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'member_object.dart';
+part of '../domain/entities/member_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlayerInfo _$$_PlayerInfoFromJson(Map<String, dynamic> json) =>
-    _$_PlayerInfo(
+_$PlayerInfoImpl _$$PlayerInfoImplFromJson(Map<String, dynamic> json) =>
+    _$PlayerInfoImpl(
       name: json['name'] as String,
       sex: $enumDecode(_$SexEnumMap, json['sex']),
     );
 
-Map<String, dynamic> _$$_PlayerInfoToJson(_$_PlayerInfo instance) =>
+Map<String, dynamic> _$$PlayerInfoImplToJson(_$PlayerInfoImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'sex': _$SexEnumMap[instance.sex]!,

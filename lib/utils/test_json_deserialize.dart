@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flame_kurikin/domain/kin_stock_object.dart';
+import 'package:flame_kurikin/domain/entities/kin_stock_object.dart';
 
 
 Future<void> json_deserializer(int index) async {

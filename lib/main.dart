@@ -1,3 +1,4 @@
+import 'package:flame_kurikin/widgets/screens/hoge_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
@@ -15,7 +16,7 @@ void main() {
     DeviceOrientation.landscapeRight
   ]);
 
-  // final game = RouterGame();
+  // final game = DragEventsGame();
   final game = RouterGame();
   runApp(GameWidget(game: game));
 }

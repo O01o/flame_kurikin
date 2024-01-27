@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:flame_kurikin/domain/kin_base_object.dart';
-import 'package:flame_kurikin/domain/kin_stock_object.dart';
-import 'package:flame_kurikin/types/kin.dart';
+import 'package:flame_kurikin/domain/entities/kin_base_object.dart';
+import 'package:flame_kurikin/domain/entities/kin_stock_object.dart';
+import 'package:flame_kurikin/domain/services/kin_converter.dart';
+import 'package:flame_kurikin/domain/value_objects/kin.dart';
 
 import 'package:flame/components.dart';
 

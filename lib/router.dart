@@ -6,7 +6,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:flame_kurikin/widgets/screens/all_screens.dart';
 
-class RouterGame extends FlameGame with HasTappableComponents {
+class RouterGame extends FlameGame with HasCollisionDetection {
   late final RouterComponent router;
   
   @override

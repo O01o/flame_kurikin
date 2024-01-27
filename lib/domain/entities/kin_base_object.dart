@@ -1,13 +1,11 @@
-import 'package:flame/game.dart';
-
-import 'package:flame_kurikin/types/kin.dart';
-import 'package:flame_kurikin/types/member.dart';
+import 'package:flame_kurikin/domain/value_objects/kin.dart';
+import 'package:flame_kurikin/domain/value_objects/member.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
-part 'kin_base_object.freezed.dart';
-part 'kin_base_object.g.dart';
+part '../../generated/kin_base_object.freezed.dart';
+part '../../generated/kin_base_object.g.dart';
 
 @freezed
 class KinCongentialConstantStatus with _$KinCongentialConstantStatus {
@@ -31,31 +29,6 @@ class KinCongentialConstantStatus with _$KinCongentialConstantStatus {
   }) = _KinCongentialConstantStatus;
 
   factory KinCongentialConstantStatus.fromJson(Map<String, dynamic> json) => _$KinCongentialConstantStatusFromJson(json);
-}
-
-int sizeToInitSpawnAmount(Size size) {
-  switch (size) {
-    case Size.S: return 50;
-    case Size.M: return 25;
-    case Size.L: return 10;
-  }
-}
-
-Vector2 sizeToVector2Size(Size size) {
-  switch (size) {
-    case Size.S: return Vector2.all(10);
-    case Size.M: return Vector2.all(15);
-    case Size.L: return Vector2.all(20);
-  }
-}
-
-double getSpeedFromSpeedType(Speed speed) {
-  switch (speed) {
-    case Speed.A: return 10;
-    case Speed.B: return 7;
-    case Speed.C: return 5;
-    case Speed.D: return 3;
-  }
 }
 
 @freezed

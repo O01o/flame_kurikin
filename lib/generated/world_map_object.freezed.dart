@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'world_map_object.dart';
+part of '../domain/entities/world_map_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -68,22 +68,22 @@ class _$LocationPathCopyWithImpl<$Res, $Val extends LocationPath>
 }
 
 /// @nodoc
-abstract class _$$_LocationPathCopyWith<$Res>
+abstract class _$$LocationPathImplCopyWith<$Res>
     implements $LocationPathCopyWith<$Res> {
-  factory _$$_LocationPathCopyWith(
-          _$_LocationPath value, $Res Function(_$_LocationPath) then) =
-      __$$_LocationPathCopyWithImpl<$Res>;
+  factory _$$LocationPathImplCopyWith(
+          _$LocationPathImpl value, $Res Function(_$LocationPathImpl) then) =
+      __$$LocationPathImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String path, LocationType locationType});
 }
 
 /// @nodoc
-class __$$_LocationPathCopyWithImpl<$Res>
-    extends _$LocationPathCopyWithImpl<$Res, _$_LocationPath>
-    implements _$$_LocationPathCopyWith<$Res> {
-  __$$_LocationPathCopyWithImpl(
-      _$_LocationPath _value, $Res Function(_$_LocationPath) _then)
+class __$$LocationPathImplCopyWithImpl<$Res>
+    extends _$LocationPathCopyWithImpl<$Res, _$LocationPathImpl>
+    implements _$$LocationPathImplCopyWith<$Res> {
+  __$$LocationPathImplCopyWithImpl(
+      _$LocationPathImpl _value, $Res Function(_$LocationPathImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_LocationPathCopyWithImpl<$Res>
     Object? path = null,
     Object? locationType = null,
   }) {
-    return _then(_$_LocationPath(
+    return _then(_$LocationPathImpl(
       path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,11 @@ class __$$_LocationPathCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_LocationPath with DiagnosticableTreeMixin implements _LocationPath {
-  const _$_LocationPath({required this.path, required this.locationType});
+class _$LocationPathImpl with DiagnosticableTreeMixin implements _LocationPath {
+  const _$LocationPathImpl({required this.path, required this.locationType});
 
-  factory _$_LocationPath.fromJson(Map<String, dynamic> json) =>
-      _$$_LocationPathFromJson(json);
+  factory _$LocationPathImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocationPathImplFromJson(json);
 
   @override
   final String path;
@@ -134,10 +134,10 @@ class _$_LocationPath with DiagnosticableTreeMixin implements _LocationPath {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocationPath &&
+            other is _$LocationPathImpl &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.locationType, locationType) ||
                 other.locationType == locationType));
@@ -150,12 +150,12 @@ class _$_LocationPath with DiagnosticableTreeMixin implements _LocationPath {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocationPathCopyWith<_$_LocationPath> get copyWith =>
-      __$$_LocationPathCopyWithImpl<_$_LocationPath>(this, _$identity);
+  _$$LocationPathImplCopyWith<_$LocationPathImpl> get copyWith =>
+      __$$LocationPathImplCopyWithImpl<_$LocationPathImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationPathToJson(
+    return _$$LocationPathImplToJson(
       this,
     );
   }
@@ -164,10 +164,10 @@ class _$_LocationPath with DiagnosticableTreeMixin implements _LocationPath {
 abstract class _LocationPath implements LocationPath {
   const factory _LocationPath(
       {required final String path,
-      required final LocationType locationType}) = _$_LocationPath;
+      required final LocationType locationType}) = _$LocationPathImpl;
 
   factory _LocationPath.fromJson(Map<String, dynamic> json) =
-      _$_LocationPath.fromJson;
+      _$LocationPathImpl.fromJson;
 
   @override
   String get path;
@@ -175,7 +175,7 @@ abstract class _LocationPath implements LocationPath {
   LocationType get locationType;
   @override
   @JsonKey(ignore: true)
-  _$$_LocationPathCopyWith<_$_LocationPath> get copyWith =>
+  _$$LocationPathImplCopyWith<_$LocationPathImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -266,10 +266,11 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 }
 
 /// @nodoc
-abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
-  factory _$$_LocationCopyWith(
-          _$_Location value, $Res Function(_$_Location) then) =
-      __$$_LocationCopyWithImpl<$Res>;
+abstract class _$$LocationImplCopyWith<$Res>
+    implements $LocationCopyWith<$Res> {
+  factory _$$LocationImplCopyWith(
+          _$LocationImpl value, $Res Function(_$LocationImpl) then) =
+      __$$LocationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -284,11 +285,11 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LocationCopyWithImpl<$Res>
-    extends _$LocationCopyWithImpl<$Res, _$_Location>
-    implements _$$_LocationCopyWith<$Res> {
-  __$$_LocationCopyWithImpl(
-      _$_Location _value, $Res Function(_$_Location) _then)
+class __$$LocationImplCopyWithImpl<$Res>
+    extends _$LocationCopyWithImpl<$Res, _$LocationImpl>
+    implements _$$LocationImplCopyWith<$Res> {
+  __$$LocationImplCopyWithImpl(
+      _$LocationImpl _value, $Res Function(_$LocationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -300,7 +301,7 @@ class __$$_LocationCopyWithImpl<$Res>
     Object? iconImagePath = null,
     Object? locationPath = null,
   }) {
-    return _then(_$_Location(
+    return _then(_$LocationImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -328,16 +329,16 @@ class __$$_LocationCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_Location with DiagnosticableTreeMixin implements _Location {
-  const _$_Location(
+class _$LocationImpl with DiagnosticableTreeMixin implements _Location {
+  const _$LocationImpl(
       {required this.name,
       required this.explanation,
       @Vector2ToJson() this.location,
       required this.iconImagePath,
       required this.locationPath});
 
-  factory _$_Location.fromJson(Map<String, dynamic> json) =>
-      _$$_LocationFromJson(json);
+  factory _$LocationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocationImplFromJson(json);
 
   @override
   final String name;
@@ -369,10 +370,10 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Location &&
+            other is _$LocationImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.explanation, explanation) ||
                 other.explanation == explanation) &&
@@ -392,12 +393,12 @@ class _$_Location with DiagnosticableTreeMixin implements _Location {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocationCopyWith<_$_Location> get copyWith =>
-      __$$_LocationCopyWithImpl<_$_Location>(this, _$identity);
+  _$$LocationImplCopyWith<_$LocationImpl> get copyWith =>
+      __$$LocationImplCopyWithImpl<_$LocationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocationToJson(
+    return _$$LocationImplToJson(
       this,
     );
   }
@@ -409,9 +410,10 @@ abstract class _Location implements Location {
       required final String explanation,
       @Vector2ToJson() final Vector2? location,
       required final String iconImagePath,
-      required final LocationPath locationPath}) = _$_Location;
+      required final LocationPath locationPath}) = _$LocationImpl;
 
-  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
+  factory _Location.fromJson(Map<String, dynamic> json) =
+      _$LocationImpl.fromJson;
 
   @override
   String get name;
@@ -426,7 +428,7 @@ abstract class _Location implements Location {
   LocationPath get locationPath;
   @override
   @JsonKey(ignore: true)
-  _$$_LocationCopyWith<_$_Location> get copyWith =>
+  _$$LocationImplCopyWith<_$LocationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -484,22 +486,22 @@ class _$ExplorationMapCopyWithImpl<$Res, $Val extends ExplorationMap>
 }
 
 /// @nodoc
-abstract class _$$_ExplorationMapCopyWith<$Res>
+abstract class _$$ExplorationMapImplCopyWith<$Res>
     implements $ExplorationMapCopyWith<$Res> {
-  factory _$$_ExplorationMapCopyWith(
-          _$_ExplorationMap value, $Res Function(_$_ExplorationMap) then) =
-      __$$_ExplorationMapCopyWithImpl<$Res>;
+  factory _$$ExplorationMapImplCopyWith(_$ExplorationMapImpl value,
+          $Res Function(_$ExplorationMapImpl) then) =
+      __$$ExplorationMapImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String backgroundImagePath, List<Location> locationList});
 }
 
 /// @nodoc
-class __$$_ExplorationMapCopyWithImpl<$Res>
-    extends _$ExplorationMapCopyWithImpl<$Res, _$_ExplorationMap>
-    implements _$$_ExplorationMapCopyWith<$Res> {
-  __$$_ExplorationMapCopyWithImpl(
-      _$_ExplorationMap _value, $Res Function(_$_ExplorationMap) _then)
+class __$$ExplorationMapImplCopyWithImpl<$Res>
+    extends _$ExplorationMapCopyWithImpl<$Res, _$ExplorationMapImpl>
+    implements _$$ExplorationMapImplCopyWith<$Res> {
+  __$$ExplorationMapImplCopyWithImpl(
+      _$ExplorationMapImpl _value, $Res Function(_$ExplorationMapImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -508,7 +510,7 @@ class __$$_ExplorationMapCopyWithImpl<$Res>
     Object? backgroundImagePath = null,
     Object? locationList = null,
   }) {
-    return _then(_$_ExplorationMap(
+    return _then(_$ExplorationMapImpl(
       backgroundImagePath: null == backgroundImagePath
           ? _value.backgroundImagePath
           : backgroundImagePath // ignore: cast_nullable_to_non_nullable
@@ -524,16 +526,16 @@ class __$$_ExplorationMapCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_ExplorationMap
+class _$ExplorationMapImpl
     with DiagnosticableTreeMixin
     implements _ExplorationMap {
-  const _$_ExplorationMap(
+  const _$ExplorationMapImpl(
       {required this.backgroundImagePath,
       required final List<Location> locationList})
       : _locationList = locationList;
 
-  factory _$_ExplorationMap.fromJson(Map<String, dynamic> json) =>
-      _$$_ExplorationMapFromJson(json);
+  factory _$ExplorationMapImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExplorationMapImplFromJson(json);
 
   @override
   final String backgroundImagePath;
@@ -560,10 +562,10 @@ class _$_ExplorationMap
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExplorationMap &&
+            other is _$ExplorationMapImpl &&
             (identical(other.backgroundImagePath, backgroundImagePath) ||
                 other.backgroundImagePath == backgroundImagePath) &&
             const DeepCollectionEquality()
@@ -578,12 +580,13 @@ class _$_ExplorationMap
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExplorationMapCopyWith<_$_ExplorationMap> get copyWith =>
-      __$$_ExplorationMapCopyWithImpl<_$_ExplorationMap>(this, _$identity);
+  _$$ExplorationMapImplCopyWith<_$ExplorationMapImpl> get copyWith =>
+      __$$ExplorationMapImplCopyWithImpl<_$ExplorationMapImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplorationMapToJson(
+    return _$$ExplorationMapImplToJson(
       this,
     );
   }
@@ -592,10 +595,10 @@ class _$_ExplorationMap
 abstract class _ExplorationMap implements ExplorationMap {
   const factory _ExplorationMap(
       {required final String backgroundImagePath,
-      required final List<Location> locationList}) = _$_ExplorationMap;
+      required final List<Location> locationList}) = _$ExplorationMapImpl;
 
   factory _ExplorationMap.fromJson(Map<String, dynamic> json) =
-      _$_ExplorationMap.fromJson;
+      _$ExplorationMapImpl.fromJson;
 
   @override
   String get backgroundImagePath;
@@ -603,7 +606,7 @@ abstract class _ExplorationMap implements ExplorationMap {
   List<Location> get locationList;
   @override
   @JsonKey(ignore: true)
-  _$$_ExplorationMapCopyWith<_$_ExplorationMap> get copyWith =>
+  _$$ExplorationMapImplCopyWith<_$ExplorationMapImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -672,11 +675,11 @@ class _$ExplorationMapListCopyWithImpl<$Res, $Val extends ExplorationMapList>
 }
 
 /// @nodoc
-abstract class _$$_ExplorationMapListCopyWith<$Res>
+abstract class _$$ExplorationMapListImplCopyWith<$Res>
     implements $ExplorationMapListCopyWith<$Res> {
-  factory _$$_ExplorationMapListCopyWith(_$_ExplorationMapList value,
-          $Res Function(_$_ExplorationMapList) then) =
-      __$$_ExplorationMapListCopyWithImpl<$Res>;
+  factory _$$ExplorationMapListImplCopyWith(_$ExplorationMapListImpl value,
+          $Res Function(_$ExplorationMapListImpl) then) =
+      __$$ExplorationMapListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -686,11 +689,11 @@ abstract class _$$_ExplorationMapListCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ExplorationMapListCopyWithImpl<$Res>
-    extends _$ExplorationMapListCopyWithImpl<$Res, _$_ExplorationMapList>
-    implements _$$_ExplorationMapListCopyWith<$Res> {
-  __$$_ExplorationMapListCopyWithImpl(
-      _$_ExplorationMapList _value, $Res Function(_$_ExplorationMapList) _then)
+class __$$ExplorationMapListImplCopyWithImpl<$Res>
+    extends _$ExplorationMapListCopyWithImpl<$Res, _$ExplorationMapListImpl>
+    implements _$$ExplorationMapListImplCopyWith<$Res> {
+  __$$ExplorationMapListImplCopyWithImpl(_$ExplorationMapListImpl _value,
+      $Res Function(_$ExplorationMapListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -700,7 +703,7 @@ class __$$_ExplorationMapListCopyWithImpl<$Res>
     Object? currentLocation = freezed,
     Object? explorationMapList = null,
   }) {
-    return _then(_$_ExplorationMapList(
+    return _then(_$ExplorationMapListImpl(
       currentExplorationMapIndex: null == currentExplorationMapIndex
           ? _value.currentExplorationMapIndex
           : currentExplorationMapIndex // ignore: cast_nullable_to_non_nullable
@@ -720,17 +723,17 @@ class __$$_ExplorationMapListCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_ExplorationMapList
+class _$ExplorationMapListImpl
     with DiagnosticableTreeMixin
     implements _ExplorationMapList {
-  const _$_ExplorationMapList(
+  const _$ExplorationMapListImpl(
       {required this.currentExplorationMapIndex,
       @Vector2ToJson() this.currentLocation,
       required final List<ExplorationMap> explorationMapList})
       : _explorationMapList = explorationMapList;
 
-  factory _$_ExplorationMapList.fromJson(Map<String, dynamic> json) =>
-      _$$_ExplorationMapListFromJson(json);
+  factory _$ExplorationMapListImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExplorationMapListImplFromJson(json);
 
   @override
   final int currentExplorationMapIndex;
@@ -763,10 +766,10 @@ class _$_ExplorationMapList
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExplorationMapList &&
+            other is _$ExplorationMapListImpl &&
             (identical(other.currentExplorationMapIndex,
                     currentExplorationMapIndex) ||
                 other.currentExplorationMapIndex ==
@@ -788,13 +791,13 @@ class _$_ExplorationMapList
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExplorationMapListCopyWith<_$_ExplorationMapList> get copyWith =>
-      __$$_ExplorationMapListCopyWithImpl<_$_ExplorationMapList>(
+  _$$ExplorationMapListImplCopyWith<_$ExplorationMapListImpl> get copyWith =>
+      __$$ExplorationMapListImplCopyWithImpl<_$ExplorationMapListImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplorationMapListToJson(
+    return _$$ExplorationMapListImplToJson(
       this,
     );
   }
@@ -805,10 +808,10 @@ abstract class _ExplorationMapList implements ExplorationMapList {
           {required final int currentExplorationMapIndex,
           @Vector2ToJson() final Vector2? currentLocation,
           required final List<ExplorationMap> explorationMapList}) =
-      _$_ExplorationMapList;
+      _$ExplorationMapListImpl;
 
   factory _ExplorationMapList.fromJson(Map<String, dynamic> json) =
-      _$_ExplorationMapList.fromJson;
+      _$ExplorationMapListImpl.fromJson;
 
   @override
   int get currentExplorationMapIndex;
@@ -819,7 +822,7 @@ abstract class _ExplorationMapList implements ExplorationMapList {
   List<ExplorationMap> get explorationMapList;
   @override
   @JsonKey(ignore: true)
-  _$$_ExplorationMapListCopyWith<_$_ExplorationMapList> get copyWith =>
+  _$$ExplorationMapListImplCopyWith<_$ExplorationMapListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -913,10 +916,11 @@ class _$EventMapCopyWithImpl<$Res, $Val extends EventMap>
 }
 
 /// @nodoc
-abstract class _$$_EventMapCopyWith<$Res> implements $EventMapCopyWith<$Res> {
-  factory _$$_EventMapCopyWith(
-          _$_EventMap value, $Res Function(_$_EventMap) then) =
-      __$$_EventMapCopyWithImpl<$Res>;
+abstract class _$$EventMapImplCopyWith<$Res>
+    implements $EventMapCopyWith<$Res> {
+  factory _$$EventMapImplCopyWith(
+          _$EventMapImpl value, $Res Function(_$EventMapImpl) then) =
+      __$$EventMapImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -931,11 +935,11 @@ abstract class _$$_EventMapCopyWith<$Res> implements $EventMapCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EventMapCopyWithImpl<$Res>
-    extends _$EventMapCopyWithImpl<$Res, _$_EventMap>
-    implements _$$_EventMapCopyWith<$Res> {
-  __$$_EventMapCopyWithImpl(
-      _$_EventMap _value, $Res Function(_$_EventMap) _then)
+class __$$EventMapImplCopyWithImpl<$Res>
+    extends _$EventMapCopyWithImpl<$Res, _$EventMapImpl>
+    implements _$$EventMapImplCopyWith<$Res> {
+  __$$EventMapImplCopyWithImpl(
+      _$EventMapImpl _value, $Res Function(_$EventMapImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -947,7 +951,7 @@ class __$$_EventMapCopyWithImpl<$Res>
     Object? parentExplorationMap = null,
     Object? parentExplorationMapLocationIndex = null,
   }) {
-    return _then(_$_EventMap(
+    return _then(_$EventMapImpl(
       backgroundImagePath: null == backgroundImagePath
           ? _value.backgroundImagePath
           : backgroundImagePath // ignore: cast_nullable_to_non_nullable
@@ -976,8 +980,8 @@ class __$$_EventMapCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
-  const _$_EventMap(
+class _$EventMapImpl with DiagnosticableTreeMixin implements _EventMap {
+  const _$EventMapImpl(
       {required this.backgroundImagePath,
       required final List<KinCollectionConstantStatus>
           collectionConstantStatusList,
@@ -987,8 +991,8 @@ class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
       : _collectionConstantStatusList = collectionConstantStatusList,
         _collectableArea = collectableArea;
 
-  factory _$_EventMap.fromJson(Map<String, dynamic> json) =>
-      _$$_EventMapFromJson(json);
+  factory _$EventMapImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EventMapImplFromJson(json);
 
   @override
   final String backgroundImagePath;
@@ -1037,10 +1041,10 @@ class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EventMap &&
+            other is _$EventMapImpl &&
             (identical(other.backgroundImagePath, backgroundImagePath) ||
                 other.backgroundImagePath == backgroundImagePath) &&
             const DeepCollectionEquality().equals(
@@ -1069,12 +1073,12 @@ class _$_EventMap with DiagnosticableTreeMixin implements _EventMap {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EventMapCopyWith<_$_EventMap> get copyWith =>
-      __$$_EventMapCopyWithImpl<_$_EventMap>(this, _$identity);
+  _$$EventMapImplCopyWith<_$EventMapImpl> get copyWith =>
+      __$$EventMapImplCopyWithImpl<_$EventMapImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EventMapToJson(
+    return _$$EventMapImplToJson(
       this,
     );
   }
@@ -1087,9 +1091,10 @@ abstract class _EventMap implements EventMap {
           collectionConstantStatusList,
       @Vector2ListToJson() final List<Vector2?>? collectableArea,
       required final ExplorationMap parentExplorationMap,
-      required final int parentExplorationMapLocationIndex}) = _$_EventMap;
+      required final int parentExplorationMapLocationIndex}) = _$EventMapImpl;
 
-  factory _EventMap.fromJson(Map<String, dynamic> json) = _$_EventMap.fromJson;
+  factory _EventMap.fromJson(Map<String, dynamic> json) =
+      _$EventMapImpl.fromJson;
 
   @override
   String get backgroundImagePath;
@@ -1104,6 +1109,6 @@ abstract class _EventMap implements EventMap {
   int get parentExplorationMapLocationIndex;
   @override
   @JsonKey(ignore: true)
-  _$$_EventMapCopyWith<_$_EventMap> get copyWith =>
+  _$$EventMapImplCopyWith<_$EventMapImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

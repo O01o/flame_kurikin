@@ -1,4 +1,4 @@
-import 'package:flame_kurikin/domain/member_object.dart';
+import 'package:flame_kurikin/domain/entities/member_object.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 

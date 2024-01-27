@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'kin_base_object.dart';
+part of '../domain/entities/kin_base_object.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KinCongentialConstantStatus _$$_KinCongentialConstantStatusFromJson(
+_$KinCongentialConstantStatusImpl _$$KinCongentialConstantStatusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KinCongentialConstantStatus(
+    _$KinCongentialConstantStatusImpl(
       id: json['id'] as String,
       name: json['name'] as String,
       race: $enumDecode(_$RaceEnumMap, json['race']),
@@ -26,8 +26,8 @@ _$_KinCongentialConstantStatus _$$_KinCongentialConstantStatusFromJson(
       speed: $enumDecode(_$SpeedEnumMap, json['speed']),
     );
 
-Map<String, dynamic> _$$_KinCongentialConstantStatusToJson(
-        _$_KinCongentialConstantStatus instance) =>
+Map<String, dynamic> _$$KinCongentialConstantStatusImplToJson(
+        _$KinCongentialConstantStatusImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -96,15 +96,15 @@ const _$SpeedEnumMap = {
   Speed.D: 'd',
 };
 
-_$_KinAcquiredConstantStatus _$$_KinAcquiredConstantStatusFromJson(
+_$KinAcquiredConstantStatusImpl _$$KinAcquiredConstantStatusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KinAcquiredConstantStatus(
+    _$KinAcquiredConstantStatusImpl(
       owner: $enumDecode(_$CharacterEnumMap, json['owner']),
       getType: $enumDecode(_$GetTypeEnumMap, json['get-type']),
     );
 
-Map<String, dynamic> _$$_KinAcquiredConstantStatusToJson(
-        _$_KinAcquiredConstantStatus instance) =>
+Map<String, dynamic> _$$KinAcquiredConstantStatusImplToJson(
+        _$KinAcquiredConstantStatusImpl instance) =>
     <String, dynamic>{
       'owner': _$CharacterEnumMap[instance.owner]!,
       'get-type': _$GetTypeEnumMap[instance.getType]!,
@@ -164,17 +164,17 @@ const _$GetTypeEnumMap = {
   GetType.trade: 'trade',
 };
 
-_$_KinCollectionConstantStatus _$$_KinCollectionConstantStatusFromJson(
+_$KinCollectionConstantStatusImpl _$$KinCollectionConstantStatusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KinCollectionConstantStatus(
+    _$KinCollectionConstantStatusImpl(
       kinIndex: json['kin-index'] as int,
       minLevel: json['min-level'] as int,
       maxLevel: json['max-level'] as int,
       probability: (json['probability'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_KinCollectionConstantStatusToJson(
-        _$_KinCollectionConstantStatus instance) =>
+Map<String, dynamic> _$$KinCollectionConstantStatusImplToJson(
+        _$KinCollectionConstantStatusImpl instance) =>
     <String, dynamic>{
       'kin-index': instance.kinIndex,
       'min-level': instance.minLevel,
@@ -182,15 +182,15 @@ Map<String, dynamic> _$$_KinCollectionConstantStatusToJson(
       'probability': instance.probability,
     };
 
-_$_KinGeneralVariableStatus _$$_KinGeneralVariableStatusFromJson(
+_$KinGeneralVariableStatusImpl _$$KinGeneralVariableStatusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KinGeneralVariableStatus(
+    _$KinGeneralVariableStatusImpl(
       activity: $enumDecode(_$ActivityEnumMap, json['activity']),
       motionMode: $enumDecode(_$MotionModeEnumMap, json['motion-mode']),
     );
 
-Map<String, dynamic> _$$_KinGeneralVariableStatusToJson(
-        _$_KinGeneralVariableStatus instance) =>
+Map<String, dynamic> _$$KinGeneralVariableStatusImplToJson(
+        _$KinGeneralVariableStatusImpl instance) =>
     <String, dynamic>{
       'activity': _$ActivityEnumMap[instance.activity]!,
       'motion-mode': _$MotionModeEnumMap[instance.motionMode]!,
@@ -211,9 +211,9 @@ const _$MotionModeEnumMap = {
   MotionMode.defeat: 'defeat',
 };
 
-_$_KinStockVariableStatus _$$_KinStockVariableStatusFromJson(
+_$KinStockVariableStatusImpl _$$KinStockVariableStatusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KinStockVariableStatus(
+    _$KinStockVariableStatusImpl(
       level: json['level'] as int,
       hp: json['hp'] as int,
       atk: json['atk'] as int,
@@ -222,8 +222,8 @@ _$_KinStockVariableStatus _$$_KinStockVariableStatusFromJson(
       expMax: json['exp-max'] as int,
     );
 
-Map<String, dynamic> _$$_KinStockVariableStatusToJson(
-        _$_KinStockVariableStatus instance) =>
+Map<String, dynamic> _$$KinStockVariableStatusImplToJson(
+        _$KinStockVariableStatusImpl instance) =>
     <String, dynamic>{
       'level': instance.level,
       'hp': instance.hp,
@@ -233,14 +233,15 @@ Map<String, dynamic> _$$_KinStockVariableStatusToJson(
       'exp-max': instance.expMax,
     };
 
-_$_KinExplanation _$$_KinExplanationFromJson(Map<String, dynamic> json) =>
-    _$_KinExplanation(
+_$KinExplanationImpl _$$KinExplanationImplFromJson(Map<String, dynamic> json) =>
+    _$KinExplanationImpl(
       explanation: json['explanation'] as String,
       langOfKin: json['lang-of-kin'] as String,
       isCollected: json['is-collected'] as bool,
     );
 
-Map<String, dynamic> _$$_KinExplanationToJson(_$_KinExplanation instance) =>
+Map<String, dynamic> _$$KinExplanationImplToJson(
+        _$KinExplanationImpl instance) =>
     <String, dynamic>{
       'explanation': instance.explanation,
       'lang-of-kin': instance.langOfKin,

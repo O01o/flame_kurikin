@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'vector_object.dart';
+part of '../domain/entities/vector_object.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -68,22 +68,22 @@ class _$FreezedVector2CopyWithImpl<$Res, $Val extends FreezedVector2>
 }
 
 /// @nodoc
-abstract class _$$_FreezedVector2CopyWith<$Res>
+abstract class _$$FreezedVector2ImplCopyWith<$Res>
     implements $FreezedVector2CopyWith<$Res> {
-  factory _$$_FreezedVector2CopyWith(
-          _$_FreezedVector2 value, $Res Function(_$_FreezedVector2) then) =
-      __$$_FreezedVector2CopyWithImpl<$Res>;
+  factory _$$FreezedVector2ImplCopyWith(_$FreezedVector2Impl value,
+          $Res Function(_$FreezedVector2Impl) then) =
+      __$$FreezedVector2ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double x, double y});
 }
 
 /// @nodoc
-class __$$_FreezedVector2CopyWithImpl<$Res>
-    extends _$FreezedVector2CopyWithImpl<$Res, _$_FreezedVector2>
-    implements _$$_FreezedVector2CopyWith<$Res> {
-  __$$_FreezedVector2CopyWithImpl(
-      _$_FreezedVector2 _value, $Res Function(_$_FreezedVector2) _then)
+class __$$FreezedVector2ImplCopyWithImpl<$Res>
+    extends _$FreezedVector2CopyWithImpl<$Res, _$FreezedVector2Impl>
+    implements _$$FreezedVector2ImplCopyWith<$Res> {
+  __$$FreezedVector2ImplCopyWithImpl(
+      _$FreezedVector2Impl _value, $Res Function(_$FreezedVector2Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_FreezedVector2CopyWithImpl<$Res>
     Object? x = null,
     Object? y = null,
   }) {
-    return _then(_$_FreezedVector2(
+    return _then(_$FreezedVector2Impl(
       x: null == x
           ? _value.x
           : x // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,11 @@ class __$$_FreezedVector2CopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.kebab)
-class _$_FreezedVector2 implements _FreezedVector2 {
-  const _$_FreezedVector2({required this.x, required this.y});
+class _$FreezedVector2Impl implements _FreezedVector2 {
+  const _$FreezedVector2Impl({required this.x, required this.y});
 
-  factory _$_FreezedVector2.fromJson(Map<String, dynamic> json) =>
-      _$$_FreezedVector2FromJson(json);
+  factory _$FreezedVector2Impl.fromJson(Map<String, dynamic> json) =>
+      _$$FreezedVector2ImplFromJson(json);
 
   @override
   final double x;
@@ -125,10 +125,10 @@ class _$_FreezedVector2 implements _FreezedVector2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FreezedVector2 &&
+            other is _$FreezedVector2Impl &&
             (identical(other.x, x) || other.x == x) &&
             (identical(other.y, y) || other.y == y));
   }
@@ -140,12 +140,13 @@ class _$_FreezedVector2 implements _FreezedVector2 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FreezedVector2CopyWith<_$_FreezedVector2> get copyWith =>
-      __$$_FreezedVector2CopyWithImpl<_$_FreezedVector2>(this, _$identity);
+  _$$FreezedVector2ImplCopyWith<_$FreezedVector2Impl> get copyWith =>
+      __$$FreezedVector2ImplCopyWithImpl<_$FreezedVector2Impl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FreezedVector2ToJson(
+    return _$$FreezedVector2ImplToJson(
       this,
     );
   }
@@ -153,10 +154,11 @@ class _$_FreezedVector2 implements _FreezedVector2 {
 
 abstract class _FreezedVector2 implements FreezedVector2 {
   const factory _FreezedVector2(
-      {required final double x, required final double y}) = _$_FreezedVector2;
+      {required final double x,
+      required final double y}) = _$FreezedVector2Impl;
 
   factory _FreezedVector2.fromJson(Map<String, dynamic> json) =
-      _$_FreezedVector2.fromJson;
+      _$FreezedVector2Impl.fromJson;
 
   @override
   double get x;
@@ -164,6 +166,6 @@ abstract class _FreezedVector2 implements FreezedVector2 {
   double get y;
   @override
   @JsonKey(ignore: true)
-  _$$_FreezedVector2CopyWith<_$_FreezedVector2> get copyWith =>
+  _$$FreezedVector2ImplCopyWith<_$FreezedVector2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
